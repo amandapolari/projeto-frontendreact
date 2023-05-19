@@ -1,13 +1,16 @@
 import Items from '../Items/Items';
+import imgCart from '../../img/cart.png'
+import { ContainerCart } from './CartStyle';
 
 function Cart() {
     return (
-        <div className="Cart">
-            <header>
-                <p>Cart</p>
+        <ContainerCart>
+            {/* <header> */}
+                <img src={imgCart} alt="" />
+                {/* <p>Cart</p> */}
                 <Items />
-            </header>
-        </div>
+            {/* </header> */}
+        </ContainerCart>
     );
 }
 

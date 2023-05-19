@@ -1,15 +1,14 @@
 import React from 'react';
 import Home from './Components/Home/Home';
-import Filters from './Components/Filters/Filters';
-import Cart from './Components/Cart/Cart';
+import Header from './Components/Header/Header';
+import { ContainerApp } from './AppStyle';
 
 function App() {
     return (
-        <div>
-            <Filters />
+        <ContainerApp>
+            <Header />
             <Home />
-            <Cart />
-        </div>
+        </ContainerApp>
     );
 }
 

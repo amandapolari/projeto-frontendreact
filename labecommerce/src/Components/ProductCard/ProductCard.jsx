@@ -1,10 +1,12 @@
+import { ContainerCard } from "./ProductCardStyle";
+
 function ProductCard() {
     return (
-        <div className="ProductCard">
+        <ContainerCard>
             <header>
                 <p>ProductCard</p>
             </header>
-        </div>
+        </ContainerCard>
     );
 }
 

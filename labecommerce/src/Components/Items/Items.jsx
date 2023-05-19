@@ -1,10 +1,12 @@
+import { ContainerItems } from "./ItemsSyle";
+
 function Items() {
     return (
-        <div className="Items">
+        <ContainerItems>
             <header>
                 <p>Items</p>
             </header>
-        </div>
+        </ContainerItems>
     );
 }
 

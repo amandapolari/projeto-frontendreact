@@ -1,13 +1,14 @@
 import ProductCard from '../ProductCard/ProductCard';
+import { ContainerHome } from './HomeStyle';
 
 function Home() {
     return (
-        <div className="Home">
+        <ContainerHome>
             <header>
                 <p>Home</p>
                 <ProductCard />
             </header>
-        </div>
+        </ContainerHome>
     );
 }
 
