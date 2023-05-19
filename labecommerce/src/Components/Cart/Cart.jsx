@@ -1,9 +1,9 @@
-import Items from './Items/Items';
+import Items from '../Items/Items';
 
 function Cart() {
     return (
         <div className="Cart">
-            <header className="Cart-header">
+            <header>
                 <p>Cart</p>
                 <Items />
             </header>

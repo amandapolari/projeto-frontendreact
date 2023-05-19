@@ -1,7 +1,7 @@
 function Filters() {
     return (
         <div className="Filters">
-            <header className="Filters-header">
+            <header>
                 <p>Filters</p>
             </header>
         </div>

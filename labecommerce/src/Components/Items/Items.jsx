@@ -1,7 +1,7 @@
 function Items() {
     return (
         <div className="Items">
-            <header className="Items-header">
+            <header>
                 <p>Items</p>
             </header>
         </div>
