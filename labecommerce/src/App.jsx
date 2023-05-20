@@ -1,15 +1,18 @@
 import React from 'react';
 import Home from './Components/Home/Home';
-import Filters from './Components/Filters/Filters';
+import Header from './Components/Header/Header';
+import { ContainerApp, ContainerHomeCart } from './AppStyle';
 import Cart from './Components/Cart/Cart';
 
 function App() {
     return (
-        <div>
-            <Filters />
-            <Home />
-            <Cart />
-        </div>
+        <ContainerApp>
+            <Header />
+            <ContainerHomeCart>
+                <Home />
+                <Cart />
+            </ContainerHomeCart>
+        </ContainerApp>
     );
 }
 

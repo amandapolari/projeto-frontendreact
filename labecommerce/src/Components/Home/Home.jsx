@@ -1,13 +1,16 @@
-import ProductCard from './ProductCard/ProductCard';
+import ProductCard from '../ProductCard/ProductCard';
+import { ContainerHome, ContainerProduct } from './HomeStyle';
 
 function Home() {
     return (
-        <div className="Home">
-            <header className="Home-header">
-                <p>Home</p>
+        <ContainerHome>
+            <ContainerProduct>
+                {/* <p>Home</p> */}
                 <ProductCard />
-            </header>
-        </div>
+                <ProductCard />
+                <ProductCard />
+            </ContainerProduct>
+        </ContainerHome>
     );
 }
 

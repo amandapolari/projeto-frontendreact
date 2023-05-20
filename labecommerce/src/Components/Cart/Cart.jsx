@@ -1,13 +1,15 @@
-import Items from './Items/Items';
+import Items from '../Items/Items';
+
+import { ContainerCart } from './CartStyle';
 
 function Cart() {
     return (
-        <div className="Cart">
-            <header className="Cart-header">
-                <p>Cart</p>
-                <Items />
-            </header>
-        </div>
+        <ContainerCart>
+            {/* <header> */}
+            {/* <h2>Cart</h2> */}
+            <Items />
+            {/* </header> */}
+        </ContainerCart>
     );
 }
 

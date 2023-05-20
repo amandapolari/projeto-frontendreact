@@ -1,10 +1,17 @@
+import { ContainerFilter } from "./FiltersStyle";
+
 function Filters() {
     return (
-        <div className="Filters">
-            <header className="Filters-header">
-                <p>Filters</p>
-            </header>
-        </div>
+        <ContainerFilter>
+                <form action="">
+                    <label htmlFor="">Buscar por nome</label>
+                    <input type="text" />
+                    <label htmlFor="">Valor Mínimo</label>
+                    <input type="text" />
+                    <label htmlFor="">Valor Máximo</label>
+                    <input type="text" />
+                </form>
+        </ContainerFilter>
     );
 }
 
