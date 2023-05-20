@@ -1,13 +1,15 @@
 import ProductCard from '../ProductCard/ProductCard';
-import { ContainerHome } from './HomeStyle';
+import { ContainerHome, ContainerProduct } from './HomeStyle';
 
 function Home() {
     return (
         <ContainerHome>
-            <header>
-                <p>Home</p>
+            <ContainerProduct>
+                {/* <p>Home</p> */}
                 <ProductCard />
-            </header>
+                <ProductCard />
+                <ProductCard />
+            </ContainerProduct>
         </ContainerHome>
     );
 }

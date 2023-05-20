@@ -1,11 +1,17 @@
-import { ContainerItems } from "./ItemsSyle";
+import { ContainerItems, InfoItems } from './ItemsSyle';
 
 function Items() {
     return (
         <ContainerItems>
-            <header>
-                <p>Items</p>
-            </header>
+            <h2>Cart</h2>
+            {/* <header> */}
+            <InfoItems>
+                <h4>Nome</h4>
+                <p>V. Unidade</p>
+                <p>Quant</p>
+                <p>Subtotal</p>
+                <button>Remover</button>
+            </InfoItems>
         </ContainerItems>
     );
 }

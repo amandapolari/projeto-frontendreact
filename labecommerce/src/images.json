@@ -1,4 +1,4 @@
 {
-    "logo": "./img/logo.png",
-    "cart": "./img/cart.png"
+    "logo": "img/logo.png",
+    "cart": "img/cart.png"
 }
