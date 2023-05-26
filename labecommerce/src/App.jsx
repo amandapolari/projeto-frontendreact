@@ -6,12 +6,8 @@ import Cart from './Components/Cart/Cart';
 import productsList from './assets/productsList.js';
 
 function App() {
-    // console.log(productsList[0].id)
-    // const productListItems = productsList.map((product) => product.name);
-    // console.log(productListItems);
     return (
         <ContainerApp>
-            {/* {productListItems} */}
             <Header />
             <ContainerHomeCart>
                 <Home productsList={productsList} />

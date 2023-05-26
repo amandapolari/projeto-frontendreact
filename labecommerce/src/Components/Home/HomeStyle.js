@@ -12,7 +12,7 @@ export const ContainerHome = styled.styled.div`
 `;
 
 export const ContainerProduct = styled.styled.div`
-    background: red ;
+    /* background: red ; */
     /* width: 30vw; */
     /* height:100vh; */
     /* display: flex; */

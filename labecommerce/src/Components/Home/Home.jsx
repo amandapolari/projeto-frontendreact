@@ -6,7 +6,6 @@ function Home(props) {
     return (
         <ContainerHome>
             <ContainerProduct>
-                {/* <p>Home</p> */}
                 <ProductCard productsList={productsList} />
             </ContainerProduct>
         </ContainerHome>

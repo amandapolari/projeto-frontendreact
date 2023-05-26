@@ -8,12 +8,9 @@ import imgCart from '../../assets/img/cart.png';
 const Header = () => {
     return (
         <ContainerHeader>
-            {/* <ImgHeader src={`../../${images.logo}`} alt="IMAGEM" /> */}
             <ImgHeader src={logo} alt="IMAGEM" />
             <Filters />
-            {/* <p>Header</p> */}
-            {/* <Cart / */}
-            <IconCart src={imgCart} alt="" />
+            <IconCart src={imgCart} alt="IMAGEM" />
         </ContainerHeader>
     );
 };

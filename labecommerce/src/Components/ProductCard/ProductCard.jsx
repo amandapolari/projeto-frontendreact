@@ -1,29 +1,25 @@
-import { Card, ContainerCard, ContainerImagem, Img } from './ProductCardStyle';
+import { Button, Card, CardContainer, Img, P } from './ProductCardStyle';
 // import product from '../../img/product.png'
 
 function ProductCard(props) {
     const { productsList } = props;
-    console.log(productsList);
+
+    console.log(productsList.length);
 
     return (
-        <ContainerCard>
-            <Card>
-                {/* <ContainerImagem>IMAGEM DO PRODUTO</ContainerImagem>
-                <h3>Nome Do Produto</h3>
-                <p>Preço R$:</p>
-                <button>Adicionar ao Carrinho</button> */}
-                {productsList.map((product) => (
-                    // <>
-                    <ContainerImagem>
+        <CardContainer>
+            <P>Quantidade de produtos: {productsList.length}</P>
+            {productsList.map((product) => (
+                <>
+                    <Card>
                         <Img src={product.imageUrl} alt={product.name} />
                         <h3>{product.name}</h3>
                         <p>Preço R$:{product.value}</p>
-                        <button>Adicionar ao Carrinho</button>
-                    </ContainerImagem>
-                    // </>
-                ))}
-            </Card>
-        </ContainerCard>
+                        <Button>Adicionar ao Carrinho</Button>
+                    </Card>
+                </>
+            ))}
+        </CardContainer>
     );
 }
 
