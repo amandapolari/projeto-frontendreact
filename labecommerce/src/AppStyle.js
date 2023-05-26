@@ -7,5 +7,5 @@ export const ContainerApp = styled.styled.div`
 
 export const ContainerHomeCart = styled.styled.div`
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
+    grid-template: 1fr / 1fr 0.3fr;
 `;
