@@ -1,14 +1,31 @@
-import { Button, Card, CardContainer, Img, P } from './ProductCardStyle';
-// import product from '../../img/product.png'
+import {
+    Button,
+    Card,
+    CardContainer,
+    ContainerSuperior,
+    Img,
+    P,
+    Select,
+} from './ProductCardStyle';
 
 function ProductCard(props) {
-    const { productsList } = props;
-
-    console.log(productsList.length);
+    const { productsList, ordination, setOrdination } = props;
+    const handleChangeSelect = (event) => {
+        setOrdination(event.target.value);
+    };
 
     return (
         <CardContainer>
-            <P>Quantidade de produtos: {productsList.length}</P>
+            <ContainerSuperior>
+                <P>Quantidade de produtos: {productsList.length}</P>
+                <Select value={ordination} onChange={handleChangeSelect}>
+                    <option disabled value="">
+                        Selecione
+                    </option>
+                    <option>Crescente</option>
+                    <option>Decrescente</option>
+                </Select>
+            </ContainerSuperior>
             {productsList.map((product) => (
                 <>
                     <Card>

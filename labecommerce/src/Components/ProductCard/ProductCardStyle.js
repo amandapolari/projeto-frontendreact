@@ -20,8 +20,23 @@ export const Button = styled.styled.button`
     /* justify-self: center; */
 `;
 
+export const ContainerSuperior = styled.styled.div`
+    padding: 0 3vw 0 3vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
 export const P = styled.styled.p`
-    margin:2vw;
-    width:100%;
+    /* margin:2vw; */
+    /* width:50%; */
+    /* display: block; */
+`;
+
+export const Select = styled.styled.select`
+    height: 3vh;
+    /* margin:2vw; */
+    /* width:50%; */
     /* display: block; */
 `;
