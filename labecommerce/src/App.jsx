@@ -13,8 +13,8 @@ function App() {
     //  - - - - - - - - - - - - - - - - - - - - -
 
     // ESTADOS PARA O COMPONENTE:
-    // [] HOME > PRODUCTCARD
-    // [] CART > ITEMS
+    // [x] HOME > PRODUCTCARD
+    // [x] CART > ITEMS
     const [amount, setAmount] = useState('');
     const [cart, setCart] = useState('');
     //  - - - - - - - - - - - - - - - - - - - - -
@@ -30,8 +30,19 @@ function App() {
                 setSearchFilter={setSearchFilter}
             />
             <ContainerHomeCart>
-                <Home productsList={productsList} />
-                <Cart />
+                <Home
+                    productsList={productsList}
+                    amount={amount}
+                    setAmount={setAmount}
+                    cart={cart}
+                    setCart={setCart}
+                />
+                <Cart
+                    amount={amount}
+                    setAmount={setAmount}
+                    cart={cart}
+                    setCart={setCart}
+                />
             </ContainerHomeCart>
         </ContainerApp>
     );

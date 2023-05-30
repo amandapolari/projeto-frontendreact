@@ -1,6 +1,7 @@
 import { ContainerItems, InfoItems } from './ItemsSyle';
 
-function Items() {
+function Items({ amount, setAmount, cart, setCart }) {
+    // console.log(amount, setAmount, cart, setCart);
     return (
         <ContainerItems>
             <h2>Cart</h2>

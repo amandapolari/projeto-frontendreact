@@ -8,11 +8,20 @@ import {
     Select,
 } from './ProductCardStyle';
 
-function ProductCard(props) {
-    const { productsList, ordination, setOrdination } = props;
+function ProductCard({
+    productsList,
+    ordination,
+    setOrdination,
+    amount,
+    setAmount,
+    cart,
+    setCart,
+}) {
     const handleChangeSelect = (event) => {
         setOrdination(event.target.value);
     };
+
+    // console.log(amount, setAmount, cart, setCart);
 
     return (
         <CardContainer>

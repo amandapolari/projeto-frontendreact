@@ -8,12 +8,12 @@ function Filters({
     searchFilter,
     setSearchFilter,
 }) {
-    console.log(minFilter,
-        setMinFilter,
-        maxFilter,
-        setMaxFilter,
-        searchFilter,
-        setSearchFilter,);
+    // console.log(minFilter,
+    //     setMinFilter,
+    //     maxFilter,
+    //     setMaxFilter,
+    //     searchFilter,
+    //     setSearchFilter,);
     return (
         <ContainerFilter>
             <form action="">
