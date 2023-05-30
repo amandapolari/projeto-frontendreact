@@ -6,15 +6,29 @@ import Cart from './Components/Cart/Cart';
 import productsList from './assets/productsList.js';
 
 function App() {
+    // [x] ESTADOS PARA O COMPONENTE: HEADER > FILTERS
     const [minFilter, setMinFilter] = useState('');
     const [maxFilter, setMaxFilter] = useState('');
     const [searchFilter, setSearchFilter] = useState('');
-    const [cart, setCart] = useState('');
+    //  - - - - - - - - - - - - - - - - - - - - -
+
+    // ESTADOS PARA O COMPONENTE:
+    // [] HOME > PRODUCTCARD
+    // [] CART > ITEMS
     const [amount, setAmount] = useState('');
+    const [cart, setCart] = useState('');
+    //  - - - - - - - - - - - - - - - - - - - - -
 
     return (
         <ContainerApp>
-            <Header />
+            <Header
+                minFilter={minFilter}
+                setMinFilter={setMinFilter}
+                maxFilter={maxFilter}
+                setMaxFilter={setMaxFilter}
+                searchFilter={searchFilter}
+                setSearchFilter={setSearchFilter}
+            />
             <ContainerHomeCart>
                 <Home productsList={productsList} />
                 <Cart />
