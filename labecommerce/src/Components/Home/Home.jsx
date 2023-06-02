@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import { ContainerHome, ContainerProduct } from './HomeStyle';
 
-function Home(props) {
-    const { productsList } = props;
+function Home({ productsList, amount, setAmount, cart, setCart, addToCart }) {
     const [ordination, setOrdination] = useState('');
+    // console.log(amount, setAmount, cart, setCart);
     return (
         <ContainerHome>
             <ContainerProduct>
@@ -12,6 +12,11 @@ function Home(props) {
                     productsList={productsList}
                     ordination={ordination}
                     setOrdination={setOrdination}
+                    amount={amount}
+                    setAmount={setAmount}
+                    cart={cart}
+                    setCart={setCart}
+                    // addToCart={addToCart}
                 />
             </ContainerProduct>
         </ContainerHome>

@@ -8,11 +8,21 @@ import {
     Select,
 } from './ProductCardStyle';
 
-function ProductCard(props) {
-    const { productsList, ordination, setOrdination } = props;
+function ProductCard({
+    productsList,
+    ordination,
+    setOrdination,
+    amount,
+    setAmount,
+    cart,
+    setCart,
+    addToCart,
+}) {
     const handleChangeSelect = (event) => {
         setOrdination(event.target.value);
     };
+
+    // console.log(amount, setAmount, cart, setCart);
 
     return (
         <CardContainer>
@@ -32,6 +42,7 @@ function ProductCard(props) {
                         <Img src={product.imageUrl} alt={product.name} />
                         <h3>{product.name}</h3>
                         <p>Preço R$:{product.value}</p>
+                        {/* <Button onClick={() => addToCart(product.name, product.value)}>Adicionar ao Carrinho</Button> */}
                         <Button>Adicionar ao Carrinho</Button>
                     </Card>
                 </>
