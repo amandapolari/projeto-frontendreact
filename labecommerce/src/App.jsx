@@ -16,7 +16,21 @@ function App() {
     // [x] HOME > PRODUCTCARD
     // [x] CART > ITEMS
     const [amount, setAmount] = useState('');
-    const [cart, setCart] = useState('');
+    const [cart, setCart] = useState([]);
+    //  - - - - - - - - - - - - - - - - - - - - -
+
+    // TESTANDO CONTROLE DOS CLICKS DOS BOTÕES DA HOME E DO CART:
+    // let counter = 0;
+    // const addToCart = (productName, productValue) => {
+    // Verificando o que foi recebido no console:
+    // console.log('Nome do produto:', productName);
+    // console.log('Valor do produto:', productValue);
+    // Setando novos valores no array cart:
+    //     setCart([...cart, productName, productValue]);
+    // };
+    // console.log(cart);
+    // Função que adicionar linha no carrinho:
+    // const addLineProductCart = () => {}
     //  - - - - - - - - - - - - - - - - - - - - -
 
     return (
@@ -36,6 +50,7 @@ function App() {
                     setAmount={setAmount}
                     cart={cart}
                     setCart={setCart}
+                    // addToCart={addToCart}
                 />
                 <Cart
                     amount={amount}

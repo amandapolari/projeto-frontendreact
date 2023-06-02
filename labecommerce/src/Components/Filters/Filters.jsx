@@ -18,11 +18,16 @@ function Filters({
     // TRATATIVAS PARA NÚMEROS NEGATIVOS
     const treatmentNegativeNumber = (event, functionSetFilter) => {
         let enteredValue = Number(event.target.value);
-        if (enteredValue < 0) {
-            functionSetFilter('');
-        } else {
-            functionSetFilter(enteredValue);
-        }
+        // ternário:
+        enteredValue < 0
+            ? functionSetFilter('')
+            : functionSetFilter(enteredValue);
+        // comum:
+        // if (enteredValue < 0) {
+        //     functionSetFilter('');
+        // } else {
+        //     functionSetFilter(enteredValue);
+        // }
     };
     // - - - - - - - - - - - - - -
 

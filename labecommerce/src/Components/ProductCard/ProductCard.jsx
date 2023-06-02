@@ -16,6 +16,7 @@ function ProductCard({
     setAmount,
     cart,
     setCart,
+    addToCart,
 }) {
     const handleChangeSelect = (event) => {
         setOrdination(event.target.value);
@@ -41,6 +42,7 @@ function ProductCard({
                         <Img src={product.imageUrl} alt={product.name} />
                         <h3>{product.name}</h3>
                         <p>Preço R$:{product.value}</p>
+                        {/* <Button onClick={() => addToCart(product.name, product.value)}>Adicionar ao Carrinho</Button> */}
                         <Button>Adicionar ao Carrinho</Button>
                     </Card>
                 </>
