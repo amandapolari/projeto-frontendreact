@@ -19,18 +19,28 @@ function App() {
     const [cart, setCart] = useState([]);
     //  - - - - - - - - - - - - - - - - - - - - -
 
-    // TESTANDO CONTROLE DOS CLICKS DOS BOTÕES DA HOME E DO CART:
-    // let counter = 0;
-    // const addToCart = (productName, productValue) => {
-    // Verificando o que foi recebido no console:
-    // console.log('Nome do produto:', productName);
-    // console.log('Valor do produto:', productValue);
-    // Setando novos valores no array cart:
-    //     setCart([...cart, productName, productValue]);
-    // };
-    // console.log(cart);
-    // Função que adicionar linha no carrinho:
-    // const addLineProductCart = () => {}
+    // Implemente a funcionalidade de adicionar itens no carrinho:
+    const addToCart = (productName, productValue, quantity) => {
+        const existsInCart =
+            cart.filter((item) => item[0] === productName).length > 0;
+
+        if (existsInCart) {
+            console.log(existsInCart);
+            const modificar = cart.filter((item) => item[0] === productName);
+            console.log(modificar);
+            // const newProductList = [
+            //     ...cart,
+            //     [...productName, productValue * quantity, quantity+1],
+            // ];
+            // setCart(newProductList);
+        } else {
+            const newProductList = [
+                ...cart,
+                [productName, productValue, quantity],
+            ];
+            setCart(newProductList);
+        }
+    };
     //  - - - - - - - - - - - - - - - - - - - - -
 
     return (
@@ -50,7 +60,7 @@ function App() {
                     setAmount={setAmount}
                     cart={cart}
                     setCart={setCart}
-                    // addToCart={addToCart}
+                    addToCart={addToCart}
                 />
                 <Cart
                     amount={amount}

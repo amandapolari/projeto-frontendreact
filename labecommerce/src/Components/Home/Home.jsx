@@ -4,7 +4,6 @@ import { ContainerHome, ContainerProduct } from './HomeStyle';
 
 function Home({ productsList, amount, setAmount, cart, setCart, addToCart }) {
     const [ordination, setOrdination] = useState('');
-    // console.log(amount, setAmount, cart, setCart);
     return (
         <ContainerHome>
             <ContainerProduct>
@@ -16,7 +15,7 @@ function Home({ productsList, amount, setAmount, cart, setCart, addToCart }) {
                     setAmount={setAmount}
                     cart={cart}
                     setCart={setCart}
-                    // addToCart={addToCart}
+                    addToCart={addToCart}
                 />
             </ContainerProduct>
         </ContainerHome>
