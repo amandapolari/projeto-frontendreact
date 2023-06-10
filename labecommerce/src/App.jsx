@@ -25,14 +25,17 @@ function App() {
             cart.filter((item) => item[0] === productName).length > 0;
 
         if (existsInCart) {
-            console.log(existsInCart);
-            const modificar = cart.filter((item) => item[0] === productName);
-            console.log(modificar);
-            // const newProductList = [
-            //     ...cart,
-            //     [...productName, productValue * quantity, quantity+1],
-            // ];
-            // setCart(newProductList);
+            const updatedCart = cart.map((item) => {
+                if (item[0] === productName) {
+                    return [
+                        item[0],
+                        item[1] + productValue,
+                        item[2] + quantity,
+                    ];
+                }
+                return item;
+            });
+            setCart(updatedCart);
         } else {
             const newProductList = [
                 ...cart,
