@@ -16,7 +16,7 @@ function Items({ amount, setAmount, cart, setCart, removeCart }) {
             </button>
         </InfoItems>
     ));
-    console.log(cart);
+    // console.log(cart);
 
     return (
         <ContainerItems>

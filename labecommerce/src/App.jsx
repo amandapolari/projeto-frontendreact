@@ -50,11 +50,11 @@ function App() {
     const removeCart = (itemRemove, indexRemove) => {
         if (itemRemove[2] === 1) {
             const newList = cart.filter((item) => item !== itemRemove);
-            console.log(newList);
+            // console.log(newList);
             setCart(newList);
         } else if (itemRemove[2] > 1) {
             const unitaryValue = itemRemove[1] / itemRemove[2];
-            console.log(unitaryValue);
+            // console.log(unitaryValue);
             const updatedCart = cart.map((item, index) => {
                 if (index === indexRemove) {
                     return [item[0], item[1] - unitaryValue, item[2] - 1];
