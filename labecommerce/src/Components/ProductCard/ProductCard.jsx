@@ -18,6 +18,7 @@ function ProductCard({
     setCart,
     addToCart,
 }) {
+    console.log(ordination);
     const handleChangeSelect = (event) => {
         setOrdination(event.target.value);
     };
@@ -36,8 +37,27 @@ function ProductCard({
                     <option>Decrescente</option>
                 </Select>
             </ContainerSuperior>
-            {productsList.map((product) => (
-                <>
+            {productsList
+                .sort((a, b) => {
+                    if (ordination === 'Crescente') {
+                        if (a.value > b.value) {
+                            return 1;
+                        }
+                        if (a.value < b.value) {
+                            return -1;
+                        }
+                        return 0;
+                    } else if (ordination === 'Decrescente') {
+                        if (a.value > b.value) {
+                            return -1;
+                        }
+                        if (a.value < b.value) {
+                            return 1;
+                        }
+                        return 0;
+                    }
+                })
+                .map((product) => (
                     <Card>
                         <Img src={product.imageUrl} alt={product.name} />
                         <h3>{product.name}</h3>
@@ -50,8 +70,7 @@ function ProductCard({
                             Adicionar ao Carrinho
                         </Button>
                     </Card>
-                </>
-            ))}
+                ))}
         </CardContainer>
     );
 }
