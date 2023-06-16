@@ -1,27 +1,33 @@
 import { ContainerItems, InfoItems } from './ItemsSyle';
 
-function Items({ amount, setAmount, cart, setCart }) {
-    // console.log(amount, setAmount, cart, setCart);
+function Items({ amount, setAmount, cart, setCart, removeCart }) {
+    const listCart = cart.map((item, index) => (
+        <InfoItems key={index}>
+            {console.log(item)}
+            <h3>Nome: {item[0]}</h3>
+            <p>Quant: {item[2]}</p>
+            <p>Preço: R${item[1].toFixed(2)}</p>
+            <button
+                onClick={() => {
+                    removeCart(item, index);
+                }}
+            >
+                Remover
+            </button>
+        </InfoItems>
+    ));
+    console.log(cart);
+
     return (
         <ContainerItems>
             <h2>Cart</h2>
-            <InfoItems>
-                <h4>Nome</h4>
-                <p>Un</p>
-                <p>Quant</p>
-                <p>Subtotal</p>
-                <button>Remover</button>
-                <>
-                {/* PAREI DE TESTAR AQUI */}
-                {/* {console.log(cart)} */}
-                    {cart.map((item) => (
-                        <div key={item.produtName}>
-                            <h3>{item.produtName}</h3>
-                            <p>Preço: R${item.produtValue}</p>
-                        </div>
-                    ))}
-                </>
-            </InfoItems>
+            {/* <InfoItems> */}
+            {/* <h4>Nome</h4> */}
+            {/* <p>Un</p> */}
+            {/* <p>Quant</p> */}
+            {/* <p>Subtotal</p> */}
+            {listCart}
+            {/* </InfoItems> */}
         </ContainerItems>
     );
 }

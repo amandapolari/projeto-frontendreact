@@ -19,18 +19,51 @@ function App() {
     const [cart, setCart] = useState([]);
     //  - - - - - - - - - - - - - - - - - - - - -
 
-    // TESTANDO CONTROLE DOS CLICKS DOS BOTÕES DA HOME E DO CART:
-    // let counter = 0;
-    // const addToCart = (productName, productValue) => {
-    // Verificando o que foi recebido no console:
-    // console.log('Nome do produto:', productName);
-    // console.log('Valor do produto:', productValue);
-    // Setando novos valores no array cart:
-    //     setCart([...cart, productName, productValue]);
-    // };
-    // console.log(cart);
-    // Função que adicionar linha no carrinho:
-    // const addLineProductCart = () => {}
+    // Implemente a funcionalidade de adicionar itens no carrinho:
+    const addToCart = (productName, productValue, quantity) => {
+        const existsInCart =
+            cart.filter((item) => item[0] === productName).length > 0;
+
+        if (existsInCart) {
+            const updatedCart = cart.map((item) => {
+                if (item[0] === productName) {
+                    return [
+                        item[0],
+                        item[1] + productValue,
+                        item[2] + quantity,
+                    ];
+                }
+                return item;
+            });
+            setCart(updatedCart);
+        } else {
+            const newProductList = [
+                ...cart,
+                [productName, productValue, quantity],
+            ];
+            setCart(newProductList);
+        }
+    };
+    //  - - - - - - - - - - - - - - - - - - - - -
+
+    // Implemente a remoção de itens do carrinho
+    const removeCart = (itemRemove, indexRemove) => {
+        if (itemRemove[2] === 1) {
+            const newList = cart.filter((item) => item !== itemRemove);
+            console.log(newList);
+            setCart(newList);
+        } else if (itemRemove[2] > 1) {
+            const unitaryValue = itemRemove[1] / itemRemove[2];
+            console.log(unitaryValue);
+            const updatedCart = cart.map((item, index) => {
+                if (index === indexRemove) {
+                    return [item[0], item[1] - unitaryValue, item[2] - 1];
+                }
+                return item;
+            });
+            setCart(updatedCart);
+        }
+    };
     //  - - - - - - - - - - - - - - - - - - - - -
 
     return (
@@ -50,13 +83,14 @@ function App() {
                     setAmount={setAmount}
                     cart={cart}
                     setCart={setCart}
-                    // addToCart={addToCart}
+                    addToCart={addToCart}
                 />
                 <Cart
                     amount={amount}
                     setAmount={setAmount}
                     cart={cart}
                     setCart={setCart}
+                    removeCart={removeCart}
                 />
             </ContainerHomeCart>
         </ContainerApp>

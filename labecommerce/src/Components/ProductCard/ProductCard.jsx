@@ -22,7 +22,7 @@ function ProductCard({
         setOrdination(event.target.value);
     };
 
-    // console.log(amount, setAmount, cart, setCart);
+    let quantity = 1;
 
     return (
         <CardContainer>
@@ -41,9 +41,14 @@ function ProductCard({
                     <Card>
                         <Img src={product.imageUrl} alt={product.name} />
                         <h3>{product.name}</h3>
-                        <p>Preço R$:{product.value}</p>
-                        {/* <Button onClick={() => addToCart(product.name, product.value)}>Adicionar ao Carrinho</Button> */}
-                        <Button>Adicionar ao Carrinho</Button>
+                        <p>Preço R$:{product.value.toFixed(2)}</p>
+                        <Button
+                            onClick={() =>
+                                addToCart(product.name, product.value, quantity)
+                            }
+                        >
+                            Adicionar ao Carrinho
+                        </Button>
                     </Card>
                 </>
             ))}
