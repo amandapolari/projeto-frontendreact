@@ -2,7 +2,7 @@ import Items from '../Items/Items';
 
 import { ContainerCart } from './CartStyle';
 
-function Cart({ amount, setAmount, cart, setCart }) {
+function Cart({ amount, setAmount, cart, setCart, removeCart }) {
     // console.log(amount, setAmount, cart, setCart);
     return (
         <ContainerCart>
@@ -11,6 +11,7 @@ function Cart({ amount, setAmount, cart, setCart }) {
                 setAmount={setAmount}
                 cart={cart}
                 setCart={setCart}
+                removeCart={removeCart}
             />
         </ContainerCart>
     );
