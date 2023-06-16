@@ -3,10 +3,10 @@ import { ContainerItems, InfoItems } from './ItemsSyle';
 function Items({ amount, setAmount, cart, setCart, removeCart }) {
     const listCart = cart.map((item, index) => (
         <InfoItems key={index}>
-            {/* {console.log(item)} */}
+            {console.log(item)}
             <h3>Nome: {item[0]}</h3>
             <p>Quant: {item[2]}</p>
-            <p>Preço: R${item[1]}</p>
+            <p>Preço: R${item[1].toFixed(2)}</p>
             <button
                 onClick={() => {
                     removeCart(item, index);
