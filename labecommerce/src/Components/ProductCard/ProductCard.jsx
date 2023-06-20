@@ -9,7 +9,6 @@ import {
 } from './ProductCardStyle';
 
 function ProductCard({
-    productsList,
     productsOrdered,
     ordination,
     setOrdination,
@@ -19,7 +18,6 @@ function ProductCard({
     setCart,
     addToCart,
 }) {
-    // console.log(ordination);
     const handleChangeSelect = (event) => {
         setOrdination(event.target.value);
     };
@@ -42,7 +40,7 @@ function ProductCard({
                 <Card>
                     <Img src={product.imageUrl} alt={product.name} />
                     <h3>{product.name}</h3>
-                    <p>Preço R$:{product.value.toFixed(2)}</p>
+                    <p>Preço R$:{product.value}</p>
                     <Button
                         onClick={() =>
                             addToCart(product.name, product.value, quantity)

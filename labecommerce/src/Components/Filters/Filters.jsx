@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { ContainerFilter } from './FiltersStyle';
 
 function Filters({
@@ -7,43 +8,14 @@ function Filters({
     setMaxFilter,
     searchFilter,
     setSearchFilter,
+    productsList,
+    productsFiltered,
+    setProductsFiltered,
+    treatmentNegativeNumber,
+    handleSearchFilterChanges,
+    handleMinFilterChanges,
+    handleMaxFilterChanges,
 }) {
-    // console.log(minFilter,
-    //     setMinFilter,
-    //     maxFilter,
-    //     setMaxFilter,
-    //     searchFilter,
-    //     setSearchFilter,);
-
-    // TRATATIVAS PARA NÚMEROS NEGATIVOS
-    const treatmentNegativeNumber = (event, functionSetFilter) => {
-        let enteredValue = Number(event.target.value);
-        // ternário:
-        enteredValue < 0
-            ? functionSetFilter('')
-            : functionSetFilter(enteredValue);
-        // comum:
-        // if (enteredValue < 0) {
-        //     functionSetFilter('');
-        // } else {
-        //     functionSetFilter(enteredValue);
-        // }
-    };
-    // - - - - - - - - - - - - - -
-
-    // FUNÇÕES QUE MUDAM OS ESTADOS
-    const handleSearchFilterChanges = (event) => {
-        setSearchFilter(event.target.value);
-    };
-
-    const handleMaxFilteChanges = (event) => {
-        treatmentNegativeNumber(event, setMaxFilter);
-    };
-
-    const handleMinFilterChanges = (event) => {
-        treatmentNegativeNumber(event, setMinFilter);
-    };
-    // - - - - - - - - - - - - - -
 
     return (
         <ContainerFilter>
@@ -51,22 +23,28 @@ function Filters({
                 <label htmlFor="inputSearchFilter">Buscar por nome</label>
                 <input
                     type="text"
-                    id="inputSearch"
-                    onChange={handleSearchFilterChanges}
+                    id="inputSearchFilter"
+                    onChange={(event) => {
+                        handleSearchFilterChanges(event);
+                    }}
                     value={searchFilter}
                 />
                 <label htmlFor="inputMinFilter">Valor Mínimo</label>
                 <input
                     type="number"
                     id="inputMinFilter"
-                    onChange={handleMinFilterChanges}
+                    onChange={(event) => {
+                        handleMinFilterChanges(event);
+                    }}
                     value={minFilter}
                 />
                 <label htmlFor="inputMaxFilter">Valor Máximo</label>
                 <input
                     type="number"
                     id="inputMaxFilter"
-                    onChange={handleMaxFilteChanges}
+                    onChange={(event) => {
+                        handleMaxFilterChanges(event);
+                    }}
                     value={maxFilter}
                 />
             </form>
