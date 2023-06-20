@@ -12,6 +12,11 @@ const Header = ({
     setMaxFilter,
     searchFilter,
     setSearchFilter,
+    productsFiltered,
+    setProductsFiltered,
+    handleSearchFilterChanges,
+    handleMinFilterChanges,
+    handleMaxFilterChanges,
 }) => {
     return (
         <ContainerHeader>
@@ -23,6 +28,11 @@ const Header = ({
                 setMaxFilter={setMaxFilter}
                 searchFilter={searchFilter}
                 setSearchFilter={setSearchFilter}
+                productsFiltered={productsFiltered}
+                setProductsFiltered={setProductsFiltered}
+                handleSearchFilterChanges={handleSearchFilterChanges}
+                handleMinFilterChanges={handleMinFilterChanges}
+                handleMaxFilterChanges={handleMaxFilterChanges}
             />
             <IconCart src={imgCart} alt="IMAGEM" />
         </ContainerHeader>

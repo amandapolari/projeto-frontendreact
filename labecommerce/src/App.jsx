@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from './Components/Home/Home';
 import Header from './Components/Header/Header';
 import { ContainerApp, ContainerHomeCart } from './AppStyle';
@@ -23,7 +23,6 @@ function App() {
     const addToCart = (productName, productValue, quantity) => {
         const existsInCart =
             cart.filter((item) => item[0] === productName).length > 0;
-
         if (existsInCart) {
             const updatedCart = cart.map((item) => {
                 if (item[0] === productName) {
@@ -50,11 +49,9 @@ function App() {
     const removeCart = (itemRemove, indexRemove) => {
         if (itemRemove[2] === 1) {
             const newList = cart.filter((item) => item !== itemRemove);
-            console.log(newList);
             setCart(newList);
         } else if (itemRemove[2] > 1) {
             const unitaryValue = itemRemove[1] / itemRemove[2];
-            console.log(unitaryValue);
             const updatedCart = cart.map((item, index) => {
                 if (index === indexRemove) {
                     return [item[0], item[1] - unitaryValue, item[2] - 1];
@@ -66,9 +63,79 @@ function App() {
     };
     //  - - - - - - - - - - - - - - - - - - - - -
 
+    // ESTADOS PARA O COMPONENTE FILTRO:
+    const [productsFiltered, setProductsFiltered] = useState(productsList);
+    // console.log(productsFiltered);
+    //  - - - - - - - - - - - - - - - - - - - - -
+
+    // PARA O COMPONENTE FILTER ACESSAR:
+    // TRATATIVAS PARA NÚMEROS NEGATIVOS
+    const treatmentNegativeNumber = (event, functionSetFilter) => {
+        let enteredValue = Number(event.target.value);
+        enteredValue < 0
+            ? functionSetFilter('')
+            : functionSetFilter(enteredValue);
+    };
+
+    // FUNÇÕES QUE MUDAM OS ESTADOS
+    // filtro de pesquisa por NOME
+    const handleSearchFilterChanges = (event) => {
+        setSearchFilter(event.target.value);
+    };
+
+    // filtro de pesquisa por MAX
+    const handleMaxFilterChanges = (event) => {
+        treatmentNegativeNumber(event, setMaxFilter);
+    };
+
+    // filtro de pesquisa por MIN
+    const handleMinFilterChanges = (event) => {
+        treatmentNegativeNumber(event, setMinFilter);
+
+        //
+        //const newValues = productsList.filter((item) => {
+        //     if (minFilter > 0) {
+        //         console.log('DENTRO da função', minFilter); // valor desatualizado
+        //         return item.value <= minFilter;
+        //     }
+        // });
+        // setProductsFiltered(newValues);
+    };
+    // console.log('FORA da função', minFilter); // valor atualizado
+
+    useEffect(() => {
+        const filteredProducts = productsList.filter((item) => {
+            // Aplicar filtro de pesquisa
+            if (
+                searchFilter &&
+                !item.name.toLowerCase().includes(searchFilter.toLowerCase())
+            ) {
+                return false;
+            }
+            // Aplicar filtro mínimo
+            if (minFilter && item.value < minFilter) {
+                return false;
+            }
+            // Aplicar filtro máximo
+            if (maxFilter && item.value > maxFilter) {
+                return false;
+            }
+            console.log('entrou no useEffect');
+            return true;
+        });
+
+        setProductsFiltered(filteredProducts);
+    }, [searchFilter, minFilter, maxFilter, productsList]);
+
+    console.log(productsFiltered);
     return (
         <ContainerApp>
             <Header
+                productsFiltered={productsFiltered}
+                setProductsFiltered={setProductsFiltered}
+                handleSearchFilterChanges={handleSearchFilterChanges}
+                handleMinFilterChanges={handleMinFilterChanges}
+                handleMaxFilterChanges={handleMaxFilterChanges}
                 minFilter={minFilter}
                 setMinFilter={setMinFilter}
                 maxFilter={maxFilter}
@@ -79,6 +146,7 @@ function App() {
             <ContainerHomeCart>
                 <Home
                     productsList={productsList}
+                    productsFiltered={productsFiltered}
                     amount={amount}
                     setAmount={setAmount}
                     cart={cart}
