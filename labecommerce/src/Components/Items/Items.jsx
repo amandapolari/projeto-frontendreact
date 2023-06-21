@@ -1,6 +1,21 @@
+import { useEffect } from 'react';
 import { ContainerItems, InfoItems } from './ItemsSyle';
 
 function Items({ amount, setAmount, cart, setCart, removeCart }) {
+    // Função para calcular o preço total
+    const calculateTotalPrice = () => {
+        let totalPrice = 0;
+        for (const item of cart) {
+            const itemPrice = parseFloat(item[1]);
+            totalPrice += itemPrice;
+        }
+        return totalPrice.toFixed(2);
+    };
+
+    useEffect(() => {
+        setAmount(calculateTotalPrice());
+    }, [amount, cart]);
+
     const listCart = cart.map((item, index) => (
         <InfoItems key={index}>
             {console.log(item)}
@@ -20,13 +35,8 @@ function Items({ amount, setAmount, cart, setCart, removeCart }) {
     return (
         <ContainerItems>
             <h2>Cart</h2>
-            {/* <InfoItems> */}
-            {/* <h4>Nome</h4> */}
-            {/* <p>Un</p> */}
-            {/* <p>Quant</p> */}
-            {/* <p>Subtotal</p> */}
             {listCart}
-            {/* </InfoItems> */}
+            <p>Total: R${amount}</p>
         </ContainerItems>
     );
 }
