@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import Home from './Components/Home/Home';
 import Header from './Components/Header/Header';
@@ -6,20 +7,13 @@ import Cart from './Components/Cart/Cart';
 import productsList from './assets/productsList.js';
 
 function App() {
-    // [x] ESTADOS PARA O COMPONENTE: HEADER > FILTERS
     const [minFilter, setMinFilter] = useState('');
     const [maxFilter, setMaxFilter] = useState('');
     const [searchFilter, setSearchFilter] = useState('');
-    //  - - - - - - - - - - - - - - - - - - - - -
-
-    // ESTADOS PARA O COMPONENTE:
-    // [x] HOME > PRODUCTCARD
-    // [x] CART > ITEMS
     const [amount, setAmount] = useState('');
     const [cart, setCart] = useState([]);
-    //  - - - - - - - - - - - - - - - - - - - - -
+    const [productsFiltered, setProductsFiltered] = useState(productsList);
 
-    // useEffect:
     useEffect(() => {
         const listaDoCarrinhoArmazenada = JSON.parse(
             localStorage.getItem('listaDoCarrinho')
@@ -29,16 +23,12 @@ function App() {
     }, []);
 
     useEffect(() => {
-        // adiciona itens do carrinho no local storage caso não seja vazio
         cart.length &&
             localStorage.setItem('listaDoCarrinho', JSON.stringify(cart));
 
-        // remove itens do local storage caso o carrinho esteja vazio
         !cart.length && localStorage.removeItem('listaDoCarrinho');
     }, [cart]);
 
-
-    // Implemente a funcionalidade de adicionar itens no carrinho:
     const addToCart = (productName, productValue, quantity) => {
         const existsInCart =
             cart.filter((item) => item[0] === productName).length > 0;
@@ -62,9 +52,7 @@ function App() {
             setCart(newProductList);
         }
     };
-    //  - - - - - - - - - - - - - - - - - - - - -
 
-    // Implemente a remoção de itens do carrinho
     const removeCart = (itemRemove, indexRemove) => {
         if (itemRemove[2] === 1) {
             const newList = cart.filter((item) => item !== itemRemove);
@@ -80,15 +68,7 @@ function App() {
             setCart(updatedCart);
         }
     };
-    //  - - - - - - - - - - - - - - - - - - - - -
 
-    // ESTADOS PARA O COMPONENTE FILTRO:
-    const [productsFiltered, setProductsFiltered] = useState(productsList);
-    // console.log(productsFiltered);
-    //  - - - - - - - - - - - - - - - - - - - - -
-
-    // PARA O COMPONENTE FILTER ACESSAR:
-    // TRATATIVAS PARA NÚMEROS NEGATIVOS
     const treatmentNegativeNumber = (event, functionSetFilter) => {
         let enteredValue = Number(event.target.value);
         enteredValue < 0
@@ -96,48 +76,38 @@ function App() {
             : functionSetFilter(enteredValue);
     };
 
-    // FUNÇÕES QUE MUDAM OS ESTADOS
-    // filtro de pesquisa por NOME
     const handleSearchFilterChanges = (event) => {
         setSearchFilter(event.target.value);
     };
 
-    // filtro de pesquisa por MAX
     const handleMaxFilterChanges = (event) => {
         treatmentNegativeNumber(event, setMaxFilter);
     };
 
-    // filtro de pesquisa por MIN
     const handleMinFilterChanges = (event) => {
         treatmentNegativeNumber(event, setMinFilter);
-
     };
 
     useEffect(() => {
         const filteredProducts = productsList.filter((item) => {
-            // Aplicar filtro de pesquisa
             if (
                 searchFilter &&
                 !item.name.toLowerCase().includes(searchFilter.toLowerCase())
             ) {
                 return false;
             }
-            // Aplicar filtro mínimo
             if (minFilter && item.value < minFilter) {
                 return false;
             }
-            // Aplicar filtro máximo
             if (maxFilter && item.value > maxFilter) {
                 return false;
             }
-            console.log('entrou no useEffect');
             return true;
         });
 
         setProductsFiltered(filteredProducts);
     }, [searchFilter, minFilter, maxFilter, productsList]);
 
-    console.log(productsFiltered);
     return (
         <ContainerApp>
             <Header
