@@ -19,6 +19,25 @@ function App() {
     const [cart, setCart] = useState([]);
     //  - - - - - - - - - - - - - - - - - - - - -
 
+    // useEffect:
+    useEffect(() => {
+        const listaDoCarrinhoArmazenada = JSON.parse(
+            localStorage.getItem('listaDoCarrinho')
+        );
+
+        listaDoCarrinhoArmazenada && setCart(listaDoCarrinhoArmazenada);
+    }, []);
+
+    useEffect(() => {
+        // adiciona itens do carrinho no local storage caso não seja vazio
+        cart.length &&
+            localStorage.setItem('listaDoCarrinho', JSON.stringify(cart));
+
+        // remove itens do local storage caso o carrinho esteja vazio
+        !cart.length && localStorage.removeItem('listaDoCarrinho');
+    }, [cart]);
+
+
     // Implemente a funcionalidade de adicionar itens no carrinho:
     const addToCart = (productName, productValue, quantity) => {
         const existsInCart =
@@ -92,16 +111,7 @@ function App() {
     const handleMinFilterChanges = (event) => {
         treatmentNegativeNumber(event, setMinFilter);
 
-        //
-        //const newValues = productsList.filter((item) => {
-        //     if (minFilter > 0) {
-        //         console.log('DENTRO da função', minFilter); // valor desatualizado
-        //         return item.value <= minFilter;
-        //     }
-        // });
-        // setProductsFiltered(newValues);
     };
-    // console.log('FORA da função', minFilter); // valor atualizado
 
     useEffect(() => {
         const filteredProducts = productsList.filter((item) => {
