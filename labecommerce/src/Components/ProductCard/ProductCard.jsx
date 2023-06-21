@@ -37,7 +37,7 @@ function ProductCard({
                 </Select>
             </ContainerSuperior>
             {productsOrdered.map((product) => (
-                <Card>
+                <Card key={product.id}>
                     <Img src={product.imageUrl} alt={product.name} />
                     <h3>{product.name}</h3>
                     <p>Preço R$:{product.value}</p>
