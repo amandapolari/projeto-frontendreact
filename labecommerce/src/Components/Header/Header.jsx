@@ -1,6 +1,12 @@
 import React from 'react';
 import Filters from '../Filters/Filters';
-import { ContainerHeader, IconCart, ImgHeader } from './HeaderSyle';
+import {
+    ContainerCartAndItems,
+    ContainerHeader,
+    IconCart,
+    ImgHeader,
+    QuantityItems,
+} from './HeaderSyle';
 // import logo from '../../assets/img/logo.png';
 import space from '../../assets/img/space-robot.png';
 import imgCart from '../../assets/img/cart.png';
@@ -18,6 +24,7 @@ const Header = ({
     handleMinFilterChanges,
     handleMaxFilterChanges,
     ClearFilters,
+    quantityItems,
 }) => {
     return (
         <ContainerHeader>
@@ -37,7 +44,14 @@ const Header = ({
                 handleMaxFilterChanges={handleMaxFilterChanges}
                 ClearFilters={ClearFilters}
             />
-            <IconCart src={imgCart} alt="IMAGEM" />
+            <ContainerCartAndItems>
+                {/* {quantityItems === 0 ? (quantityItems = '') : quantityItems} */}
+                {/* <QuantityItems>{quantityItems}</QuantityItems> */}
+                <QuantityItems>
+                    {quantityItems === 0 ? (quantityItems = '') : quantityItems}
+                </QuantityItems>
+                <IconCart src={imgCart} alt="IMAGEM" />
+            </ContainerCartAndItems>
         </ContainerHeader>
     );
 };

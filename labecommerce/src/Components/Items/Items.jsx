@@ -9,7 +9,16 @@ import {
 } from './ItemsSyle';
 import lixeira from '../../assets/img/lixeira.png';
 
-function Items({ amount, setAmount, cart, setCart, removeCart, ClearCart, quantityItems, setQuantityItems }) {
+function Items({
+    amount,
+    setAmount,
+    cart,
+    setCart,
+    removeCart,
+    ClearCart,
+    quantityItems,
+    setQuantityItems,
+}) {
     const calculateTotalPrice = () => {
         let totalPrice = 0;
         for (const item of cart) {
@@ -25,12 +34,15 @@ function Items({ amount, setAmount, cart, setCart, removeCart, ClearCart, quanti
             const itemElement = parseFloat(item[2]);
             totalElement += itemElement;
         }
+        // if (totalElement === 0) {
+        //     setQuantityItems = '';
+        // }
         return totalElement;
     };
 
     useEffect(() => {
         setAmount(calculateTotalPrice());
-        setQuantityItems(calculateTotalItems())
+        setQuantityItems(calculateTotalItems());
     }, [amount, cart]);
 
     const listCart = cart.map((item, index) => (
@@ -57,11 +69,11 @@ function Items({ amount, setAmount, cart, setCart, removeCart, ClearCart, quanti
                     onClick={(event) => {
                         ClearCart(event);
                     }}
-                    >
+                >
                     <ImgButton src={lixeira} alt="" />
                 </ButtonClearAll>
             </ContainerValueAndButton>
-                    <p>Item: R$ {quantityItems}</p>
+            <p>Itens: {quantityItems}</p>
             {listCart}
         </ContainerItems>
     );

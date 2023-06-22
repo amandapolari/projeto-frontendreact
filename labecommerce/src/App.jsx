@@ -13,7 +13,7 @@ function App() {
     const [searchFilter, setSearchFilter] = useState('');
     const [amount, setAmount] = useState('');
     const [cart, setCart] = useState([]);
-    const [quantityItems, setQuantityItems] = useState(0);
+    const [quantityItems, setQuantityItems] = useState('');
     const [productsFiltered, setProductsFiltered] = useState(productsList);
 
     useEffect(() => {
@@ -137,6 +137,7 @@ function App() {
                 searchFilter={searchFilter}
                 setSearchFilter={setSearchFilter}
                 ClearFilters={ClearFilters}
+                quantityItems={quantityItems}
             />
             <ContainerHomeCart>
                 <Home
