@@ -8,7 +8,9 @@ function Cart({
     cart,
     setCart,
     removeCart,
-    ClearCart,
+    sumCart,
+    removeItemCart,
+    clearCart,
     quantityItems,
     setQuantityItems,
 }) {
@@ -20,7 +22,9 @@ function Cart({
                 cart={cart}
                 setCart={setCart}
                 removeCart={removeCart}
-                ClearCart={ClearCart}
+                sumCart={sumCart}
+                removeItemCart={removeItemCart}
+                clearCart={clearCart}
                 quantityItems={quantityItems}
                 setQuantityItems={setQuantityItems}
             />

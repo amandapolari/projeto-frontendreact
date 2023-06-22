@@ -71,6 +71,27 @@ function App() {
         }
     };
 
+    // colinha:
+    // item 0 -> nome
+    // item 1 -> preço
+    // item 2 -> quantidade
+
+    const sumCart = (itemSum, indexRemove) => {
+            const unitaryValue = itemSum[1] / itemSum[2];
+            const updatedCart = cart.map((item, index) => {
+                if (index === indexRemove) {
+                    return [item[0], item[1] + unitaryValue, item[2] + 1];
+                }
+                return item;
+            });
+            setCart(updatedCart);
+    };
+
+    const removeItemCart = (itemRemove) => {
+        const newList = cart.filter((item) => item !== itemRemove);
+        setCart(newList);
+    };
+
     const treatmentNegativeNumber = (event, functionSetFilter) => {
         let enteredValue = Number(event.target.value);
         enteredValue < 0
@@ -117,7 +138,7 @@ function App() {
         setMaxFilter('');
     };
 
-    const ClearCart = (event) => {
+    const clearCart = (event) => {
         event.preventDefault();
         setCart([]);
     };
@@ -155,7 +176,9 @@ function App() {
                     cart={cart}
                     setCart={setCart}
                     removeCart={removeCart}
-                    ClearCart={ClearCart}
+                    sumCart={sumCart}
+                    removeItemCart={removeItemCart}
+                    clearCart={clearCart}
                     quantityItems={quantityItems}
                     setQuantityItems={setQuantityItems}
                 />

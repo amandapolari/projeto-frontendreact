@@ -6,8 +6,14 @@ import {
     InfoItems,
     ImgButton,
     ButtonClearAll,
+    InputQuantity,
+    DecreaseAndIncreaseButton,
+    TweaksContainer,
+    ImgControll,
 } from './ItemsSyle';
 import lixeira from '../../assets/img/lixeira.png';
+import btnAdd from '../../assets/img/btn-add.png';
+import btnRemove from '../../assets/img/btn-remove.png';
 
 function Items({
     amount,
@@ -15,7 +21,9 @@ function Items({
     cart,
     setCart,
     removeCart,
-    ClearCart,
+    sumCart,
+    removeItemCart,
+    clearCart,
     quantityItems,
     setQuantityItems,
 }) {
@@ -45,14 +53,31 @@ function Items({
     const listCart = cart.map((item, index) => (
         <InfoItems key={index}>
             <h3>{item[0]}</h3>
-            <p>Quant: {item[2]}</p>
+            <TweaksContainer>
+                <DecreaseAndIncreaseButton
+                    onClick={() => {
+                        removeCart(item, index);
+                    }}
+                >
+                    {console.log(item)}
+                    <ImgControll src={btnRemove} alt="" />
+                </DecreaseAndIncreaseButton>
+                <InputQuantity value={item[2]} />
+                <DecreaseAndIncreaseButton
+                    onClick={() => {
+                        sumCart(item, index);
+                    }}
+                >
+                    <ImgControll src={btnAdd} alt="" />
+                </DecreaseAndIncreaseButton>
+            </TweaksContainer>
             <p>Preço: R${item[1].toFixed(2)}</p>
             <button
                 onClick={() => {
-                    removeCart(item, index);
+                    removeItemCart(item, index);
                 }}
             >
-                Remover
+                Excluir Item
             </button>
         </InfoItems>
     ));
@@ -64,7 +89,7 @@ function Items({
                 <p>Total a pagar: R$ {amount}</p>
                 <ButtonClearAll
                     onClick={(event) => {
-                        ClearCart(event);
+                        clearCart(event);
                     }}
                 >
                     <ImgButton src={lixeira} alt="" />
