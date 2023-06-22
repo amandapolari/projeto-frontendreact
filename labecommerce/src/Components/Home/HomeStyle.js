@@ -1,17 +1,21 @@
-import * as styled from 'styled-components';
+import styled from 'styled-components';
 
-export const ContainerHome = styled.styled.div`
-    // Divisória
+export const ContainerHome = styled.div`
     margin: 1vh;
     border: solid 2px black;
-    //
     display: flex;
     flex-direction: column;
-    background:lightsalmon ;
-    height:100vh;
+    background-color: #000000;
+    background-image: radial-gradient(
+        #360033,
+        #0b8793
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 `;
 
-export const ContainerProduct = styled.styled.div`
+export const ContainerProduct = styled.div`
     /* background: red ; */
     /* width: 30vw; */
     /* height:100vh; */

@@ -5,6 +5,7 @@ import Header from './Components/Header/Header';
 import { ContainerApp, ContainerHomeCart } from './AppStyle';
 import Cart from './Components/Cart/Cart';
 import productsList from './assets/productsList.js';
+import Footer from './Components/Footer/Footer';
 
 function App() {
     const [minFilter, setMinFilter] = useState('');
@@ -141,6 +142,7 @@ function App() {
                     removeCart={removeCart}
                 />
             </ContainerHomeCart>
+            <Footer/>
         </ContainerApp>
     );
 }

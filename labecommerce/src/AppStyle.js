@@ -1,11 +1,12 @@
-import * as styled from 'styled-components';
+import styled from 'styled-components';
 
-export const ContainerApp = styled.styled.div`
-    background:lightpink;
+export const ContainerApp = styled.div`
+    background: lightpink;
     /* height: 100vh; */
-    `;
+`;
 
-export const ContainerHomeCart = styled.styled.div`
+export const ContainerHomeCart = styled.div`
+    /* height: 100vh; */
     display: grid;
     grid-template: 1fr / 1fr 0.3fr;
 `;

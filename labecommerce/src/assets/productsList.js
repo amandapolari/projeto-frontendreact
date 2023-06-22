@@ -8,11 +8,13 @@ import blusa7 from './img/products/blusa-7.png';
 import blusa8 from './img/products/blusa-8.png';
 import blusa9 from './img/products/blusa-9.png';
 import blusa10 from './img/products/blusa-10.png';
+import blusa11 from './img/products/blusa-11.png';
+import blusa12 from './img/products/blusa-12.png';
 
 const productsList = [
     {
         id: 1,
-        name: 'Camiseta Astronauta',
+        name: 'Camiseta Astronauta Preta',
         value: 29.99,
         imageUrl: blusa1,
     },
@@ -69,6 +71,18 @@ const productsList = [
         name: 'Camiseta Estrelas Cadentes',
         value: 19.99,
         imageUrl: blusa10,
+    },
+    {
+        id: 11,
+        name: 'Camiseta Nasa',
+        value: 19.99,
+        imageUrl: blusa11,
+    },
+    {
+        id: 12,
+        name: 'Espaço Sideral',
+        value: 19.99,
+        imageUrl: blusa12,
     },
 ];
 

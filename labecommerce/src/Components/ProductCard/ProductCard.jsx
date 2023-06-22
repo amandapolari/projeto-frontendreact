@@ -2,7 +2,9 @@ import {
     Button,
     Card,
     CardContainer,
+    ContainerInfos,
     ContainerSuperior,
+    H3,
     Img,
     P,
     Select,
@@ -38,16 +40,18 @@ function ProductCard({
             </ContainerSuperior>
             {productsOrdered.map((product) => (
                 <Card key={product.id}>
-                    <Img src={product.imageUrl} alt={product.name} />
-                    <h3>{product.name}</h3>
-                    <p>Preço R$:{product.value}</p>
-                    <Button
-                        onClick={() =>
-                            addToCart(product.name, product.value, quantity)
-                        }
-                    >
-                        Adicionar ao Carrinho
-                    </Button>
+                    <ContainerInfos>
+                        <Img src={product.imageUrl} alt={product.name} />
+                        <H3>{product.name}</H3>
+                        <p>Preço R$:{product.value}</p>
+                        <Button
+                            onClick={() =>
+                                addToCart(product.name, product.value, quantity)
+                            }
+                        >
+                            Adicionar ao Carrinho
+                        </Button>
+                    </ContainerInfos>
                 </Card>
             ))}
         </CardContainer>
