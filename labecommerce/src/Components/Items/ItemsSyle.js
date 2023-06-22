@@ -5,7 +5,7 @@ export const ContainerItems = styled.div`
     display: flex;
     flex-direction: column;
     height: 10vh;
-    background: lightseagreen;
+    /* background: lightseagreen; */
     width: 100%;
     display: grid;
     gap: 1vh;
@@ -22,4 +22,20 @@ export const InfoItems = styled.div`
     justify-content: space-around;
     background: lightgrey;
     border: solid black 1px;
+`;
+
+export const ContainerValueAndButton = styled.div`
+    display: flex;
+    justify-content: space-between;
+    /* position:fixed;
+    bottom: 7vh; */
+`;
+
+export const ImgButton = styled.img`
+    height: 3vh;
+`;
+
+export const ButtonClearAll = styled.button`
+    background-color: transparent;
+    border: none;
 `;

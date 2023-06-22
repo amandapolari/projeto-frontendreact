@@ -13,6 +13,7 @@ function App() {
     const [searchFilter, setSearchFilter] = useState('');
     const [amount, setAmount] = useState('');
     const [cart, setCart] = useState([]);
+    const [quantityItems, setQuantityItems] = useState(0);
     const [productsFiltered, setProductsFiltered] = useState(productsList);
 
     useEffect(() => {
@@ -116,6 +117,11 @@ function App() {
         setMaxFilter('');
     };
 
+    const ClearCart = (event) => {
+        event.preventDefault();
+        setCart([]);
+    };
+
     return (
         <ContainerApp>
             <Header
@@ -148,6 +154,9 @@ function App() {
                     cart={cart}
                     setCart={setCart}
                     removeCart={removeCart}
+                    ClearCart={ClearCart}
+                    quantityItems={quantityItems}
+                    setQuantityItems={setQuantityItems}
                 />
             </ContainerHomeCart>
             <Footer />

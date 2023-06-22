@@ -1,8 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
-import { ContainerItems, InfoItems } from './ItemsSyle';
+import {
+    ContainerItems,
+    ContainerValueAndButton,
+    InfoItems,
+    ImgButton,
+    ButtonClearAll,
+} from './ItemsSyle';
+import lixeira from '../../assets/img/lixeira.png';
 
-function Items({ amount, setAmount, cart, setCart, removeCart }) {
+function Items({ amount, setAmount, cart, setCart, removeCart, ClearCart, quantityItems, setQuantityItems }) {
     const calculateTotalPrice = () => {
         let totalPrice = 0;
         for (const item of cart) {
@@ -12,8 +19,18 @@ function Items({ amount, setAmount, cart, setCart, removeCart }) {
         return totalPrice.toFixed(2);
     };
 
+    const calculateTotalItems = () => {
+        let totalElement = 0;
+        for (const item of cart) {
+            const itemElement = parseFloat(item[2]);
+            totalElement += itemElement;
+        }
+        return totalElement;
+    };
+
     useEffect(() => {
         setAmount(calculateTotalPrice());
+        setQuantityItems(calculateTotalItems())
     }, [amount, cart]);
 
     const listCart = cart.map((item, index) => (
@@ -33,9 +50,19 @@ function Items({ amount, setAmount, cart, setCart, removeCart }) {
 
     return (
         <ContainerItems>
-            <h2>Cart</h2>
+            <h2>Carrinho</h2>
+            <ContainerValueAndButton>
+                <p>Total a pagar: R$ {amount}</p>
+                <ButtonClearAll
+                    onClick={(event) => {
+                        ClearCart(event);
+                    }}
+                    >
+                    <ImgButton src={lixeira} alt="" />
+                </ButtonClearAll>
+            </ContainerValueAndButton>
+                    <p>Item: R$ {quantityItems}</p>
             {listCart}
-            <p>Total: R${amount}</p>
         </ContainerItems>
     );
 }
