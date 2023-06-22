@@ -1,10 +1,8 @@
-import * as styled from 'styled-components';
+import styled from 'styled-components';
 
-export const ContainerCart = styled.styled.div`
-    // Divisória
+export const ContainerCart = styled.div`
     margin: 1vh;
     border: solid 2px black;
-    //
     display: flex;
     background: lightslategray;
 `;

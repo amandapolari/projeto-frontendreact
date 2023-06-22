@@ -5,7 +5,6 @@ export const ContainerItems = styled.div`
     display: flex;
     flex-direction: column;
     height: 10vh;
-    /* background: lightseagreen; */
     width: 100%;
     display: grid;
     gap: 1vh;
@@ -27,8 +26,6 @@ export const InfoItems = styled.div`
 export const ContainerValueAndButton = styled.div`
     display: flex;
     justify-content: space-between;
-    /* position:fixed;
-    bottom: 7vh; */
 `;
 
 export const ImgButton = styled.img`

@@ -7,7 +7,6 @@ import {
     ImgHeader,
     QuantityItems,
 } from './HeaderSyle';
-// import logo from '../../assets/img/logo.png';
 import space from '../../assets/img/space-robot.png';
 import imgCart from '../../assets/img/cart.png';
 
@@ -28,7 +27,6 @@ const Header = ({
 }) => {
     return (
         <ContainerHeader>
-            {/* <ImgHeader src={logo} alt="IMAGEM" /> */}
             <ImgHeader src={space} alt="IMAGEM" />
             <Filters
                 minFilter={minFilter}
@@ -45,8 +43,6 @@ const Header = ({
                 ClearFilters={ClearFilters}
             />
             <ContainerCartAndItems>
-                {/* {quantityItems === 0 ? (quantityItems = '') : quantityItems} */}
-                {/* <QuantityItems>{quantityItems}</QuantityItems> */}
                 <QuantityItems>
                     {quantityItems === 0 ? (quantityItems = '') : quantityItems}
                 </QuantityItems>

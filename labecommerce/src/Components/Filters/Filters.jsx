@@ -20,7 +20,6 @@ function Filters({
     return (
         <ContainerFilter>
             <form action="">
-                {/* <label htmlFor="inputSearchFilter">Buscar por nome</label> */}
                 <input
                     type="text"
                     id="inputSearchFilter"
@@ -30,7 +29,6 @@ function Filters({
                     }}
                     value={searchFilter}
                 />
-                {/* <label htmlFor="inputMinFilter">Valor Mínimo</label> */}
                 <input
                     type="number"
                     id="inputMinFilter"
@@ -40,7 +38,6 @@ function Filters({
                     }}
                     value={minFilter}
                 />
-                {/* <label htmlFor="inputMaxFilter">Valor Máximo</label> */}
                 <input
                     type="number"
                     id="inputMaxFilter"

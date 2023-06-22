@@ -34,9 +34,6 @@ function Items({
             const itemElement = parseFloat(item[2]);
             totalElement += itemElement;
         }
-        // if (totalElement === 0) {
-        //     setQuantityItems = '';
-        // }
         return totalElement;
     };
 
@@ -47,7 +44,7 @@ function Items({
 
     const listCart = cart.map((item, index) => (
         <InfoItems key={index}>
-            <h3>Nome: {item[0]}</h3>
+            <h3>{item[0]}</h3>
             <p>Quant: {item[2]}</p>
             <p>Preço: R${item[1].toFixed(2)}</p>
             <button
