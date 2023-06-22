@@ -8,7 +8,12 @@ import {
     QuantityItems,
 } from './HeaderSyle';
 import space from '../../assets/img/space-robot.png';
-import imgCart from '../../assets/img/cart.png';
+// modelo carrinho 1
+// import imgCart from '../../assets/img/cart.png';
+// modelo carrinho 2
+// import imgCart from '../../assets/img/cart-4.png';
+// modelo carrinho 3
+import imgCart from '../../assets/img/cart-3.png';
 
 const Header = ({
     minFilter,
