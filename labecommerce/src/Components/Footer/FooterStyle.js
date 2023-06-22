@@ -8,6 +8,6 @@ export const ContainerFooter = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0.5vh;
-    height: 10vh;
+    height: 5vh;
     background: lightblue;
 `;

@@ -17,6 +17,7 @@ const Header = ({
     handleSearchFilterChanges,
     handleMinFilterChanges,
     handleMaxFilterChanges,
+    ClearFilters,
 }) => {
     return (
         <ContainerHeader>
@@ -34,6 +35,7 @@ const Header = ({
                 handleSearchFilterChanges={handleSearchFilterChanges}
                 handleMinFilterChanges={handleMinFilterChanges}
                 handleMaxFilterChanges={handleMaxFilterChanges}
+                ClearFilters={ClearFilters}
             />
             <IconCart src={imgCart} alt="IMAGEM" />
         </ContainerHeader>

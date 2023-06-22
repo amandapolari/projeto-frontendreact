@@ -109,6 +109,13 @@ function App() {
         setProductsFiltered(filteredProducts);
     }, [searchFilter, minFilter, maxFilter, productsList]);
 
+    const ClearFilters = (event) => {
+        event.preventDefault();
+        setSearchFilter('');
+        setMinFilter('');
+        setMaxFilter('');
+    };
+
     return (
         <ContainerApp>
             <Header
@@ -123,6 +130,7 @@ function App() {
                 setMaxFilter={setMaxFilter}
                 searchFilter={searchFilter}
                 setSearchFilter={setSearchFilter}
+                ClearFilters={ClearFilters}
             />
             <ContainerHomeCart>
                 <Home
@@ -142,7 +150,7 @@ function App() {
                     removeCart={removeCart}
                 />
             </ContainerHomeCart>
-            <Footer/>
+            <Footer />
         </ContainerApp>
     );
 }

@@ -29,7 +29,7 @@ function ProductCard({
     return (
         <CardContainer>
             <ContainerSuperior>
-                <P>Quantidade de produtos: {productsOrdered.length}</P>
+                <P>Produtos encontrados: {productsOrdered.length}</P>
                 <Select value={ordination} onChange={handleChangeSelect}>
                     <option disabled value="">
                         Selecione

@@ -16,6 +16,7 @@ export const ContainerHome = styled.div`
 `;
 
 export const ContainerProduct = styled.div`
+    min-height: 80vh;
     /* background: red ; */
     /* width: 30vw; */
     /* height:100vh; */
