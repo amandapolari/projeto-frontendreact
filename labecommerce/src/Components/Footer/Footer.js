@@ -1,19 +1,19 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import { ContainerFooter } from './FooterStyle';
+import { AnchorLink, ContainerFooter, ParagraphFooter } from './FooterStyle';
 
 const Footer = () => {
     return (
         <ContainerFooter>
-            <p>
+            <ParagraphFooter>
                 Desenvolvido por{' '}
-                <a
+                <AnchorLink
                     target="_blank"
                     href="https://www.linkedin.com/in/amandapolari/"
                 >
                     Amanda Polari
-                </a>
-            </p>
+                </AnchorLink>
+            </ParagraphFooter>
         </ContainerFooter>
     );
 };
