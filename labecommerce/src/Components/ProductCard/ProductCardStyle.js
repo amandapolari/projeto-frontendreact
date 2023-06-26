@@ -5,10 +5,29 @@ export const CardContainer = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
 `;
+
+export const ContainerSuperior = styled.div`
+    /* border: solid 1.2px wheat; */
+    /* padding: 0 3vw 0 3vw; */
+    padding: 2vh 4vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffff;
+`;
+
+// export const ContainerInferior = styled.div`
+    
+// `;
+
+
+
 export const Card = styled.div`
-    border: solid 1.2px black;
-    /* align-items: center; */
-    /* justify-content: center; */
+    border: solid 7px #3c355b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 15vw;
     background-color: white;
     margin-bottom: 2vh;
@@ -24,16 +43,7 @@ export const Button = styled.button`
     /* justify-self: center; */
 `;
 
-export const ContainerSuperior = styled.div`
-    /* border: solid 1.2px wheat; */
-    /* padding: 0 3vw 0 3vw; */
-    padding: 2vh 4vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #ffff;
-`;
+
 
 export const P = styled.p`
     /* margin:2vw; */
@@ -67,9 +77,9 @@ export const H3 = styled.h3`
 `;
 
 export const ContainerInfos = styled.div`
-    display: grid;
+    /* display: grid;
     background-color: lightgreen;
-    grid-template: 1fr / 1fr;
-    align-content: center;
-    justify-content: center;
+    grid-template: 1fr / 1fr; */
+    /* align-content: center;
+    justify-content: center; */
 `;

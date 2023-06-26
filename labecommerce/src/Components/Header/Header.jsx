@@ -1,6 +1,7 @@
 import React from 'react';
 import Filters from '../Filters/Filters';
 import {
+    BtnCart,
     ContainerCartAndItems,
     ContainerHeader,
     IconCart,
@@ -32,6 +33,7 @@ const Header = ({
     handleMaxFilterChanges,
     ClearFilters,
     quantityItems,
+    handleClick,
 }) => {
     return (
         <ContainerHeader>
@@ -55,7 +57,13 @@ const Header = ({
                 <QuantityItems>
                     {quantityItems === 0 ? (quantityItems = '') : quantityItems}
                 </QuantityItems>
-                <IconCart src={imgCart} alt="IMAGEM" />
+                <IconCart
+                    onClick={(event) => {
+                        handleClick(event);
+                    }}
+                    src={imgCart}
+                    alt="IMAGEM"
+                />
             </ContainerCartAndItems>
         </ContainerHeader>
     );

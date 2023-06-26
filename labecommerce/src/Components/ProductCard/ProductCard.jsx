@@ -2,6 +2,7 @@ import {
     Button,
     Card,
     CardContainer,
+    ContainerInferior,
     ContainerInfos,
     ContainerSuperior,
     H3,
@@ -38,22 +39,29 @@ function ProductCard({
                     <option>Decrescente</option>
                 </Select>
             </ContainerSuperior>
-            {productsOrdered.map((product) => (
-                <Card key={product.id}>
-                    <ContainerInfos>
-                        <Img src={product.imageUrl} alt={product.name} />
-                        <H3>{product.name}</H3>
-                        <p>Preço R$:{product.value}</p>
-                        <Button
-                            onClick={() =>
-                                addToCart(product.name, product.value, quantity)
-                            }
-                        >
-                            Adicionar ao Carrinho
-                        </Button>
-                    </ContainerInfos>
-                </Card>
-            ))}
+
+            {/* <ContainerInferior> */}
+                {productsOrdered.map((product) => (
+                    <Card key={product.id}>
+                        <ContainerInfos>
+                            <Img src={product.imageUrl} alt={product.name} />
+                            <H3>{product.name}</H3>
+                            <p>Preço R$:{product.value}</p>
+                            <Button
+                                onClick={() =>
+                                    addToCart(
+                                        product.name,
+                                        product.value,
+                                        quantity
+                                    )
+                                }
+                            >
+                                Adicionar ao Carrinho
+                            </Button>
+                        </ContainerInfos>
+                    </Card>
+                ))}
+            {/* </ContainerInferior> */}
         </CardContainer>
     );
 }

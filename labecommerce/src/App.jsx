@@ -29,6 +29,9 @@ function App() {
             localStorage.setItem('listaDoCarrinho', JSON.stringify(cart));
 
         !cart.length && localStorage.removeItem('listaDoCarrinho');
+
+        const totalItems = cart.reduce((total, item) => total + item[2], 0);
+        setQuantityItems(totalItems);
     }, [cart]);
 
     const addToCart = (productName, productValue, quantity) => {
@@ -71,20 +74,15 @@ function App() {
         }
     };
 
-    // colinha:
-    // item 0 -> nome
-    // item 1 -> preço
-    // item 2 -> quantidade
-
     const sumCart = (itemSum, indexRemove) => {
-            const unitaryValue = itemSum[1] / itemSum[2];
-            const updatedCart = cart.map((item, index) => {
-                if (index === indexRemove) {
-                    return [item[0], item[1] + unitaryValue, item[2] + 1];
-                }
-                return item;
-            });
-            setCart(updatedCart);
+        const unitaryValue = itemSum[1] / itemSum[2];
+        const updatedCart = cart.map((item, index) => {
+            if (index === indexRemove) {
+                return [item[0], item[1] + unitaryValue, item[2] + 1];
+            }
+            return item;
+        });
+        setCart(updatedCart);
     };
 
     const removeItemCart = (itemRemove) => {
@@ -143,6 +141,12 @@ function App() {
         setCart([]);
     };
 
+    const [showComponent, setShowComponent] = useState(false);
+
+    const handleClick = () => {
+        setShowComponent(!showComponent);
+    };
+
     return (
         <ContainerApp>
             <Header
@@ -159,8 +163,9 @@ function App() {
                 setSearchFilter={setSearchFilter}
                 ClearFilters={ClearFilters}
                 quantityItems={quantityItems}
+                handleClick={handleClick}
             />
-            <ContainerHomeCart>
+            <ContainerHomeCart showComponent={showComponent}>
                 <Home
                     productsList={productsList}
                     productsFiltered={productsFiltered}
@@ -170,18 +175,20 @@ function App() {
                     setCart={setCart}
                     addToCart={addToCart}
                 />
-                <Cart
-                    amount={amount}
-                    setAmount={setAmount}
-                    cart={cart}
-                    setCart={setCart}
-                    removeCart={removeCart}
-                    sumCart={sumCart}
-                    removeItemCart={removeItemCart}
-                    clearCart={clearCart}
-                    quantityItems={quantityItems}
-                    setQuantityItems={setQuantityItems}
-                />
+                {showComponent && (
+                    <Cart
+                        amount={amount}
+                        setAmount={setAmount}
+                        cart={cart}
+                        setCart={setCart}
+                        removeCart={removeCart}
+                        sumCart={sumCart}
+                        removeItemCart={removeItemCart}
+                        clearCart={clearCart}
+                        quantityItems={quantityItems}
+                        setQuantityItems={setQuantityItems}
+                    />
+                )}
             </ContainerHomeCart>
             <Footer />
         </ContainerApp>
