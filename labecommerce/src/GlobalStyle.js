@@ -8,5 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
         font-family: 'Quantico', sans-serif;
+        /* color: #f4b3a0; */
     }
 `;

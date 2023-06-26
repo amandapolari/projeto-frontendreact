@@ -7,7 +7,10 @@ export const ContainerHeader = styled.div`
     align-items: center;
     padding: 0.5vh;
     height: 10vh;
-    background: lightblue;
+    background: linear-gradient(to bottom right, #170d3e, #3c355b);
+    color: #cccccc;
+    position: sticky;
+    top: 0;
 `;
 
 export const ImgHeader = styled.img`
@@ -36,4 +39,9 @@ export const ContainerCartAndItems = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+`;
+
+export const NameSite = styled.p`
+    padding: 2vh;
+    text-align: center;
 `;

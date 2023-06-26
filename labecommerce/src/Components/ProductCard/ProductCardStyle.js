@@ -25,11 +25,14 @@ export const Button = styled.button`
 `;
 
 export const ContainerSuperior = styled.div`
-    padding: 0 3vw 0 3vw;
+    /* border: solid 1.2px wheat; */
+    /* padding: 0 3vw 0 3vw; */
+    padding: 2vh 4vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #ffff;
 `;
 
 export const P = styled.p`
@@ -39,10 +42,23 @@ export const P = styled.p`
 `;
 
 export const Select = styled.select`
-    height: 3vh;
-    /* margin:2vw; */
-    /* width:50%; */
-    /* display: block; */
+    background-color: #3c355b;
+    color: #ffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    appearance: none;
+    font-size: 16px;
+    width: 200px;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px #3c355b;
+    }
+    option {
+        font-size: 16px;
+        padding: 2vh;
+    }
 `;
 
 export const H3 = styled.h3`
@@ -55,6 +71,5 @@ export const ContainerInfos = styled.div`
     background-color: lightgreen;
     grid-template: 1fr / 1fr;
     align-content: center;
-    justify-content: center ;
-    /* margin-top: 2px ; */
+    justify-content: center;
 `;

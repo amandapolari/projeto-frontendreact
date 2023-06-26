@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const ContainerApp = styled.div`
-    background: lightpink;
-    /* height: 100vh; */
+    background-image: url('./background-8.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
 
 export const ContainerHomeCart = styled.div`
-    /* height: 100vh; */
     display: grid;
     grid-template: 1fr / 1fr 0.3fr;
 `;

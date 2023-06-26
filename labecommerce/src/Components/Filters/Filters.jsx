@@ -1,5 +1,5 @@
 /* eslint-disable array-callback-return */
-import { ContainerFilter } from './FiltersStyle';
+import { BtnClear, ContainerFilter, Form, InputFilter } from './FiltersStyle';
 
 function Filters({
     minFilter,
@@ -19,8 +19,8 @@ function Filters({
 }) {
     return (
         <ContainerFilter>
-            <form action="">
-                <input
+            <Form>
+                <InputFilter
                     type="text"
                     id="inputSearchFilter"
                     placeholder="Buscar por nome"
@@ -29,7 +29,7 @@ function Filters({
                     }}
                     value={searchFilter}
                 />
-                <input
+                <InputFilter
                     type="number"
                     id="inputMinFilter"
                     placeholder="Valor Mínimo"
@@ -38,7 +38,7 @@ function Filters({
                     }}
                     value={minFilter}
                 />
-                <input
+                <InputFilter
                     type="number"
                     id="inputMaxFilter"
                     placeholder="Valor Máximo"
@@ -47,8 +47,8 @@ function Filters({
                     }}
                     value={maxFilter}
                 />
-                <button onClick={(event) => ClearFilters(event)}>Limpar</button>
-            </form>
+                <BtnClear onClick={(event) => ClearFilters(event)}>Limpar</BtnClear>
+            </Form>
         </ContainerFilter>
     );
 }
