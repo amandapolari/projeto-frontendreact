@@ -62,3 +62,7 @@ export const DecreaseAndIncreaseButton = styled.button`
 export const ImgControll = styled.img`
     height: 3vh;
 `;
+export const WarningParagraph = styled.p`
+    /* height: 3vh; */
+    text-align: center;
+`;

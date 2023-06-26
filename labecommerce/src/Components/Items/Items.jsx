@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import {
@@ -10,6 +11,7 @@ import {
     DecreaseAndIncreaseButton,
     TweaksContainer,
     ImgControll,
+    WarningParagraph,
 } from './ItemsSyle';
 import lixeira from '../../assets/img/lixeira.png';
 import btnAdd from '../../assets/img/btn-add.png';
@@ -99,7 +101,7 @@ function Items({
             {/* <p>Itens: {quantityItems}</p> */}
             {/* testando novo formato: */}
             {amount == 0 ? (
-                ''
+                <WarningParagraph>Seu carrinho está vazio!</WarningParagraph>
             ) : (
                 <ContainerValueAndButton>
                     <p>Total a pagar: R$ {amount}</p>
