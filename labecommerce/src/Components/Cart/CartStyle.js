@@ -4,5 +4,5 @@ export const ContainerCart = styled.div`
     margin: 1vh;
     border: solid 2px black;
     display: flex;
-    /* background: lightslategray; */
+    color: #ffff;
 `;

@@ -85,7 +85,8 @@ function Items({
     return (
         <ContainerItems>
             <h2>Carrinho</h2>
-            <ContainerValueAndButton>
+            {/* formato anterior: */}
+            {/* <ContainerValueAndButton>
                 <p>Total a pagar: R$ {amount}</p>
                 <ButtonClearAll
                     onClick={(event) => {
@@ -94,8 +95,25 @@ function Items({
                 >
                     <ImgButton src={lixeira} alt="" />
                 </ButtonClearAll>
-            </ContainerValueAndButton>
-            <p>Itens: {quantityItems}</p>
+            </ContainerValueAndButton> */}
+            {/* <p>Itens: {quantityItems}</p> */}
+            {/* testando novo formato: */}
+            {amount == 0 ? (
+                ''
+            ) : (
+                <ContainerValueAndButton>
+                    <p>Total a pagar: R$ {amount}</p>
+                    <ButtonClearAll
+                        onClick={(event) => {
+                            clearCart(event);
+                        }}
+                    >
+                        <ImgButton src={lixeira} alt="" />
+                    </ButtonClearAll>
+                </ContainerValueAndButton>
+            )}
+
+            {quantityItems === 0 ? '' : <p>Itens: {quantityItems}</p>}
             {listCart}
         </ContainerItems>
     );
