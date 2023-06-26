@@ -7,7 +7,7 @@ import {
     ImgHeader,
     QuantityItems,
 } from './HeaderSyle';
-import space from '../../assets/img/space-robot.png';
+import space from '../../assets/img/camisa.png';
 // modelo carrinho 1
 import imgCart from '../../assets/img/cart.png';
 // modelo carrinho 2
@@ -33,6 +33,7 @@ const Header = ({
     return (
         <ContainerHeader>
             <ImgHeader src={space} alt="IMAGEM" />
+            <p>AstroModas</p>
             <Filters
                 minFilter={minFilter}
                 setMinFilter={setMinFilter}
