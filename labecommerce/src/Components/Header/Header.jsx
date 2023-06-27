@@ -1,8 +1,22 @@
 import React from 'react';
 import Filters from '../Filters/Filters';
-import { ContainerHeader, IconCart, ImgHeader } from './HeaderSyle';
-import logo from '../../assets/img/logo.png';
-import imgCart from '../../assets/img/cart.png';
+import {
+    ContainerCartAndItems,
+    ContainerHeader,
+    IconCart,
+    ImgHeader,
+    NameSite,
+    QuantityItems,
+} from './HeaderSyle';
+import space from '../../assets/img/camisa.png';
+// modelo carrinho 1
+// import imgCart from '../../assets/img/cart.png';
+// modelo carrinho 2
+// import imgCart from '../../assets/img/cart-4.png';
+// modelo carrinho 3
+// import imgCart from '../../assets/img/cart-3.png';
+// modelo carrinho 4
+import imgCart from '../../assets/img/cart-personalizado-3.png';
 
 const Header = ({
     minFilter,
@@ -16,10 +30,14 @@ const Header = ({
     handleSearchFilterChanges,
     handleMinFilterChanges,
     handleMaxFilterChanges,
+    ClearFilters,
+    quantityItems,
+    handleClick,
 }) => {
     return (
         <ContainerHeader>
-            <ImgHeader src={logo} alt="IMAGEM" />
+            {/* <ImgHeader src={space} alt="IMAGEM" /> */}
+            <NameSite>LABECOMMERCE</NameSite>
             <Filters
                 minFilter={minFilter}
                 setMinFilter={setMinFilter}
@@ -32,8 +50,20 @@ const Header = ({
                 handleSearchFilterChanges={handleSearchFilterChanges}
                 handleMinFilterChanges={handleMinFilterChanges}
                 handleMaxFilterChanges={handleMaxFilterChanges}
+                ClearFilters={ClearFilters}
             />
-            <IconCart src={imgCart} alt="IMAGEM" />
+            <ContainerCartAndItems>
+                <QuantityItems>
+                    {quantityItems === 0 ? (quantityItems = '') : quantityItems}
+                </QuantityItems>
+                <IconCart
+                    onClick={(event) => {
+                        handleClick(event);
+                    }}
+                    src={imgCart}
+                    alt="IMAGEM"
+                />
+            </ContainerCartAndItems>
         </ContainerHeader>
     );
 };
