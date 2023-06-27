@@ -7,8 +7,6 @@ export const CardContainer = styled.div`
 `;
 
 export const ContainerSuperior = styled.div`
-    /* border: solid 1.2px wheat; */
-    /* padding: 0 3vw 0 3vw; */
     padding: 2vh 4vh;
     width: 100%;
     display: flex;
@@ -16,10 +14,6 @@ export const ContainerSuperior = styled.div`
     align-items: center;
     color: #ffff;
 `;
-
-// export const ContainerInferior = styled.div`
-
-// `;
 
 export const Card = styled.div`
     /* border: solid 7px #3c355b; */
@@ -41,9 +35,7 @@ export const Img = styled.img`
 `;
 
 export const Button = styled.button`
-    /* background-color: #170d3e4d; */
     background: linear-gradient(to bottom, #170d3e, #170d3e4d);
-
     color: #ffff;
     border: none;
     padding: 10px 20px;
@@ -54,27 +46,12 @@ export const Button = styled.button`
     &:hover {
         box-shadow: 0 0 5px #3c355b;
     }
-    /* background-color: #170d3e;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    &:hover {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    } */
 `;
 
 export const P = styled.p`
-    /* margin:2vw; */
-    /* width:50%; */
-    /* display: block; */
 `;
 
 export const PriceText = styled.p`
-    /* border: solid 1px #170d3e; */
 `;
 
 export const Select = styled.select`
@@ -98,7 +75,6 @@ export const Select = styled.select`
 `;
 
 export const H3 = styled.h3`
-    /* border: solid 1px #170d3e; */
     margin: 1vh 0vh 0.5vh 0vh;
     font-size: 2vh;
 `;
@@ -112,10 +88,8 @@ export const ContainerInfos = styled.div`
 `;
 
 export const NoneItems = styled.p`
-    /* border: solid 1px white; */
     height: 71vh;
     width: 90vw;
     font-size: 3vh;
     text-align: center;
-    /* position: block-inline; */
 `;
