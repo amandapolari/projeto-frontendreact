@@ -13,6 +13,7 @@ import {
     ImgControll,
     WarningParagraph,
     ButtonDeleteItem,
+    SummaryContainer,
 } from './ItemsSyle';
 import lixeira from '../../assets/img/lixeira.png';
 import btnAdd from '../../assets/img/btn-add.png';
@@ -101,22 +102,26 @@ function Items({
             </ContainerValueAndButton> */}
             {/* <p>Itens: {quantityItems}</p> */}
             {/* testando novo formato: */}
-            {amount == 0 ? (
-                <WarningParagraph>Seu carrinho está vazio!</WarningParagraph>
-            ) : (
-                <ContainerValueAndButton>
-                    <p>Total: R$ {amount}</p>
-                    <ButtonClearAll
-                        onClick={(event) => {
-                            clearCart(event);
-                        }}
-                    >
-                        <ImgButton src={lixeira} alt="" />
-                    </ButtonClearAll>
-                </ContainerValueAndButton>
-            )}
-
-            {quantityItems === 0 ? '' : <p>Itens: {quantityItems}</p>}
+            <SummaryContainer>
+                <h3>Resumo da Compra:</h3>
+                {quantityItems === 0 ? '' : <p>Itens: {quantityItems}</p>}
+                {amount == 0 ? (
+                    <WarningParagraph>
+                        Seu carrinho está vazio!
+                    </WarningParagraph>
+                ) : (
+                    <ContainerValueAndButton>
+                        <p>Total: R$ {amount}</p>
+                        <ButtonClearAll
+                            onClick={(event) => {
+                                clearCart(event);
+                            }}
+                        >
+                            <ImgButton src={lixeira} alt="" />
+                        </ButtonClearAll>
+                    </ContainerValueAndButton>
+                )}
+            </SummaryContainer>
             {listCart}
         </ContainerItems>
     );

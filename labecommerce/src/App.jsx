@@ -56,6 +56,9 @@ function App() {
             ];
             setCart(newProductList);
         }
+        if(showComponent===false){
+            setShowComponent(true)
+        }
     };
 
     const removeCart = (itemRemove, indexRemove) => {

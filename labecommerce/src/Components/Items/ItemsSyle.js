@@ -29,7 +29,7 @@ export const InfoItems = styled.div`
     flex-direction: column;
     justify-content: space-around;
     /* background: lightgrey; */
-    border: solid black 1px;
+    /* border: solid black 1px; */
     box-shadow: 5px 5px 5px #000000;
 `;
 
@@ -103,4 +103,14 @@ export const ButtonDeleteItem = styled.button`
     &:hover {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     } */
+`;
+
+export const SummaryContainer = styled.div`
+    border: solid 1px #170d3e;
+    display: grid;
+    grid-template: 0.5fr 1fr 1fr / 1fr 1fr;
+    h3 {
+        display: grid;
+        grid-column: 1 / 3;
+    }
 `;

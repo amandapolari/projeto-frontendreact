@@ -34,7 +34,6 @@ export const Card = styled.div`
     width: 15vw;
     margin-bottom: 2vh;
     box-shadow: 5px 5px 5px #000000;
-
 `;
 
 export const Img = styled.img`
@@ -110,4 +109,13 @@ export const ContainerInfos = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+`;
+
+export const NoneItems = styled.p`
+    /* border: solid 1px white; */
+    height: 71vh;
+    width: 90vw;
+    font-size: 3vh;
+    text-align: center;
+    /* position: block-inline; */
 `;

@@ -31,6 +31,7 @@ function ProductCard({
     return (
         <CardContainer>
             <ContainerSuperior>
+                {/* {productsOrdered.length ?  <P>Produtos encontrados: {productsOrdered.length}</P> : <p>Nenhum item encontrado</p>} */}
                 <P>Produtos encontrados: {productsOrdered.length}</P>
                 <Select value={ordination} onChange={handleChangeSelect}>
                     <option disabled value="">
