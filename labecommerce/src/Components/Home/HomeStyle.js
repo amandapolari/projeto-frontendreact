@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerHome = styled.div`
     margin: 1vh;
-    border: solid 2px black;
+    /* border: solid 2px black; */
     display: flex;
     flex-direction: column;
     /* background-color: #000000;
@@ -16,7 +16,7 @@ export const ContainerHome = styled.div`
 `;
 
 export const ContainerProduct = styled.div`
-    min-height: 80vh;
+    /* min-height: 80vh; */
     /* background: red ; */
     /* width: 30vw; */
     /* height:100vh; */

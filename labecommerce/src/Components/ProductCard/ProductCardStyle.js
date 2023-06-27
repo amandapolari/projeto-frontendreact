@@ -18,19 +18,23 @@ export const ContainerSuperior = styled.div`
 `;
 
 // export const ContainerInferior = styled.div`
-    
+
 // `;
 
-
-
 export const Card = styled.div`
-    border: solid 7px #3c355b;
+    /* border: solid 7px #3c355b; */
+    border-radius: 10px;
+    color: #ffff;
+    border: solid 1px #170d3e;
+    background-color: #3c355b;
+    padding: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 15vw;
-    background-color: white;
     margin-bottom: 2vh;
+    box-shadow: 5px 5px 5px #000000;
+
 `;
 
 export const Img = styled.img`
@@ -38,17 +42,40 @@ export const Img = styled.img`
 `;
 
 export const Button = styled.button`
-    /* width: 100%; */
-    /* display: grid; */
-    /* justify-self: center; */
+    /* background-color: #170d3e4d; */
+    background: linear-gradient(to bottom, #170d3e, #170d3e4d);
+
+    color: #ffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    border: solid 1px #170d3e;
+    &:hover {
+        box-shadow: 0 0 5px #3c355b;
+    }
+    /* background-color: #170d3e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    } */
 `;
-
-
 
 export const P = styled.p`
     /* margin:2vw; */
     /* width:50%; */
     /* display: block; */
+`;
+
+export const PriceText = styled.p`
+    /* border: solid 1px #170d3e; */
 `;
 
 export const Select = styled.select`
@@ -72,14 +99,15 @@ export const Select = styled.select`
 `;
 
 export const H3 = styled.h3`
+    /* border: solid 1px #170d3e; */
+    margin: 1vh 0vh 0.5vh 0vh;
     font-size: 2vh;
-    align-items: center;
 `;
 
 export const ContainerInfos = styled.div`
-    /* display: grid;
-    background-color: lightgreen;
-    grid-template: 1fr / 1fr; */
-    /* align-content: center;
-    justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 `;

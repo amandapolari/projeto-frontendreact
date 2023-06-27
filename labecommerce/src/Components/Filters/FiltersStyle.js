@@ -21,11 +21,11 @@ export const InputFilter = styled.input`
     font-size: 2vh;
     &:focus {
         outline: none;
-        box-shadow: 0 0 5px #ff0000;
+        /* box-shadow: 0 0 5px #ff0000; */
+        box-shadow: 0 0 5px #cc9e75;
 
     }
 
-    background-color: #3c355b;
     color: #ffff;
     border: none;
     padding: 10px;

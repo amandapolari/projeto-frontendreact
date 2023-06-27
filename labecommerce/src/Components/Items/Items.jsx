@@ -12,6 +12,7 @@ import {
     TweaksContainer,
     ImgControll,
     WarningParagraph,
+    ButtonDeleteItem,
 } from './ItemsSyle';
 import lixeira from '../../assets/img/lixeira.png';
 import btnAdd from '../../assets/img/btn-add.png';
@@ -74,13 +75,13 @@ function Items({
                 </DecreaseAndIncreaseButton>
             </TweaksContainer>
             <p>Preço: R${item[1].toFixed(2)}</p>
-            <button
+            <ButtonDeleteItem
                 onClick={() => {
                     removeItemCart(item, index);
                 }}
             >
                 Excluir Item
-            </button>
+            </ButtonDeleteItem>
         </InfoItems>
     ));
 
@@ -104,7 +105,7 @@ function Items({
                 <WarningParagraph>Seu carrinho está vazio!</WarningParagraph>
             ) : (
                 <ContainerValueAndButton>
-                    <p>Total a pagar: R$ {amount}</p>
+                    <p>Total: R$ {amount}</p>
                     <ButtonClearAll
                         onClick={(event) => {
                             clearCart(event);
