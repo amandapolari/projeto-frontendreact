@@ -12,7 +12,8 @@ export const ContainerHeader = styled.div`
     box-shadow: 0 4px rgba(0, 0, 0, 0.1);
     /* color: #cccccc; */
     /* color: #1d1117; */
-    color: #908a82;
+    /* color: #908a82; */
+    color: #471835;
     position: sticky;
     top: 0;
 
@@ -52,4 +53,6 @@ export const ContainerCartAndItems = styled.div`
 export const NameSite = styled.p`
     padding: 2vh;
     text-align: center;
+    font-weight: 800;
+    font-size: 4vh;
 `;

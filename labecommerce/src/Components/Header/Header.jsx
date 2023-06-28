@@ -16,7 +16,7 @@ import space from '../../assets/img/camisa.png';
 // modelo carrinho 3
 // import imgCart from '../../assets/img/cart-3.png';
 // modelo carrinho 4
-import imgCart from '../../assets/img/cart-personalizado-3.png';
+import imgCart from '../../assets/img/cart.png';
 
 const Header = ({
     minFilter,

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerApp = styled.div`
-    background-image: url('./background-8.jpg');
+    /* background-image: url('./background-8.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
 `;
