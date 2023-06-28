@@ -16,36 +16,37 @@ export const Form = styled.form`
 `;
 
 export const InputFilter = styled.input`
-    /* background-color: #3c355b; */
-    background-color: #C89F9C;
-    
+    font-family: 'Dosis', sans-serif;
 
+    background-color: #f9f6f5;
     padding: 1vh;
     font-size: 2vh;
-    &:focus {
-        outline: none;
-        /* box-shadow: 0 0 5px #ff0000; */
-        box-shadow: 0 0 5px #cc9e75;
-
-    }
-
-    color: #ffff;
     border: none;
     padding: 10px;
-    /* border-radius: 5px; */
     transition: box-shadow 0.3s ease;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px #c89f9c;
+    }
 `;
 
 export const BtnClear = styled.button`
-    /* background-color: #3c355b; */
-    background-color: #C97C5D;
-    color: #ffff;
-    border: none;
-    padding: 10px 20px;
-    /* border-radius: 5px; */
-    transition: box-shadow 0.3s ease;
+    /* padrão de botão */
+    font-family: 'Dosis', sans-serif;
+    border: 1px solid #b36a5e;
+    /* background-color: #471835; */
+    background-color: #50252D;
+
+    color: #eee2df;
+    font-size: 2vh;
+    font-weight: 600;
+    padding: 1vh 2vh;
+    /* padding: 10px 20px; */
+    /* border-radius: 11px; */
     cursor: pointer;
     &:hover {
         box-shadow: 0 0 5px #3c355b;
+        transition: box-shadow 0.3s ease;
+        /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25); */
     }
 `;

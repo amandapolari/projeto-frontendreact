@@ -1,27 +1,12 @@
 import styled from 'styled-components';
 
 export const ContainerHome = styled.div`
-    margin: 1vh;
-    /* border: solid 2px black; */
+    padding: 1vh;
     display: flex;
     flex-direction: column;
-    /* background-color: #000000;
-    background-image: radial-gradient(
-        #360033,
-        #0b8793
-    );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; */
 `;
 
 export const ContainerProduct = styled.div`
-    /* min-height: 80vh; */
-    /* background: red ; */
-    /* width: 30vw; */
-    /* height:100vh; */
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-around; */
-    /* padding: 1%; */
+    /* altura usada para que o o footer não desloque caso não haja itens a serem renderizados */
+    min-height: 81vh;
 `;

@@ -8,6 +8,7 @@ import {
     NameSite,
     QuantityItems,
 } from './HeaderSyle';
+
 import space from '../../assets/img/camisa.png';
 // modelo carrinho 1
 // import imgCart from '../../assets/img/cart.png';
@@ -16,7 +17,7 @@ import space from '../../assets/img/camisa.png';
 // modelo carrinho 3
 // import imgCart from '../../assets/img/cart-3.png';
 // modelo carrinho 4
-import imgCart from '../../assets/img/cart-personalizado-3.png';
+import imgCart from '../../assets/img/cart-cor-padrao.png';
 
 const Header = ({
     minFilter,
