@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerApp = styled.div`
-    /* background-image: url('./background-8.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #F9F6F5;
 `;
 
 export const ContainerHomeCart = styled.div`

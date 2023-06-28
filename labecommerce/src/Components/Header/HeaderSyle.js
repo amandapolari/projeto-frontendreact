@@ -4,7 +4,7 @@ export const ContainerHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5vh;
+    padding: 0.6vh;
     height: 10vh;
     background-color: #eee2df;
     box-shadow: 4px 8px 6px -5px #777;
@@ -48,4 +48,5 @@ export const NameSite = styled.p`
     text-align: center;
     font-weight: 800;
     font-size: 4vh;
+    color: #50252D;
 `;

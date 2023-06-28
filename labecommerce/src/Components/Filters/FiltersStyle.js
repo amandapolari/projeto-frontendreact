@@ -35,7 +35,7 @@ export const BtnClear = styled.button`
     font-family: 'Dosis', sans-serif;
     border: 1px solid #b36a5e;
     /* background-color: #471835; */
-    background-color: #583243;
+    background-color: #50252D;
 
     color: #eee2df;
     font-size: 2vh;

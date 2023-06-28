@@ -3,37 +3,36 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    /* distância entre os cards */
+    gap: 1.4vh;
 `;
 
 export const ContainerSuperior = styled.div`
-    padding: 2vh 4vh;
+    padding: 0 1vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* color: #ffff; */
+    color: #471835;
+    font-weight: 600;
+    font-size: 3vh;
 `;
 
 export const Card = styled.div`
-    /* border: solid 7px #3c355b; */
-    /* border-radius: 10px; */
-    /* color: #ffff; */
-    /* color: black; */
-    /* color: #ffff; */
     color: #471835;
-    border: solid 1px #170d3e;
-    /* background-color: #3c355b; */
     background-color: #eee2df;
     padding: 2vh;
     display: flex;
+    /* display: grid; */
+    /* grid-template: 3fr 1fr 1fr 1fr / 1fr; */
     align-items: center;
     justify-content: center;
     width: 10vw;
     margin-bottom: 2vh;
-    /* box-shadow: 5px 5px 5px #000000; */
+    box-shadow: 0 0 5px #c89f9c;
     &:hover {
-        box-shadow: 0 0 5px #c89f9c;
+        box-shadow: 0 0 5px #50252d;
         transition: box-shadow 0.4s ease;
     }
 `;
@@ -43,12 +42,10 @@ export const Img = styled.img`
 `;
 
 export const Button = styled.button`
-    /* background: linear-gradient(to bottom, #170d3e, #170d3e4d); */
-    background-color: #c97c5d;
+    background-color: #50252d;
     color: #ffff;
     border: none;
     padding: 10px 20px;
-    /* border-radius: 5px; */
     transition: box-shadow 0.3s ease;
     cursor: pointer;
     border: solid 1px #170d3e;
@@ -62,24 +59,28 @@ export const P = styled.p``;
 export const PriceText = styled.p``;
 
 export const Select = styled.select`
-    /* background-color: #3c355b; */
-    /* background-color: #C97C5D; */
-    background-color: #c97c5d;
-    color: #ffff;
-    border: none;
-    padding: 10px;
-    /* border-radius: 5px; */
+    /* text-align: center; */
+    /* padding: 10px; */
     appearance: none;
     font-size: 16px;
-    width: 200px;
+    background-color: #50252d;
+    color: #ffff;
+    border: none;
+    transition: box-shadow 0.3s ease;
+    /* width: ; */
+    cursor: pointer;
+    border: solid 1px #170d3e;
+    padding: 1vh;
+    &:hover {
+        box-shadow: 0 0 5px #3c355b;
+    }
 
     &:focus {
         outline: none;
         box-shadow: 0 0 5px #3c355b;
     }
     option {
-        font-size: 16px;
-        padding: 2vh;
+        font-size: 17px;
     }
 `;
 
