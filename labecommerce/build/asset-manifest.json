@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/projeto-frontendreact/static/js/main.1ad6abc4.js",
+    "main.js": "/projeto-frontendreact/static/js/main.6b1e5f77.js",
     "static/js/787.9ab7b319.chunk.js": "/projeto-frontendreact/static/js/787.9ab7b319.chunk.js",
     "static/media/blusa-4.png": "/projeto-frontendreact/static/media/blusa-4.c50bd75647666b558b4d.png",
     "static/media/blusa-9.png": "/projeto-frontendreact/static/media/blusa-9.39e01d3eab615aa82a6b.png",
@@ -16,10 +16,10 @@
     "static/media/blusa-1.png": "/projeto-frontendreact/static/media/blusa-1.e05eac94c13876ee5d89.png",
     "static/media/camisa.png": "/projeto-frontendreact/static/media/camisa.519a2632afa45d9cc416.png",
     "index.html": "/projeto-frontendreact/index.html",
-    "main.1ad6abc4.js.map": "/projeto-frontendreact/static/js/main.1ad6abc4.js.map",
+    "main.6b1e5f77.js.map": "/projeto-frontendreact/static/js/main.6b1e5f77.js.map",
     "787.9ab7b319.chunk.js.map": "/projeto-frontendreact/static/js/787.9ab7b319.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1ad6abc4.js"
+    "static/js/main.6b1e5f77.js"
   ]
 }
