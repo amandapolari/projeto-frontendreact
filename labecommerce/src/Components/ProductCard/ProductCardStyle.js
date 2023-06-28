@@ -24,7 +24,7 @@ export const Card = styled.div`
     color: #471835;
     border: solid 1px #170d3e;
     /* background-color: #3c355b; */
-    background-color:  #EEE2DF;
+    background-color: #eee2df;
     padding: 2vh;
     display: flex;
     align-items: center;
@@ -32,6 +32,10 @@ export const Card = styled.div`
     width: 10vw;
     margin-bottom: 2vh;
     /* box-shadow: 5px 5px 5px #000000; */
+    &:hover {
+        box-shadow: 0 0 5px #c89f9c;
+        transition: box-shadow 0.4s ease;
+    }
 `;
 
 export const Img = styled.img`
@@ -40,7 +44,7 @@ export const Img = styled.img`
 
 export const Button = styled.button`
     /* background: linear-gradient(to bottom, #170d3e, #170d3e4d); */
-    background-color: #C97C5D;
+    background-color: #c97c5d;
     color: #ffff;
     border: none;
     padding: 10px 20px;
@@ -53,16 +57,14 @@ export const Button = styled.button`
     }
 `;
 
-export const P = styled.p`
-`;
+export const P = styled.p``;
 
-export const PriceText = styled.p`
-`;
+export const PriceText = styled.p``;
 
 export const Select = styled.select`
     /* background-color: #3c355b; */
     /* background-color: #C97C5D; */
-    background-color: #C97C5D;
+    background-color: #c97c5d;
     color: #ffff;
     border: none;
     padding: 10px;
