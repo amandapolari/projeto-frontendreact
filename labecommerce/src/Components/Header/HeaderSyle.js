@@ -7,10 +7,18 @@ export const ContainerHeader = styled.div`
     align-items: center;
     padding: 0.5vh;
     height: 10vh;
-    background: linear-gradient(to bottom right, #170d3e, #3c355b);
-    color: #cccccc;
+    /* background: linear-gradient(to bottom right, #170d3e, #3c355b); */
+    background-color: #EEE2DF;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    /* color: #cccccc; */
+    /* color: #1d1117; */
+    color: #908a82;
     position: sticky;
     top: 0;
+
+    box-shadow: 4px 8px 6px -5px #777;
+	/* -moz-box-shadow: 4px 8px 6px -5px #777;
+	-webkit-box-shadow: 4px 8px 6px -5px #777; */
 `;
 
 export const ImgHeader = styled.img`

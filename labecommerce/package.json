@@ -12,7 +12,7 @@
     "styled-components": "^6.0.0-rc.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://amandapolari.github.io/projeto-frontendreact/labecommerce",
+  "homepage": "https://amandapolari.github.io/projeto-frontendreact",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

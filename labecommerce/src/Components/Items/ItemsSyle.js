@@ -6,10 +6,11 @@ export const ContainerItems = styled.div`
     flex-direction: column;
     /* height: 100vh; */
     width: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: #ffff;
     /* border: solid 1px #170d3e; */
-    background-color: #3c355b;
+    /* background-color: #3c355b; */
+    background-color: #EED7C5;
     /* background-color: #170d3ecc; */
 
     h2 {
@@ -20,8 +21,9 @@ export const ContainerItems = styled.div`
 
 export const InfoItems = styled.div`
     /* background-color: #170d3ecc; */
-    background: linear-gradient(to bottom right, #170d3e, #3c355b);
-    border-radius: 10px;
+    background-color: #C89F9C;
+    /* background: linear-gradient(to bottom right, #170d3e, #3c355b); */
+    /* border-radius: 10px; */
     /* gap: 10px; */
     padding: 2vh;
     font-size: 15px;
@@ -30,7 +32,7 @@ export const InfoItems = styled.div`
     justify-content: space-around;
     /* background: lightgrey; */
     /* border: solid black 1px; */
-    box-shadow: 5px 5px 5px #000000;
+    /* box-shadow: 5px 5px 5px #000000; */
 `;
 
 export const ContainerValueAndButton = styled.div`
@@ -80,12 +82,13 @@ export const WarningParagraph = styled.p`
 
 export const ButtonDeleteItem = styled.button`
     /* background-color: #170d3e4d; */
-    background: linear-gradient(to bottom, #170d3e, #170d3e4d);
+    background-color: #C97C5D;
+    /* background: linear-gradient(to bottom, #170d3e, #170d3e4d); */
 
     color: #ffff;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transition: box-shadow 0.3s ease;
     cursor: pointer;
     border: solid 1px #170d3e;
