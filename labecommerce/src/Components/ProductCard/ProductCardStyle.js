@@ -13,7 +13,8 @@ export const Select = styled.select`
     appearance: none;
     font-size: 16px;
     background-color: #50252d;
-    color: #ffff;
+    background-color: #50252d;
+    color: #f9f6f5;
     border: none;
     transition: box-shadow 0.3s ease;
     cursor: pointer;
@@ -42,7 +43,7 @@ export const CardContainer = styled.div`
 `;
 
 export const ContainerSuperior = styled.div`
-    padding: 0 1vh;
+    padding: 0 4.1vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -95,8 +96,9 @@ export const PriceText = styled.p`
 `;
 
 export const Button = styled.button`
+    font-family: 'Dosis', sans-serif;
     background-color: #50252d;
-    color: #ffff;
+    color: #f9f6f5;
     border: none;
     padding: 10px 20px;
     transition: box-shadow 0.3s ease;
@@ -107,9 +109,3 @@ export const Button = styled.button`
     }
     grid-row: 4 / 5;
 `;
-
-
-
-
-
-

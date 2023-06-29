@@ -16,6 +16,7 @@ function Cart({
 }) {
     return (
         <ContainerCart>
+            <h2>Carrinho</h2>
             <Items
                 amount={amount}
                 setAmount={setAmount}

@@ -17,17 +17,17 @@ export const ContainerFooter = styled.div`
     padding: 0.5vh;
     /* background: linear-gradient(to bottom right, #170d3e, #3c355b); */
     background-color: #eed7c5;
-    color: #cccccc;
+    /* color: #cccccc; */
 `;
 
 export const ParagraphFooter = styled.p`
-    color: #ffff;
+    /* color: #ffff; */
     font-size: 2vh;
 `;
 
 export const AnchorLink = styled.a`
-    color: #ffff;
+    color: #50252d;
     &:hover {
-        color: #cc9e75;
+        color: #b36a5e;
     }
 `;

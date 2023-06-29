@@ -14,7 +14,9 @@ import {
     WarningParagraph,
     ButtonDeleteItem,
     SummaryContainer,
+    CheckoutButton,
 } from './ItemsSyle';
+
 import lixeira from '../../assets/img/lixeira.png';
 import btnAdd from '../../assets/img/btn-add.png';
 import btnRemove from '../../assets/img/btn-remove.png';
@@ -88,22 +90,8 @@ function Items({
 
     return (
         <ContainerItems>
-            <h2>Carrinho</h2>
-            {/* formato anterior: */}
-            {/* <ContainerValueAndButton>
-                <p>Total a pagar: R$ {amount}</p>
-                <ButtonClearAll
-                    onClick={(event) => {
-                        clearCart(event);
-                    }}
-                >
-                    <ImgButton src={lixeira} alt="" />
-                </ButtonClearAll>
-            </ContainerValueAndButton> */}
-            {/* <p>Itens: {quantityItems}</p> */}
-            {/* testando novo formato: */}
             <SummaryContainer>
-                <h3>Resumo da Compra:</h3>
+                {quantityItems === 0 ? '' : <h3>Resumo da Compra:</h3>}
                 {quantityItems === 0 ? '' : <p>Itens: {quantityItems}</p>}
                 {amount == 0 ? (
                     <WarningParagraph>
@@ -120,6 +108,11 @@ function Items({
                             <ImgButton src={lixeira} alt="" />
                         </ButtonClearAll>
                     </ContainerValueAndButton>
+                )}
+                {quantityItems === 0 ? (
+                    ''
+                ) : (
+                    <CheckoutButton>Finalizar Pedido</CheckoutButton>
                 )}
             </SummaryContainer>
             {listCart}
