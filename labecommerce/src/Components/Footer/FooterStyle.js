@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerFooter = styled.div`
     height: 5vh;
     /* border: solid 2px black; */
-    box-shadow: -4px -8px 6px -5px #777;
+    /* box-shadow: -4px -8px 6px -5px #777; */
     /* box-shadow: 4px 8px 6px -5px #777;
 	-moz-box-shadow: 4px 8px 6px -5px #777;
 	-webkit-box-shadow: 4px 8px 6px -5px #777; */

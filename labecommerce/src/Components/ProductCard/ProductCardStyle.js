@@ -62,7 +62,7 @@ export const Card = styled.div`
     justify-content: center;
     width: 10vw;
     margin-bottom: 2vh;
-    box-shadow: 0 0 5px #c89f9c;
+    /* box-shadow: 0 0 5px #c89f9c; */
     &:hover {
         box-shadow: 0 0 5px #50252d;
         transition: box-shadow 0.4s ease;

@@ -46,19 +46,8 @@ export const WarningDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2.4vh;
 `;
-
-
-
-// export const ContainerValueAndButton = styled.div`
-//     display: grid;
-//     grid-row: 3/4;
-//     p {
-//         display: grid;
-//         grid-column: 1/2;
-//         grid-row: 3/4;
-//     }
-//     `;
 
 export const Container = styled.div`
     grid-column: 1 / 3;
@@ -117,8 +106,6 @@ export const InfoItems = styled.div`
     grid-template: 0.8fr 0.5fr 1fr / 1fr 1.5fr 0.7fr;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
-    /* justify-content: space-around; */
     h3 {
         grid-column: 1 / 4;
     }
@@ -126,7 +113,6 @@ export const InfoItems = styled.div`
         font-size: 2.1vh;
         font-weight: 600;
         align-self: center;
-        /* justify-self: center; */
         grid-row: 2 / 3;
         grid-column: 1 / 2;
     }
@@ -163,10 +149,6 @@ export const DecreaseAndIncreaseButton = styled.button`
     cursor: pointer;
 `;
 
-// export const ImgControll = styled.img`
-//     height: 3vh;
-// `;
-
 export const InputQuantity = styled.input`
     background-color: transparent;
     border: none;
@@ -182,4 +164,13 @@ export const ButtonDeleteItem = styled.button`
     background: none;
     border: none;
     cursor: pointer;
+`;
+
+export const PurchaseCompleted = styled.p`
+    font-family: 'Dosis', sans-serif;
+    background-color: #eee2df;
+    position: absolute;
+    padding: 4vh;
+    font-size: 2.5vh;
+    z-index: 2;
 `;

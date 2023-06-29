@@ -3,24 +3,22 @@
 import { useEffect } from 'react';
 import {
     ContainerItems,
-    ContainerValueAndButton,
     InfoItems,
     ImgButton,
     ButtonClearAll,
     InputQuantity,
     DecreaseAndIncreaseButton,
     TweaksContainer,
-    ImgControll,
     ButtonDeleteItem,
     SummaryContainer,
     CheckoutButton,
-    TotalPrice,
     TotalPriceP,
     Container,
     ProductsP,
     ContainerButton,
     WarningDiv,
     Divisoria,
+    PurchaseCompleted,
 } from './ItemsSyle';
 
 import lixeira from '../../assets/img/lixeira.png';
@@ -36,6 +34,8 @@ function Items({
     clearCart,
     quantityItems,
     setQuantityItems,
+    isPurchaseCompleted,
+    showSentence,
 }) {
     const calculateTotalPrice = () => {
         let totalPrice = 0;
@@ -103,15 +103,16 @@ function Items({
                 )}
                 {amount == 0 ? (
                     <WarningDiv>
-                        <p>
-                            Seu carrinho está vazio!
-                        </p>
+                        {isPurchaseCompleted && (
+                            <PurchaseCompleted>
+                                Compra concluída!
+                            </PurchaseCompleted>
+                        )}
+                        <p>Seu carrinho está vazio!</p>
                     </WarningDiv>
                 ) : (
                     <Container>
-                        {/* <ContainerValueAndButton> */}
                         <TotalPriceP> Total: R$ {amount}</TotalPriceP>
-                        {/* </ContainerValueAndButton> */}
                         <ButtonClearAll
                             onClick={(event) => {
                                 clearCart(event);
@@ -125,7 +126,13 @@ function Items({
                     ''
                 ) : (
                     <ContainerButton>
-                        <CheckoutButton>Finalizar Pedido</CheckoutButton>
+                        <CheckoutButton
+                            onClick={(event) => {
+                                showSentence(event);
+                            }}
+                        >
+                            Finalizar Pedido
+                        </CheckoutButton>
                     </ContainerButton>
                 )}
             </SummaryContainer>

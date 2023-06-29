@@ -56,8 +56,8 @@ function App() {
             ];
             setCart(newProductList);
         }
-        if(showComponent===false){
-            setShowComponent(true)
+        if (showComponent === false) {
+            setShowComponent(true);
         }
     };
 
@@ -150,6 +150,15 @@ function App() {
         setShowComponent(!showComponent);
     };
 
+    const [isPurchaseCompleted, setIsPurchaseCompleted] = useState(false);
+    const showSentence = (event) => {
+        clearCart(event);
+        setIsPurchaseCompleted(true);
+        setTimeout(() => {
+            setIsPurchaseCompleted(false);
+        }, 3000);
+    };
+
     return (
         <ContainerApp>
             <Header
@@ -190,6 +199,8 @@ function App() {
                         clearCart={clearCart}
                         quantityItems={quantityItems}
                         setQuantityItems={setQuantityItems}
+                        isPurchaseCompleted={isPurchaseCompleted}
+                        showSentence={showSentence}
                     />
                 )}
             </ContainerHomeCart>

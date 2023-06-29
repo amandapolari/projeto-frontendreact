@@ -13,6 +13,8 @@ function Cart({
     clearCart,
     quantityItems,
     setQuantityItems,
+    isPurchaseCompleted,
+    showSentence,
 }) {
     return (
         <ContainerCart>
@@ -28,6 +30,8 @@ function Cart({
                 clearCart={clearCart}
                 quantityItems={quantityItems}
                 setQuantityItems={setQuantityItems}
+                isPurchaseCompleted={isPurchaseCompleted}
+                showSentence={showSentence}
             />
         </ContainerCart>
     );
