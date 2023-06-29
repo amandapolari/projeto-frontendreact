@@ -13,16 +13,18 @@ export const ContainerItems = styled.div`
 export const SummaryContainer = styled.div`
     border: solid 1.5px #c89f9c;
     display: grid;
-    /* grid-template: 1fr 0.1fr 0.1fr 0.1fr / 1fr 0.5fr; */
     grid-template: 5vh 5vh 5vh 7vh / 1fr 0.5fr;
-    /* row-gap: 0.1px; */
-    padding: 1vh;
+    padding: 0.4vh 1vh 0.5vh 1vh;
+    align-items: center;
+    font-size: 2.1vh;
+    font-weight: 600;
+
     h3 {
+        font-size: 2.5vh;
         display: grid;
         grid-column: 1/3;
         grid-row: 1/2;
         justify-content: center;
-        align-items: center;
     }
 `;
 
@@ -46,13 +48,7 @@ export const WarningDiv = styled.div`
     align-items: center;
 `;
 
-export const WarningParagraph = styled.p`
-    /* display: grid;
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    justify-content: center;
-    align-items: center; */
-`;
+
 
 // export const ContainerValueAndButton = styled.div`
 //     display: grid;
@@ -73,8 +69,8 @@ export const Container = styled.div`
 `;
 
 export const ButtonClearAll = styled.button`
+    cursor: pointer;
     background-color: transparent;
-    /* border: 1px solid black; */
     align-items: center;
     border: none;
     display: grid;
@@ -85,7 +81,6 @@ export const ButtonClearAll = styled.button`
 
 export const ImgButton = styled.img`
     height: 3vh;
-    /* justify-items: center; */
 `;
 
 export const ContainerButton = styled.div`
@@ -103,71 +98,88 @@ export const CheckoutButton = styled.button`
     grid-row: 4 / 5;
     color: #f9f6f5;
     grid-row: 4/5;
-    padding: 1vh;
-    /* height: 5vh;
-    width: 8vw; */
+    padding: 0.5vh;
     transition: box-shadow 0.3s ease;
+    width: 10vw;
+    font-size: 2vh;
     cursor: pointer;
     border: solid 1px #170d3e;
+    border-radius: 1vh;
     &:hover {
         box-shadow: 0 0 5px #3c355b;
     }
 `;
 
 export const InfoItems = styled.div`
-    padding: 2vh;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    padding: 1vh;
+    font-size: 1.8vh;
+    display: grid;
+    grid-template: 0.8fr 0.5fr 1fr / 1fr 1.5fr 0.7fr;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
     h3 {
+        grid-column: 1 / 4;
+    }
+    p {
+        font-size: 2.1vh;
+        font-weight: 600;
+        align-self: center;
+        /* justify-self: center; */
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
     }
 `;
 
+export const Divisoria = styled.div`
+    border-bottom: 1px solid #c89f9c;
+    grid-column: 1 / 4;
+    height: 2vh;
+`;
+
 export const TweaksContainer = styled.div`
+    border: 1.6px solid #b36a5e;
+    border-radius: 100px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 7vw;
+    width: 8vw;
     height: 3vh;
     overflow: hidden;
-    padding: 1vh;
+    /* testando tamanho de padding */
+    /* padding: 1vh; */
 `;
 
 export const DecreaseAndIncreaseButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
     background-color: transparent;
     border: none;
+    padding: 1.2vh;
+    cursor: pointer;
 `;
 
-export const ImgControll = styled.img`
-    height: 3vh;
-`;
+// export const ImgControll = styled.img`
+//     height: 3vh;
+// `;
 
 export const InputQuantity = styled.input`
     background-color: transparent;
     border: none;
+    border-left: 1.5px solid #b36a5e;
+    border-right: 1.5px solid #b36a5e;
     text-align: center;
-    height: 3vh;
-    width: 4vw;
-    font-size: 2.5vh;
-    color: #ffff;
+    width: 2.4vw;
+    font-size: 1.8vh;
 `;
 
 export const ButtonDeleteItem = styled.button`
     font-family: 'Dosis', sans-serif;
-    background-color: #50252d;
-    color: #f9f6f5;
-    grid-row: 4/5;
-    padding: 1vh;
-    height: 5vh;
-    width: 8vw;
-    transition: box-shadow 0.3s ease;
-    cursor: pointer;
+    background: none;
     border: none;
-    padding: 10px 20px;
-    transition: box-shadow 0.3s ease;
     cursor: pointer;
-    border: solid 1px #170d3e;
-    &:hover {
-        box-shadow: 0 0 5px #3c355b;
-    }
 `;

@@ -11,7 +11,6 @@ import {
     DecreaseAndIncreaseButton,
     TweaksContainer,
     ImgControll,
-    WarningParagraph,
     ButtonDeleteItem,
     SummaryContainer,
     CheckoutButton,
@@ -21,11 +20,10 @@ import {
     ProductsP,
     ContainerButton,
     WarningDiv,
+    Divisoria,
 } from './ItemsSyle';
 
 import lixeira from '../../assets/img/lixeira.png';
-import btnAdd from '../../assets/img/btn-add.png';
-import btnRemove from '../../assets/img/btn-remove.png';
 
 function Items({
     amount,
@@ -71,8 +69,7 @@ function Items({
                         removeCart(item, index);
                     }}
                 >
-                    {console.log(item)}
-                    <ImgControll src={btnRemove} alt="" />
+                    -
                 </DecreaseAndIncreaseButton>
                 <InputQuantity value={item[2]} />
                 <DecreaseAndIncreaseButton
@@ -80,17 +77,18 @@ function Items({
                         sumCart(item, index);
                     }}
                 >
-                    <ImgControll src={btnAdd} alt="" />
+                    +
                 </DecreaseAndIncreaseButton>
             </TweaksContainer>
-            <p>Preço: R${item[1].toFixed(2)}</p>
+            <p>R$ {item[1].toFixed(2)}</p>
             <ButtonDeleteItem
                 onClick={() => {
                     removeItemCart(item, index);
                 }}
             >
-                Excluir Item
+                <ImgButton src={lixeira} alt="" />
             </ButtonDeleteItem>
+            <Divisoria />
         </InfoItems>
     ));
 
@@ -105,9 +103,9 @@ function Items({
                 )}
                 {amount == 0 ? (
                     <WarningDiv>
-                        <WarningParagraph>
+                        <p>
                             Seu carrinho está vazio!
-                        </WarningParagraph>
+                        </p>
                     </WarningDiv>
                 ) : (
                     <Container>
