@@ -1,13 +1,23 @@
 import styled from 'styled-components';
 
-// => Itens do container superior:
+export const CardContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* distância entre os cards: */
+    gap: 1.4vh;
+`;
 
-// export const NoneItems = styled.p`
-//     height: 71vh;
-//     width: 90vw;
-//     font-size: 3vh;
-//     text-align: center;
-// `;
+export const ContainerSuperior = styled.div`
+    padding: 0 4.1vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #471835;
+    font-weight: 600;
+    font-size: 3vh;
+`;
 
 export const Select = styled.select`
     appearance: none;
@@ -31,26 +41,6 @@ export const Select = styled.select`
     option {
         font-size: 17px;
     }
-`;
-// ---
-
-export const CardContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* distância entre os cards */
-    gap: 1.4vh;
-`;
-
-export const ContainerSuperior = styled.div`
-    padding: 0 4.1vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #471835;
-    font-weight: 600;
-    font-size: 3vh;
 `;
 
 export const Card = styled.div`

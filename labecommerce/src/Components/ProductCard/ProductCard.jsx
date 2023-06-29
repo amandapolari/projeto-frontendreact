@@ -2,13 +2,11 @@ import {
     Button,
     Card,
     CardContainer,
-    ContainerInferior,
     PriceText,
     ContainerInfos,
     ContainerSuperior,
     H3,
     Img,
-    P,
     Select,
 } from './ProductCardStyle';
 
@@ -22,18 +20,17 @@ function ProductCard({
     setCart,
     addToCart,
 }) {
-    const handleChangeSelect = (event) => {
-        setOrdination(event.target.value);
-    };
-
     let quantity = 1;
-
     return (
         <CardContainer>
             <ContainerSuperior>
-                {/* {productsOrdered.length ?  <P>Produtos encontrados: {productsOrdered.length}</P> : <p>Nenhum item encontrado</p>} */}
                 <p>Produtos encontrados: {productsOrdered.length}</p>
-                <Select value={ordination} onChange={handleChangeSelect}>
+                <Select
+                    value={ordination}
+                    onChange={(event) => {
+                        setOrdination(event.target.value);
+                    }}
+                >
                     <option disabled value="">
                         Selecione
                     </option>
@@ -42,7 +39,6 @@ function ProductCard({
                 </Select>
             </ContainerSuperior>
 
-            {/* <ContainerInferior> */}
             {productsOrdered.map((product) => (
                 <Card key={product.id}>
                     <ContainerInfos>
@@ -59,7 +55,6 @@ function ProductCard({
                     </ContainerInfos>
                 </Card>
             ))}
-            {/* </ContainerInferior> */}
         </CardContainer>
     );
 }
