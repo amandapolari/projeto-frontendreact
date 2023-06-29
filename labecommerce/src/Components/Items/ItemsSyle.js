@@ -8,6 +8,8 @@ export const ContainerItems = styled.div`
     background-color: #eee2df;
     border: 2px solid #c89f9c;
     border-radius: 5px;
+    overflow-y: auto;
+    max-height: 70vh;
 `;
 
 export const SummaryContainer = styled.div`
