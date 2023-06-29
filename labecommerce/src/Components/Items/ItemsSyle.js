@@ -13,52 +13,99 @@ export const ContainerItems = styled.div`
 export const SummaryContainer = styled.div`
     border: solid 1.5px #c89f9c;
     display: grid;
-    grid-template: 0.5fr 1fr 1fr / 1fr 1fr;
+    /* grid-template: 1fr 0.1fr 0.1fr 0.1fr / 1fr 0.5fr; */
+    grid-template: 5vh 5vh 5vh 7vh / 1fr 0.5fr;
+    /* row-gap: 0.1px; */
+    padding: 1vh;
     h3 {
         display: grid;
-        grid-column: 1 / 3;
+        grid-column: 1/3;
+        grid-row: 1/2;
         justify-content: center;
         align-items: center;
     }
-    p {
-        grid-row: 2/3;
-    }
 `;
 
-export const WarningParagraph = styled.p`
+export const ProductsP = styled.p`
     display: grid;
     grid-column: 1 / 3;
     grid-row: 2 / 3;
+`;
+
+export const TotalPriceP = styled.p`
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+`;
+
+export const WarningDiv = styled.div`
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    display: flex;
     justify-content: center;
     align-items: center;
 `;
 
-export const ContainerValueAndButton = styled.div`
+export const WarningParagraph = styled.p`
+    /* display: grid;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    justify-content: center;
+    align-items: center; */
+`;
+
+// export const ContainerValueAndButton = styled.div`
+//     display: grid;
+//     grid-row: 3/4;
+//     p {
+//         display: grid;
+//         grid-column: 1/2;
+//         grid-row: 3/4;
+//     }
+//     `;
+
+export const Container = styled.div`
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
     display: flex;
     justify-content: space-between;
-    p {
-        display: grid;
-        grid-row: 4/5;
-    }
+    align-self: center;
 `;
 
 export const ButtonClearAll = styled.button`
     background-color: transparent;
+    /* border: 1px solid black; */
+    align-items: center;
     border: none;
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-items: right;
 `;
 
 export const ImgButton = styled.img`
     height: 3vh;
+    /* justify-items: center; */
+`;
+
+export const ContainerButton = styled.div`
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const CheckoutButton = styled.button`
     font-family: 'Dosis', sans-serif;
     background-color: #50252d;
+    display: grid;
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
     color: #f9f6f5;
     grid-row: 4/5;
     padding: 1vh;
-    height: 5vh;
-    width: 8vw;
+    /* height: 5vh;
+    width: 8vw; */
     transition: box-shadow 0.3s ease;
     cursor: pointer;
     border: solid 1px #170d3e;

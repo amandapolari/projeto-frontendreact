@@ -15,6 +15,12 @@ import {
     ButtonDeleteItem,
     SummaryContainer,
     CheckoutButton,
+    TotalPrice,
+    TotalPriceP,
+    Container,
+    ProductsP,
+    ContainerButton,
+    WarningDiv,
 } from './ItemsSyle';
 
 import lixeira from '../../assets/img/lixeira.png';
@@ -92,14 +98,22 @@ function Items({
         <ContainerItems>
             <SummaryContainer>
                 {quantityItems === 0 ? '' : <h3>Resumo da Compra:</h3>}
-                {quantityItems === 0 ? '' : <p>Itens: {quantityItems}</p>}
-                {amount == 0 ? (
-                    <WarningParagraph>
-                        Seu carrinho está vazio!
-                    </WarningParagraph>
+                {quantityItems === 0 ? (
+                    ''
                 ) : (
-                    <ContainerValueAndButton>
-                        <p>Total: R$ {amount}</p>
+                    <ProductsP>Produtos: {quantityItems}</ProductsP>
+                )}
+                {amount == 0 ? (
+                    <WarningDiv>
+                        <WarningParagraph>
+                            Seu carrinho está vazio!
+                        </WarningParagraph>
+                    </WarningDiv>
+                ) : (
+                    <Container>
+                        {/* <ContainerValueAndButton> */}
+                        <TotalPriceP> Total: R$ {amount}</TotalPriceP>
+                        {/* </ContainerValueAndButton> */}
                         <ButtonClearAll
                             onClick={(event) => {
                                 clearCart(event);
@@ -107,12 +121,14 @@ function Items({
                         >
                             <ImgButton src={lixeira} alt="" />
                         </ButtonClearAll>
-                    </ContainerValueAndButton>
+                    </Container>
                 )}
                 {quantityItems === 0 ? (
                     ''
                 ) : (
-                    <CheckoutButton>Finalizar Pedido</CheckoutButton>
+                    <ContainerButton>
+                        <CheckoutButton>Finalizar Pedido</CheckoutButton>
+                    </ContainerButton>
                 )}
             </SummaryContainer>
             {listCart}
