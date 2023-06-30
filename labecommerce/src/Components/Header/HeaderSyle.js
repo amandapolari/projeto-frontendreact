@@ -11,6 +11,7 @@ export const ContainerHeader = styled.div`
     color: #471835;
     position: sticky;
     top: 0;
+    z-index: 2;
 `;
 
 export const ImgHeader = styled.img`

@@ -186,6 +186,7 @@ function App() {
                     cart={cart}
                     setCart={setCart}
                     addToCart={addToCart}
+                    showComponent={showComponent}
                 />
                 {showComponent && (
                     <Cart

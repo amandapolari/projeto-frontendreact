@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
     Button,
     Card,
@@ -9,6 +10,7 @@ import {
     Img,
     Select,
 } from './ProductCardStyle';
+import Pagination from '../Pagination/Pagination';
 
 function ProductCard({
     productsOrdered,
@@ -19,43 +21,77 @@ function ProductCard({
     cart,
     setCart,
     addToCart,
+    showComponent,
 }) {
+    // => PAGINAÇÃO:
+    const [currentPage, setCurrentPage] = useState(1);
+    let itemsPerPage; // Defina a quantidade de itens por página aqui
+    if (showComponent === true) {
+        itemsPerPage = 10;
+    } else if (showComponent === false) {
+        itemsPerPage = 14;
+    }
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = productsOrdered.slice(
+        indexOfFirstItem,
+        indexOfLastItem
+    );
+
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
     let quantity = 1;
     return (
-        <CardContainer>
-            <ContainerSuperior>
-                <p>Produtos encontrados: {productsOrdered.length}</p>
-                <Select
-                    value={ordination}
-                    onChange={(event) => {
-                        setOrdination(event.target.value);
-                    }}
-                >
-                    <option disabled value="">
-                        Selecione
-                    </option>
-                    <option>Crescente</option>
-                    <option>Decrescente</option>
-                </Select>
-            </ContainerSuperior>
+        <>
+            <CardContainer>
+                <ContainerSuperior>
+                    <p>Produtos encontrados: {productsOrdered.length}</p>
+                    <Select
+                        value={ordination}
+                        onChange={(event) => {
+                            setOrdination(event.target.value);
+                        }}
+                    >
+                        <option disabled value="">
+                            Selecione
+                        </option>
+                        <option>Crescente</option>
+                        <option>Decrescente</option>
+                    </Select>
+                </ContainerSuperior>
 
-            {productsOrdered.map((product) => (
-                <Card key={product.id}>
-                    <ContainerInfos>
-                        <Img src={product.imageUrl} alt={product.name} />
-                        <H3>{product.name}</H3>
-                        <PriceText>Preço R$:{product.value}</PriceText>
-                        <Button
-                            onClick={() =>
-                                addToCart(product.name, product.value, quantity)
-                            }
-                        >
-                            Adicionar ao Carrinho
-                        </Button>
-                    </ContainerInfos>
-                </Card>
-            ))}
-        </CardContainer>
+                {currentItems.map((product) => (
+                    <Card key={product.id}>
+                        <ContainerInfos>
+                            <Img src={product.imageUrl} alt={product.name} />
+                            <H3>{product.name}</H3>
+                            <PriceText>Preço R$:{product.value}</PriceText>
+                            <Button
+                                onClick={() =>
+                                    addToCart(
+                                        product.name,
+                                        product.value,
+                                        quantity
+                                    )
+                                }
+                            >
+                                Adicionar ao Carrinho
+                            </Button>
+                        </ContainerInfos>
+                    </Card>
+                ))}
+            </CardContainer>
+
+            <Pagination
+                itemsPerPage={itemsPerPage}
+                totalItems={productsOrdered.length}
+                currentPage={currentPage}
+                paginate={paginate}
+            />
+        </>
     );
 }
 

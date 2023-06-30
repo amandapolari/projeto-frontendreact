@@ -13,6 +13,9 @@ export const ContainerItems = styled.div`
 `;
 
 export const SummaryContainer = styled.div`
+    position: sticky;
+    top: 0;
+    background-color: #eee2df;
     border: solid 1.5px #c89f9c;
     display: grid;
     grid-template: 5vh 5vh 5vh 7vh / 1fr 0.5fr;
