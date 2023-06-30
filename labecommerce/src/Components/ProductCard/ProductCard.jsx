@@ -23,7 +23,6 @@ function ProductCard({
     addToCart,
     showComponent,
 }) {
-    // => PAGINAÇÃO:
     const [currentPage, setCurrentPage] = useState(1);
     let itemsPerPage = showComponent ? 10 : 12;
 

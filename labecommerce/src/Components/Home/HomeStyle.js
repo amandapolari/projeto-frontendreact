@@ -7,6 +7,5 @@ export const ContainerHome = styled.div`
 `;
 
 export const ContainerProduct = styled.div`
-    /* altura usada para que o o footer não desloque caso não haja itens a serem renderizados */
     min-height: 81vh;
 `;

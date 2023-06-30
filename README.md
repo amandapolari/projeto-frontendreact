@@ -3,7 +3,7 @@
 
 ![funcionamento-site-gif](./labecommerce/src/assets/img/site.gif)
 
- Clique [aqui](https://amandapolari.github.io/projeto-frontendreact/) para conferir o resultado final!
+Clique [aqui](https://amandapolari.github.io/projeto-frontendreact/) para conferir o resultado final!
 
 <p align="center"><strong>Status do Projeto:<br></strong> <i>Concluído</i> ✔</p>
 
@@ -61,10 +61,12 @@ O Labecommerce oferece diversas funcionalidades aos usuários:
 -   O carrinho também possui uma facilidade adicional para o usuário: um botão para voltar ao topo da lista quando o usuário rola a tela para visualizar os itens no final.
 
 -   Outra facilidade oferecida é a organização dos produtos em páginas, permitindo ao usuário selecionar a página desejada com apenas um clique. Existem dois tipos de visualizações de página disponíveis:
+
     -   Com o carrinho aberto, o usuário pode visualizar até 10 produtos.
     -   Com o carrinho fechado, o usuário pode visualizar até 12 produtos.
 
-- Os itens do carrinho permanecem no carrinho mesmo após a atualização da página.
+-   Os itens do carrinho permanecem no carrinho mesmo após a atualização da página.
+
 ---
 
 ## 3. Instalação
@@ -103,25 +105,26 @@ Este site foi construído com as seguintes tecnologias:
 ---
 
 ## 6. Lista de Requisitos do Projeto
-- Home
-    - [ ✔ ]  O usuário deve ser capaz de visualizar uma lista de produtos
-    - [ ✔ ]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
-    - [ ✔ ]  O usuário deve ser capaz de adicionar um produto no carrinho
-- Carrinho
-    - [ ✔ ]  O usuário deve ser capaz de visualizar os produtos adicionados
-    - [ ✔ ]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
-    - [ ✔ ]  O usuário deve ser capaz de remover itens do carrinho
-    - [ ✔ ]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
-    - [ ✔ ]  Quando a página é atualizada, os itens devem continuar no carrinho
-- Filtros e Ordenação
-    - [ ✔ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
-    - [ ✔ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
-    - [ ✔ ]  O usuário deve ser capaz de realizar uma busca por nome
-    - [ ✔ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
-    - [ ✔ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
-    - [ ✔ ]  O usuário deve ser capaz de retornar à visualização sem filtros
-    
- ### 
+
+-   Home
+    -   [ ✔ ] O usuário deve ser capaz de visualizar uma lista de produtos
+    -   [ ✔ ] O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
+    -   [ ✔ ] O usuário deve ser capaz de adicionar um produto no carrinho
+-   Carrinho
+    -   [ ✔ ] O usuário deve ser capaz de visualizar os produtos adicionados
+    -   [ ✔ ] O usuário deve ser capaz de visualizar a quantidade correta de cada produto
+    -   [ ✔ ] O usuário deve ser capaz de remover itens do carrinho
+    -   [ ✔ ] O usuário deve ser capaz de ver corretamente o valor total de sua compra
+    -   [ ✔ ] Quando a página é atualizada, os itens devem continuar no carrinho
+-   Filtros e Ordenação
+    -   [ ✔ ] O usuário deve ser capaz de filtrar os itens por preço mínimo
+    -   [ ✔ ] O usuário deve ser capaz de filtrar os itens por preço máximo
+    -   [ ✔ ] O usuário deve ser capaz de realizar uma busca por nome
+    -   [ ✔ ] O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
+    -   [ ✔ ] O usuário deve ser capaz de adicionar filtros, busca e ordenação simultaneamente
+    -   [ ✔ ] O usuário deve ser capaz de retornar à visualização sem filtros
+
+###
 
 ## 7. Desenvolvedora
 

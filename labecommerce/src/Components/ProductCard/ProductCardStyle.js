@@ -14,10 +14,7 @@ export const ContainerSuperior = styled.div`
 export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
-    /* distância entre os cards: */
     justify-content: center;
-    /* padding: 0.5vh; */
     gap: 2vh 5vh;
 `;
 
@@ -48,7 +45,6 @@ export const Card = styled.div`
     display: grid;
     justify-content: center;
     align-items: flex-start;
-    /* height: 45vh; */
     border-radius: 5px;
     border: 2px solid #c89f9c;
     color: #471835;

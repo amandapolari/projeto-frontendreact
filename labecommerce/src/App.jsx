@@ -94,10 +94,6 @@ function App() {
     };
 
     const treatmentNegativeNumber = (event, functionSetFilter) => {
-        // let enteredValue = Number(event.target.value);
-        // enteredValue < 0
-        //     ? functionSetFilter('')
-        //     : functionSetFilter(enteredValue);
         let enteredValue = event.target.value;
         enteredValue = enteredValue.replace(/[^\d.]/g, '');
         functionSetFilter(enteredValue);
@@ -107,7 +103,6 @@ function App() {
         setSearchFilter(event.target.value);
         const searchValue = event.target.value.normalize().toLocaleLowerCase();
         setSearchFilter(searchValue);
-        
     };
 
     const handleMaxFilterChanges = (event) => {

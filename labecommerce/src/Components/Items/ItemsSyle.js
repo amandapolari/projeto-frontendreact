@@ -40,7 +40,6 @@ export const SummaryContainer = styled.div`
     align-items: center;
     font-size: 2.1vh;
     font-weight: 600;
-
     h3 {
         font-size: 2.5vh;
         display: grid;
@@ -155,8 +154,6 @@ export const TweaksContainer = styled.div`
     width: 8vw;
     height: 3vh;
     overflow: hidden;
-    /* testando tamanho de padding */
-    /* padding: 1vh; */
 `;
 
 export const DecreaseAndIncreaseButton = styled.button`
