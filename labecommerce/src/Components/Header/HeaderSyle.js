@@ -7,10 +7,11 @@ export const ContainerHeader = styled.div`
     padding: 0.6vh;
     height: 10vh;
     background-color: #eee2df;
-    box-shadow: 4px 8px 6px -5px #777;
+    /* box-shadow: 4px 8px 6px -5px #777; */
     color: #471835;
     position: sticky;
     top: 0;
+    z-index: 2;
 `;
 
 export const ImgHeader = styled.img`

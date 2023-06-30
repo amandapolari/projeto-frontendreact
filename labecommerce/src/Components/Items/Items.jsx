@@ -1,23 +1,30 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
     ContainerItems,
-    ContainerValueAndButton,
     InfoItems,
     ImgButton,
     ButtonClearAll,
     InputQuantity,
     DecreaseAndIncreaseButton,
     TweaksContainer,
-    ImgControll,
-    WarningParagraph,
     ButtonDeleteItem,
     SummaryContainer,
+    CheckoutButton,
+    TotalPriceP,
+    Container,
+    ProductsP,
+    ContainerButton,
+    WarningDiv,
+    Divisoria,
+    PurchaseCompleted,
+    ButtonBackTop,
+    ImgTop,
 } from './ItemsSyle';
+
 import lixeira from '../../assets/img/lixeira.png';
-import btnAdd from '../../assets/img/btn-add.png';
-import btnRemove from '../../assets/img/btn-remove.png';
+import top from '../../assets/img/back-top.png';
 
 function Items({
     amount,
@@ -30,6 +37,8 @@ function Items({
     clearCart,
     quantityItems,
     setQuantityItems,
+    isPurchaseCompleted,
+    showSentence,
 }) {
     const calculateTotalPrice = () => {
         let totalPrice = 0;
@@ -54,6 +63,24 @@ function Items({
         setQuantityItems(calculateTotalItems());
     }, [amount, cart]);
 
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+        const container = document.getElementById('containerItems');
+        const handleScroll = () => {
+            const { scrollTop, scrollHeight, clientHeight } = container;
+            const isScrollable = scrollHeight > clientHeight;
+            setShowButton(isScrollable && scrollTop > 0);
+        };
+        container.addEventListener('scroll', handleScroll);
+        return () => container.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const returnTop = () => {
+        const container = document.getElementById('containerItems');
+        container.scrollTop = 0;
+    };
+
     const listCart = cart.map((item, index) => (
         <InfoItems key={index}>
             <h3>{item[0]}</h3>
@@ -63,8 +90,7 @@ function Items({
                         removeCart(item, index);
                     }}
                 >
-                    {console.log(item)}
-                    <ImgControll src={btnRemove} alt="" />
+                    -
                 </DecreaseAndIncreaseButton>
                 <InputQuantity value={item[2]} />
                 <DecreaseAndIncreaseButton
@@ -72,46 +98,42 @@ function Items({
                         sumCart(item, index);
                     }}
                 >
-                    <ImgControll src={btnAdd} alt="" />
+                    +
                 </DecreaseAndIncreaseButton>
             </TweaksContainer>
-            <p>Preço: R${item[1].toFixed(2)}</p>
+            <p>R$ {item[1].toFixed(2)}</p>
             <ButtonDeleteItem
                 onClick={() => {
                     removeItemCart(item, index);
                 }}
             >
-                Excluir Item
+                <ImgButton src={lixeira} alt="" />
             </ButtonDeleteItem>
+            <Divisoria />
         </InfoItems>
     ));
 
     return (
-        <ContainerItems>
-            <h2>Carrinho</h2>
-            {/* formato anterior: */}
-            {/* <ContainerValueAndButton>
-                <p>Total a pagar: R$ {amount}</p>
-                <ButtonClearAll
-                    onClick={(event) => {
-                        clearCart(event);
-                    }}
-                >
-                    <ImgButton src={lixeira} alt="" />
-                </ButtonClearAll>
-            </ContainerValueAndButton> */}
-            {/* <p>Itens: {quantityItems}</p> */}
-            {/* testando novo formato: */}
+        <ContainerItems id="containerItems">
             <SummaryContainer>
-                <h3>Resumo da Compra:</h3>
-                {quantityItems === 0 ? '' : <p>Itens: {quantityItems}</p>}
-                {amount == 0 ? (
-                    <WarningParagraph>
-                        Seu carrinho está vazio!
-                    </WarningParagraph>
+                {quantityItems === 0 ? '' : <h3>Resumo da Compra:</h3>}
+                {quantityItems === 0 ? (
+                    ''
                 ) : (
-                    <ContainerValueAndButton>
-                        <p>Total: R$ {amount}</p>
+                    <ProductsP>Produtos: {quantityItems}</ProductsP>
+                )}
+                {amount == 0 ? (
+                    <WarningDiv>
+                        {isPurchaseCompleted && (
+                            <PurchaseCompleted>
+                                Compra concluída!
+                            </PurchaseCompleted>
+                        )}
+                        <p>Seu carrinho está vazio!</p>
+                    </WarningDiv>
+                ) : (
+                    <Container>
+                        <TotalPriceP> Total: R$ {amount}</TotalPriceP>
                         <ButtonClearAll
                             onClick={(event) => {
                                 clearCart(event);
@@ -119,9 +141,25 @@ function Items({
                         >
                             <ImgButton src={lixeira} alt="" />
                         </ButtonClearAll>
-                    </ContainerValueAndButton>
+                    </Container>
+                )}
+                {quantityItems === 0 ? (
+                    ''
+                ) : (
+                    <ContainerButton>
+                        <CheckoutButton
+                            onClick={(event) => {
+                                showSentence(event);
+                            }}
+                        >
+                            Finalizar Pedido
+                        </CheckoutButton>
+                    </ContainerButton>
                 )}
             </SummaryContainer>
+            {showButton && (
+                <ButtonBackTop onClick={returnTop}><ImgTop src={top}/></ButtonBackTop>
+            )}
             {listCart}
         </ContainerItems>
     );

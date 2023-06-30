@@ -8,5 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Dosis', sans-serif;
         color: #50252D;
+        scroll-behavior: smooth;
     }
 `;

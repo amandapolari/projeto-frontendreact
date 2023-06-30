@@ -56,8 +56,8 @@ function App() {
             ];
             setCart(newProductList);
         }
-        if(showComponent===false){
-            setShowComponent(true)
+        if (showComponent === false) {
+            setShowComponent(true);
         }
     };
 
@@ -94,14 +94,20 @@ function App() {
     };
 
     const treatmentNegativeNumber = (event, functionSetFilter) => {
-        let enteredValue = Number(event.target.value);
-        enteredValue < 0
-            ? functionSetFilter('')
-            : functionSetFilter(enteredValue);
+        // let enteredValue = Number(event.target.value);
+        // enteredValue < 0
+        //     ? functionSetFilter('')
+        //     : functionSetFilter(enteredValue);
+        let enteredValue = event.target.value;
+        enteredValue = enteredValue.replace(/[^\d.]/g, '');
+        functionSetFilter(enteredValue);
     };
 
     const handleSearchFilterChanges = (event) => {
         setSearchFilter(event.target.value);
+        const searchValue = event.target.value.normalize().toLocaleLowerCase();
+        setSearchFilter(searchValue);
+        
     };
 
     const handleMaxFilterChanges = (event) => {
@@ -150,6 +156,15 @@ function App() {
         setShowComponent(!showComponent);
     };
 
+    const [isPurchaseCompleted, setIsPurchaseCompleted] = useState(false);
+    const showSentence = (event) => {
+        clearCart(event);
+        setIsPurchaseCompleted(true);
+        setTimeout(() => {
+            setIsPurchaseCompleted(false);
+        }, 3000);
+    };
+
     return (
         <ContainerApp>
             <Header
@@ -177,6 +192,7 @@ function App() {
                     cart={cart}
                     setCart={setCart}
                     addToCart={addToCart}
+                    showComponent={showComponent}
                 />
                 {showComponent && (
                     <Cart
@@ -190,6 +206,8 @@ function App() {
                         clearCart={clearCart}
                         quantityItems={quantityItems}
                         setQuantityItems={setQuantityItems}
+                        isPurchaseCompleted={isPurchaseCompleted}
+                        showSentence={showSentence}
                     />
                 )}
             </ContainerHomeCart>

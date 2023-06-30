@@ -4,19 +4,10 @@ import {
     ContainerCartAndItems,
     ContainerHeader,
     IconCart,
-    ImgHeader,
     NameSite,
     QuantityItems,
 } from './HeaderSyle';
 
-import space from '../../assets/img/camisa.png';
-// modelo carrinho 1
-// import imgCart from '../../assets/img/cart.png';
-// modelo carrinho 2
-// import imgCart from '../../assets/img/cart-4.png';
-// modelo carrinho 3
-// import imgCart from '../../assets/img/cart-3.png';
-// modelo carrinho 4
 import imgCart from '../../assets/img/cart-cor-padrao.png';
 
 const Header = ({
@@ -37,7 +28,6 @@ const Header = ({
 }) => {
     return (
         <ContainerHeader>
-            {/* <ImgHeader src={space} alt="IMAGEM" /> */}
             <NameSite>LABECOMMERCE</NameSite>
             <Filters
                 minFilter={minFilter}

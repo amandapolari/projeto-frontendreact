@@ -10,6 +10,7 @@ function Home({
     setCart,
     addToCart,
     productsFiltered,
+    showComponent,
 }) {
     const [ordination, setOrdination] = useState('');
     const productsOrdered = productsFiltered.sort((a, b) => {
@@ -43,6 +44,7 @@ function Home({
                     cart={cart}
                     setCart={setCart}
                     addToCart={addToCart}
+                    showComponent={showComponent}
                 />
             </ContainerProduct>
         </ContainerHome>

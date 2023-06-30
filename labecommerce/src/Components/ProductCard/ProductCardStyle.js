@@ -1,48 +1,7 @@
 import styled from 'styled-components';
 
-// => Itens do container superior:
-
-// export const NoneItems = styled.p`
-//     height: 71vh;
-//     width: 90vw;
-//     font-size: 3vh;
-//     text-align: center;
-// `;
-
-export const Select = styled.select`
-    appearance: none;
-    font-size: 16px;
-    background-color: #50252d;
-    color: #ffff;
-    border: none;
-    transition: box-shadow 0.3s ease;
-    cursor: pointer;
-    border: solid 1px #170d3e;
-    padding: 1vh;
-    &:hover {
-        box-shadow: 0 0 5px #3c355b;
-    }
-
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 5px #3c355b;
-    }
-    option {
-        font-size: 17px;
-    }
-`;
-// ---
-
-export const CardContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* distância entre os cards */
-    gap: 1.4vh;
-`;
-
 export const ContainerSuperior = styled.div`
-    padding: 0 1vh;
+    padding: 0 4.1vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -52,16 +11,50 @@ export const ContainerSuperior = styled.div`
     font-size: 3vh;
 `;
 
+export const CardContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    /* distância entre os cards: */
+    justify-content: center;
+    /* padding: 0.5vh; */
+    gap: 2vh 5vh;
+`;
+
+export const Select = styled.select`
+    appearance: none;
+    font-size: 2vh;
+    background-color: #50252d;
+    text-align: center;
+    width: 8vw;
+    color: #f9f6f5;
+    border: none;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 1vh 0;
+    &:hover {
+        box-shadow: 0 0 5px #3c355b;
+    }
+    border-radius: 5px;
+    &:focus {
+        outline: none;
+    }
+    option {
+        font-size: 2vh;
+    }
+`;
+
 export const Card = styled.div`
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    /* height: 45vh; */
+    border-radius: 5px;
+    border: 2px solid #c89f9c;
     color: #471835;
     background-color: #eee2df;
     padding: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 10vw;
-    margin-bottom: 2vh;
-    box-shadow: 0 0 5px #c89f9c;
     &:hover {
         box-shadow: 0 0 5px #50252d;
         transition: box-shadow 0.4s ease;
@@ -69,23 +62,22 @@ export const Card = styled.div`
 `;
 
 export const ContainerInfos = styled.div`
+    height: 100%;
     display: grid;
-    grid-template: 2fr 0.5fr 0.5fr 0.5fr / 1fr;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
     text-align: center;
 `;
 
 export const Img = styled.img`
+    align-self: flex-start;
     width: 10vw;
-    display: grid;
-    grid-row: 1 / 2;
 `;
 
 export const H3 = styled.h3`
     margin: 1vh 0vh 0.5vh 0vh;
-    font-size: 2.5vh;
-    font-weight: 700;
+    align-self: flex-start;
+    margin: 1vh 0vh 0.5vh 0vh;
 `;
 
 export const PriceText = styled.p`
@@ -95,21 +87,16 @@ export const PriceText = styled.p`
 `;
 
 export const Button = styled.button`
+    font-family: 'Dosis', sans-serif;
     background-color: #50252d;
-    color: #ffff;
+    color: #f9f6f5;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
+    padding: 0.8vh;
     transition: box-shadow 0.3s ease;
     cursor: pointer;
     border: solid 1px #170d3e;
     &:hover {
         box-shadow: 0 0 5px #3c355b;
     }
-    grid-row: 4 / 5;
 `;
-
-
-
-
-
-
