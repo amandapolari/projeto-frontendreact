@@ -3,6 +3,10 @@
 
 ![funcionamento-site-gif](./labecommerce/src/assets/img/site.gif)
 
+ Clique [aqui](https://amandapolari.github.io/projeto-frontendreact/) para conferir o resultado final!
+
+<p align="center"><strong>Status do Projeto:<br></strong> <i>Concluído</i> ✔</p>
+
 </div>
 <p align="center">
 <span><strong>Tecnologias e Ferramentas utilizadas:</strong></span>
@@ -19,7 +23,8 @@
 -   [3. Instalação](#3-instalação)
 -   [4. Iniciando](#4-iniciando)
 -   [5. Tecnologias Utilizadas](#5-tecnologias-utilizadas)
--   [6. Desenvolvedora](#6-desenvolvedora)
+-   [6. Lista de Requisitos do Projeto](#6-lista-de-requisitos-do-projeto)
+-   [7. Desenvolvedora](#7-desenvolvedora)
 
 ---
 
@@ -59,6 +64,7 @@ O Labecommerce oferece diversas funcionalidades aos usuários:
     -   Com o carrinho aberto, o usuário pode visualizar até 10 produtos.
     -   Com o carrinho fechado, o usuário pode visualizar até 12 produtos.
 
+- Os itens do carrinho permanecem no carrinho mesmo após a atualização da página.
 ---
 
 ## 3. Instalação
@@ -96,7 +102,28 @@ Este site foi construído com as seguintes tecnologias:
 
 ---
 
-## 6. Desenvolvedora
+## 6. Lista de Requisitos do Projeto
+- Home
+    - [ ✔ ]  O usuário deve ser capaz de visualizar uma lista de produtos
+    - [ ✔ ]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
+    - [ ✔ ]  O usuário deve ser capaz de adicionar um produto no carrinho
+- Carrinho
+    - [ ✔ ]  O usuário deve ser capaz de visualizar os produtos adicionados
+    - [ ✔ ]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
+    - [ ✔ ]  O usuário deve ser capaz de remover itens do carrinho
+    - [ ✔ ]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
+    - [ ✔ ]  Quando a página é atualizada, os itens devem continuar no carrinho
+- Filtros e Ordenação
+    - [ ✔ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
+    - [ ✔ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
+    - [ ✔ ]  O usuário deve ser capaz de realizar uma busca por nome
+    - [ ✔ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
+    - [ ✔ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
+    - [ ✔ ]  O usuário deve ser capaz de retornar à visualização sem filtros
+    
+ ### 
+
+## 7. Desenvolvedora
 
 Este projeto foi desenvolvido por:
 
