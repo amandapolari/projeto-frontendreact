@@ -17,7 +17,7 @@ export const CardContainer = styled.div`
     /* justify-content: space-around; */
     /* distância entre os cards: */
     justify-content: center;
-    padding: 0.5vh;
+    /* padding: 0.5vh; */
     gap: 2vh 5vh;
 `;
 

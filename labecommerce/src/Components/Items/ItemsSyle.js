@@ -10,6 +10,23 @@ export const ContainerItems = styled.div`
     border-radius: 5px;
     overflow-y: auto;
     max-height: 70vh;
+    scroll-behavior: smooth;
+`;
+
+export const ButtonBackTop = styled.button`
+    background-color: #b3999f9c;
+    border-radius: 100%;
+    padding: 0.7vw;
+    position: absolute;
+    bottom: 5vh;
+    right: 2.5vw;
+    border: none;
+    cursor: pointer;
+`;
+
+export const ImgTop = styled.img`
+    height: 1vh;
+    width: 1.5vh;
 `;
 
 export const SummaryContainer = styled.div`

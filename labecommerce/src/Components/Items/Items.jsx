@@ -1,6 +1,6 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
     ContainerItems,
     InfoItems,
@@ -19,9 +19,12 @@ import {
     WarningDiv,
     Divisoria,
     PurchaseCompleted,
+    ButtonBackTop,
+    ImgTop,
 } from './ItemsSyle';
 
 import lixeira from '../../assets/img/lixeira.png';
+import top from '../../assets/img/back-top.png';
 
 function Items({
     amount,
@@ -60,6 +63,24 @@ function Items({
         setQuantityItems(calculateTotalItems());
     }, [amount, cart]);
 
+    const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+        const container = document.getElementById('containerItems');
+        const handleScroll = () => {
+            const { scrollTop, scrollHeight, clientHeight } = container;
+            const isScrollable = scrollHeight > clientHeight;
+            setShowButton(isScrollable && scrollTop > 0);
+        };
+        container.addEventListener('scroll', handleScroll);
+        return () => container.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const returnTop = () => {
+        const container = document.getElementById('containerItems');
+        container.scrollTop = 0;
+    };
+
     const listCart = cart.map((item, index) => (
         <InfoItems key={index}>
             <h3>{item[0]}</h3>
@@ -93,7 +114,7 @@ function Items({
     ));
 
     return (
-        <ContainerItems>
+        <ContainerItems id="containerItems">
             <SummaryContainer>
                 {quantityItems === 0 ? '' : <h3>Resumo da Compra:</h3>}
                 {quantityItems === 0 ? (
@@ -136,6 +157,9 @@ function Items({
                     </ContainerButton>
                 )}
             </SummaryContainer>
+            {showButton && (
+                <ButtonBackTop onClick={returnTop}><ImgTop src={top}/></ButtonBackTop>
+            )}
             {listCart}
         </ContainerItems>
     );
