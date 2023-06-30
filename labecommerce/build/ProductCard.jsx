@@ -32,7 +32,7 @@ function ProductCard({
                 <P>Produtos encontrados: {productsOrdered.length}</P>
                 <Select value={ordination} onChange={handleChangeSelect}>
                     <option disabled value="">
-                        Selecione
+                        Ordenar
                     </option>
                     <option>Crescente</option>
                     <option>Decrescente</option>

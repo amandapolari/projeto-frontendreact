@@ -54,7 +54,7 @@ function ProductCard({
                         }}
                     >
                         <option disabled value="">
-                            Selecione
+                            Ordenar
                         </option>
                         <option>Crescente</option>
                         <option>Decrescente</option>
