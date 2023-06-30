@@ -25,14 +25,12 @@ function ProductCard({
 }) {
     // => PAGINAÇÃO:
     const [currentPage, setCurrentPage] = useState(1);
-    let itemsPerPage; // Defina a quantidade de itens por página aqui
-    if (showComponent === true) {
-        itemsPerPage = 10;
-    } else if (showComponent === false) {
-        itemsPerPage = 14;
-    }
+    let itemsPerPage = showComponent ? 10 : 12;
 
-    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfLastItem = Math.min(
+        currentPage * itemsPerPage,
+        productsOrdered.length
+    );
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = productsOrdered.slice(
         indexOfFirstItem,
