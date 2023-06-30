@@ -1,121 +1,103 @@
-# projeto-frontendreact
+<h1 align="center">LabeCommerce</h1>
+<div align="center">
 
-Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
+![funcionamento-site-gif](./labecommerce/src/assets/img/site.gif)
 
-- JSX
-- Componentes
-- Props
-- Estado
-- Fluxo de dados no React
-- Renderização de listas
-- Renderização condicional
-- localStorage
+</div>
+<p align="center">
+<span><strong>Tecnologias e Ferramentas utilizadas:</strong></span>
+<br>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,react,styledcomponents,github,git" style="height: 25px;"/>
+  </a>
+</p>
 
-## Instruções
+## Índice
 
-O Astrodev deixou um testamento e essa foi a herança deixada pra vocês:
+-   [1. Resumo do Projeto](#1-resumo-do-projeto)
+-   [2. Definição de Produto](#2-definição-de-produto)
+-   [3. Instalação](#3-instalação)
+-   [4. Iniciando](#4-iniciando)
+-   [5. Tecnologias Utilizadas](#5-tecnologias-utilizadas)
+-   [6. Desenvolvedora](#6-desenvolvedora)
+
+---
+
+## 1. Resumo do Projeto
+
+O Labecommerce é um e-commerce com recursos avançados que permite aos usuários ordenar, pesquisar e filtrar produtos de forma intuitiva. Ele também oferece um carrinho de compras completo, com resumo da compra, opção de limpar o carrinho e ajustar as quantidades. Além disso, o Labecommerce possui organização em páginas e a capacidade de ocultar o carrinho para visualizar mais produtos.
+
+---
+
+## 2. Definição de Produto
+
+O Labecommerce oferece diversas funcionalidades aos usuários:
+
+-   Ordenação dos produtos por preço em duas opções:
+
+    -   Ordem crescente
+    -   Ordem decrescente
+
+-   Pesquisa de produtos por nome, considerando letras minúsculas ou maiúsculas.
+
+-   Filtragem por valores com dois tipos de filtros:
+
+    -   Valor mínimo
+    -   Valor máximo
+
+-   Todos os filtros podem ser usados simultaneamente.
+
+-   Para maior comodidade do usuário, há um botão "Limpar" que restaura a busca padrão na tela.
+
+-   O usuário também pode ocultar o carrinho para visualizar mais produtos na tela.
+
+-   No carrinho, é possível ver um resumo da compra, incluindo a quantidade de itens e o valor total. O usuário pode limpar o carrinho com um único clique no ícone da lixeira. Além disso, no carrinho, existem botões que permitem aumentar ou diminuir a quantidade de um item. O usuário também pode excluir um produto completamente, independentemente da quantidade, clicando no ícone da lixeira correspondente ao produto.
+
+-   O carrinho também possui uma facilidade adicional para o usuário: um botão para voltar ao topo da lista quando o usuário rola a tela para visualizar os itens no final.
+
+-   Outra facilidade oferecida é a organização dos produtos em páginas, permitindo ao usuário selecionar a página desejada com apenas um clique. Existem dois tipos de visualizações de página disponíveis:
+    -   Com o carrinho aberto, o usuário pode visualizar até 10 produtos.
+    -   Com o carrinho fechado, o usuário pode visualizar até 12 produtos.
+
+---
+
+## 3. Instalação
+
+### Pré-requisitos:
+
+-   Node.js
+-   npm
+
+Para instalar as dependências no diretório do seu projeto, execute o seguinte comando:
 
 ```
-Estudantes do meu coração,
-Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção. 
-Pretendo montar diferentes linhas de produtos. 
-
-As possíveis linhas de produto são:
-- Satélites antigos;
-- Roupas espaciais;
-- Camisetas com estampas divertidas relacionadas ao espaço;
-- Viagens espaciais;
-- Meteoritos / aerolitos como pedras preciosas;
-- Brinquedos e produtos infantis temáticos;
-- Naves / Foguetes / Ônibus espaciais;
-
-Escolham uma linha dentre essas, e criem um e-commerce de acordo com a lista de requisitos.
-
-
-Att.
+npm install
 ```
 
-# Requisitos
+---
 
-O projeto consistirá em 3 grandes partes:
+## 4. Iniciando
 
-1. Home
-    - Mostrando todos os produtos
-    - Deve haver alguma forma de ordenar os produtos por ordem crescente ou decrescente de preço (pode ser na home em si ou junto dos filtros)
-    - Produtos:
-        - Devem ter um botão que permita adicioná-los ao carrinho
-        - Devem exibir o nome, preço e imagem em um card
-2. Carrinho
-    - Mostrar todos os produtos e quantidades adicionadas
-    - Capacidade de remover itens do carrinho
-    - Mostrar o valor total do carrinho
-3. Filtro
-    - Por valor mínimo e máximo
-    - Por nome do produto
+Para iniciar o aplicativo, execute o seguinte comando:
 
-Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma lista contendo todos):
-
-```jsx
-{
-	id: 1,
-	name: "Foguete da Missão Apollo 11",
-	value: 10000.0,
-	imageUrl: "https://picsum.photos/200/200",
-}
+```
+npm run start
 ```
 
-### Lista de Requisitos
-- Home (Lista de Produtos)
-    - [ ]  O usuário deve ser capaz de visualizar uma lista de produtos
-    - [ ]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
-    - [ ]  O usuário deve ser capaz de adicionar um produto no carrinho
-- Carrinho
-    - [ ]  O usuário deve ser capaz de visualizar os produtos adicionados
-    - [ ]  O usuário deve ser capaz de visualizar a quantidade correta de cada produto
-    - [ ]  O usuário deve ser capaz de remover itens do carrinho
-    - [ ]  O usuário deve ser capaz de ver corretamente o valor total de sua compra
-    - [ ]  Quando a página é atualizada, os itens devem continuar no carrinho
-- Filtros e Ordenação
-    - [ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
-    - [ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
-    - [ ]  O usuário deve ser capaz de realizar uma busca por nome
-    - [ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
-    - [ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
-    - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
-    
- ### 
+---
 
-O layout da página é escolha de vocês! O exemplo abaixo é só uma implementação bemmm simples das funcionalidades, não se atenham a ele.
+## 5. Tecnologias Utilizadas
 
-http://fluttering-coast.surge.sh/
- 
+Este site foi construído com as seguintes tecnologias:
 
-https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-b57c-b94913ff2dd6.mp4
+-   JavaScript
+-   React
+-   Styled-Components
 
+---
 
+## 6. Desenvolvedora
 
-    
-  ### Conseguiu terminar? Aqui temos alguns **desafios**
-  1. Salvar e Recuperar conteúdo do carrinho usando o `LocalStorage`;
-  2. Dediquem um tempo para melhorar o layout e a usabilidade do seu site! Se baseiem em outros e-commerces que vocês gostam para chegar em um resultado   mais próximo do padrão de design visto no mercado;
-  3. Se TODO O RESTO DO SITE  e os dois desafios anteriores estiverem funcionando, pensem: qual outra funcionalidade está faltando? Decidam o que vocês concordam que poderia ser uma boa adição à loja virtual (pode ser qualquer funcionalidade, desde que vocês consigam implementá-la). Todas as funcionalidades extras implementadas devem ser listadas e explicadas no readme do projeto para que possam ser avaliadas.
-  
-  ### Instruções para preparar o seu repositório
+Este projeto foi desenvolvido por:
 
-- Faça o fork desse repositório e realize o clone da sua cópia `seu-nome-de-usuario/projeto-lista-intro-javascript`.
-   <details>
-   <summary>Quer uma dica?</summary>
-   <img src="https://firebasestorage.googleapis.com/v0/b/assets-conteudo.appspot.com/o/gerais%2Ffork.png?alt=media&token=7030e997-246a-41fe-a75f-2a2ced61e54d" alt="Como adicionar o projeto no repositório"/>
-   </details>
-- Crie os arquivos do projeto dentro deste repo;
-- **Lembre-se de abrir os PRs para seu próprio repositório.**
-- Para isso, você precisará fazer o projeto utilizando **branches**. Não faça as alterações direto na branch ```main```!
-
-### Instruções de entrega
-
-![image](https://user-images.githubusercontent.com/71137294/227538428-52271ed2-df78-4500-b286-25f03aa7bf2e.png)
-1.  [Crie o surge](https://labenu.notion.site/Deploy-de-front-React-com-Surge-f902a03ec1d247dc9af9aee5a1469d96) do seu projeto e pegue o link da publicação(deploy);
-2.  Adicione o link do surge no readme do seu projeto;
-3.  Tire print das páginas do seu projeto e cole no readme;
-4.  Abra um novo Pull Request (PR) com a frase **PR para correção**. Caso não saiba como fazê-lo, assista a esse [vídeo](https://www.canva.com/design/DAFY4nS5W2c/t92uFMR61YtmA7bCwj2S1Q/watch).
-5.  Envie o link do seu PR e do surge no [formulário de entrega](https://forms.gle/S9XChPZravP3WdxL6).
+**Amanda Polari**: [LinkedIn](https://www.linkedin.com/in/amandapolari/) | [GitHub](https://github.com/amandapolari)
