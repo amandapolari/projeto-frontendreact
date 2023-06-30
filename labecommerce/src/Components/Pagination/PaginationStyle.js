@@ -6,6 +6,9 @@ export const PaginationContainer = styled.div`
   display: flex;
   padding: 1vh;
   justify-content: center;
+  /* position: fixed;
+  bottom: 6vh;
+  left: 48vw; */
 `;
 
 export const PaginationList = styled.ul`
