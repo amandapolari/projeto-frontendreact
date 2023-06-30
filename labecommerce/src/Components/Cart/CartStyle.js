@@ -7,6 +7,9 @@ export const ContainerCart = styled.div`
     flex-direction: column;
     align-items: center;
     h2 {
-        padding: 1.7vh;
+        padding: 2.4vh;
+        /* padding: 0 4.1vh; */
+        font-size: 3vh;
+        font-weight: 700;
     }
 `;

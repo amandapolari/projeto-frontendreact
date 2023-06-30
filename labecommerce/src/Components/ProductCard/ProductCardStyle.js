@@ -14,9 +14,11 @@ export const ContainerSuperior = styled.div`
 export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     /* distância entre os cards: */
-    gap: 1.3vh;
+    justify-content: center;
+    padding: 0.5vh;
+    gap: 2vh 5vh;
 `;
 
 export const Select = styled.select`
