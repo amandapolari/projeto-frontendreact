@@ -158,7 +158,9 @@ function Items({
                 )}
             </SummaryContainer>
             {showButton && (
-                <ButtonBackTop onClick={returnTop}><ImgTop src={top}/></ButtonBackTop>
+                <ButtonBackTop onClick={returnTop}>
+                    <ImgTop src={top} />
+                </ButtonBackTop>
             )}
             {listCart}
         </ContainerItems>
