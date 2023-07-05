@@ -53,7 +53,10 @@ export const Select = styled.select`
 
     @media (max-width: 480px) {
         font-size: 1.6vh;
-        width: 15vw;
+        width: 25vw;
+        option {
+            font-size: 2vh;
+        }
     }
 
     &:hover {
