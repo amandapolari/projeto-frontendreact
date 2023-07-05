@@ -6,10 +6,10 @@ export const ContainerFooter = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0.5vh;
-    background-color: #eed7c5;
+    background-color: #eee2df;
     @media (max-width: 768px) {
         /* Estilo para tablets */
-        height: 8vh;
+        /* height: 5vh; */
     }
 
     @media (max-width: 480px) {
@@ -22,12 +22,12 @@ export const ParagraphFooter = styled.p`
     font-size: 2vh;
     @media (max-width: 768px) {
         /* Estilo para tablets */
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     @media (max-width: 480px) {
         /* Estilo para celulares */
-        font-size: 3vh;
+        font-size: 2vh;
     }
 `;
 
@@ -38,11 +38,11 @@ export const AnchorLink = styled.a`
     }
     @media (max-width: 768px) {
         /* Estilo para tablets */
-        font-size: 2.5vh;
+        /* font-size: 2vh; */
     }
 
     @media (max-width: 480px) {
         /* Estilo para celulares */
-        font-size: 3vh;
+        /* font-size: 2vh; */
     }
 `;

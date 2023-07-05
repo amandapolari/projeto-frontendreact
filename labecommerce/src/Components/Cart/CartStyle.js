@@ -10,16 +10,16 @@ export const ContainerCart = styled.div`
         font-weight: 700;
     }
     @media (max-width: 768px) {
-        /* Estilo para tablets */
         h2 {
-            font-size: 2.5vh;
+            font-size: 2.3vh;
+            padding: 2vh;
         }
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
         h2 {
             font-size: 2vh;
+            padding: 2vh;
         }
     }
 `;
