@@ -48,7 +48,7 @@ export const Select = styled.select`
 
     @media (max-width: 768px) {
         font-size: 1.8vh;
-        width: 12vw;
+        width: 20vw;
     }
 
     @media (max-width: 480px) {
