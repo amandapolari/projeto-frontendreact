@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     Button,
     Card,
@@ -24,7 +24,24 @@ function ProductCard({
     showComponent,
 }) {
     const [currentPage, setCurrentPage] = useState(1);
-    let itemsPerPage = showComponent ? 10 : 12;
+
+    const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileOrTablet(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    let itemsPerPage;
+    if (isMobileOrTablet) {
+        itemsPerPage = showComponent ? 4 : 6;
+    } else {
+        itemsPerPage = showComponent ? 10 : 12;
+    }
 
     const indexOfLastItem = Math.min(
         currentPage * itemsPerPage,

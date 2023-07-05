@@ -13,6 +13,14 @@ const Pagination = ({ itemsPerPage, totalItems, currentPage, paginate }) => {
         pageNumbers.push(i);
     }
 
+    const handlePageClick = (number) => {
+        paginate(number);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <PaginationContainer>
             <PaginationList>
@@ -20,7 +28,7 @@ const Pagination = ({ itemsPerPage, totalItems, currentPage, paginate }) => {
                     <PaginationItem key={number}>
                         <PaginationButton
                             isActive={currentPage === number}
-                            onClick={() => paginate(number)}
+                            onClick={() => handlePageClick(number)}
                         >
                             {number}
                         </PaginationButton>
