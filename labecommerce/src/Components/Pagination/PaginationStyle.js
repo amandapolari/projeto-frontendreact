@@ -4,22 +4,6 @@ export const PaginationContainer = styled.div`
     display: flex;
     padding: 1vh;
     justify-content: center;
-    /* position: fixed;
-  bottom: 6vh;
-  left: 48vw; */
-    @media (max-width: 768px) {
-        /* Estilo para tablets */
-        /* position: fixed;
-        bottom: 6vh;
-        left: 48vw; */
-    }
-
-    @media (max-width: 480px) {
-        /* Estilo para celulares */
-        /* position: fixed; */
-        /* bottom: 6vh;
-        left: 42vw; */
-    }
 `;
 
 export const PaginationList = styled.ul`
@@ -42,14 +26,12 @@ export const PaginationButton = styled.button`
     border-radius: 5px;
     cursor: pointer;
     @media (max-width: 768px) {
-        /* Estilo para tablets */
         font-size: 2vh;
         padding: 5px 10px;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        font-size: 2.5vh;
-        padding: 6px 12px;
+        font-size: 1.6vh;
+        padding: 4px 10px;
     }
 `;
