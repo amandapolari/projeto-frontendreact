@@ -13,15 +13,13 @@ export const ContainerItems = styled.div`
     scroll-behavior: smooth;
 
     @media (max-width: 768px) {
-        border: 2px solid red;
         width: 85%;
         margin-right: 2vw;
-        max-height: 50vh;
+        max-height: 60vh;
     }
-    
+
     @media (max-width: 480px) {
-        
-        max-height: 55vh;
+        max-height: 60vh;
         width: 80%;
         margin-right: 2vw;
     }
@@ -47,10 +45,10 @@ export const ButtonBackTop = styled.button`
 
     @media (max-width: 480px) {
         border-radius: 100%;
-        padding: 0.7vw;
+        padding: 0.99vw;
         height: 5vh;
         position: absolute;
-        bottom: 30vh;
+        bottom: 20vh;
         right: 6vw;
     }
 `;
@@ -64,9 +62,8 @@ export const ImgTop = styled.img`
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        height: 3vh;
-        width: 4vh;
+        height: 1.9vh;
+        width: 3.2vh;
     }
 `;
 
@@ -89,19 +86,12 @@ export const SummaryContainer = styled.div`
         justify-content: center;
     }
     @media (max-width: 768px) {
-        /* font-size: 2vh;
-        grid-template: 4vh 4vh 4vh 6vh / 1fr 0.5fr;
-        padding: 0.3vh 0.8vh 0.4vh 0.8vh; */
         h3 {
             font-size: 2vh;
         }
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        /* font-size: 2.5vh;
-        grid-template: 3.5vh 3.5vh 3.5vh 5.5vh / 1fr 0.5fr;
-        padding: 0.2vh 0.5vh 0.3vh 0.5vh; */
         h3 {
             font-size: 2.2vh;
         }
@@ -125,14 +115,6 @@ export const TotalPriceP = styled.p`
     display: grid;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    @media (max-width: 768px) {
-        /* grid-row: 2 / 3; */
-    }
-
-    @media (max-width: 480px) {
-        /* Estilo para celulares */
-        /* grid-row: 3 / 4; */
-    }
 `;
 
 export const WarningDiv = styled.div`
@@ -175,10 +157,6 @@ export const ButtonClearAll = styled.button`
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     justify-items: right;
-
-    @media (max-width: 768px) {
-        /* grid-column: 1 / 2; */
-    }
 `;
 
 export const ImgButton = styled.img`
@@ -254,14 +232,19 @@ export const InfoItems = styled.div`
         grid-column: 1 / 2;
     }
     @media (max-width: 768px) {
-        /* Estilo para tablets */
-        font-size: 2vh;
-        grid-template: 0.7fr 0.4fr 1fr / 1fr 1.5fr 0.7fr;
+        padding: 0.1vh;
+
+        p {
+            font-size: 1.9vh;
+        }
     }
 
     @media (max-width: 480px) {
-        font-size: 2.3vh;
-        grid-template: 0.6fr 0.3fr 1fr / 1fr 1.5fr 0.7fr;
+        align-items: center;
+        padding: 0.1vh;
+        p {
+            font-size: 1.6vh;
+        }
     }
 `;
 
@@ -270,11 +253,11 @@ export const Divisoria = styled.div`
     grid-column: 1 / 4;
     height: 2vh;
     @media (max-width: 768px) {
-        height: 1.5vh;
+        height: 1vh;
     }
 
     @media (max-width: 480px) {
-        height: 2.5vh;
+        height: 1vh;
     }
 `;
 
@@ -288,14 +271,17 @@ export const TweaksContainer = styled.div`
     height: 3vh;
     overflow: hidden;
     @media (max-width: 768px) {
-        width: 10vw;
-        height: 2.5vh;
+        justify-self: center;
+        width: 13vw;
+        border: 1px solid #b36a5e;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        width: 12vw;
-        height: 3.5vh;
+        justify-self: center;
+        width: 16.5vw;
+        border: 1px solid #b36a5e;
+        height: 2.3vh;
+        padding-top: 0.1vh;
     }
 `;
 
@@ -309,15 +295,15 @@ export const DecreaseAndIncreaseButton = styled.button`
     border: none;
     padding: 1.2vh;
     cursor: pointer;
+
     @media (max-width: 768px) {
-        font-size: 18px;
+        font-size: 2vh;
         padding: 1vh;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        font-size: 16px;
-        padding: 0.8vh;
+        font-size: 2vh;
+        padding: 1vh;
     }
 `;
 
@@ -330,14 +316,13 @@ export const InputQuantity = styled.input`
     width: 2.4vw;
     font-size: 1.8vh;
     @media (max-width: 768px) {
-        width: 3.5vw;
-        font-size: 2vh;
+        width: 3vw;
+        font-size: 1.7vh;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        width: 6vw;
-        font-size: 2.5vh;
+        width: 5vw;
+        font-size: 1.5vh;
     }
 `;
 
@@ -351,7 +336,6 @@ export const ButtonDeleteItem = styled.button`
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
         font-size: 2.5vh;
     }
 `;
