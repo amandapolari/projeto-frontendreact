@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const ContainerFilter = styled.div``;
+export const ContainerFilter = styled.div`
+    @media (max-width: 768px) {
+        height: 100%;
+    }
+`;
 
 export const Form = styled.form`
     display: flex;
@@ -13,12 +17,31 @@ export const Form = styled.form`
     }
 
     @media (max-width: 768px) {
+        height: auto;
         flex-direction: column;
         max-height: ${({ isMobileMenuOpen }) =>
             isMobileMenuOpen ? '1000px' : '0'};
         overflow: hidden;
         transition: max-height 0.3s ease;
         background-color: #eee2df;
+        /* width: 30vw; */
+        /* padding: 2vw; */
+    }
+`;
+
+export const ContainerAllFilters = styled.div`
+    @media (max-width: 768px) {
+        margin-top: 15vh;
+        /* padding-top: 10vh; */
+        padding: 2vh;
+        display: block;
+        /* background-color: black; */
+        /* background-color: #eee2df; */
+
+        position: fixed;
+        top: -2vh;
+        width: 92vw;
+        left: 1vh;
     }
 `;
 
@@ -89,4 +112,10 @@ export const MobileMenuButton = styled.button`
 
 export const MenuIcon = styled.i`
     font-size: 3.5vh;
+    @media (max-width: 480px) {
+        /* display: flex;
+        align-self: center; */
+        margin-top: 1.5vh;
+        font-size: 3vh;
+    }
 `;

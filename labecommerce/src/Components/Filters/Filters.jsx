@@ -7,6 +7,7 @@ import {
     InputFilter,
     MobileMenuButton,
     MenuIcon,
+    ContainerAllFilters,
 } from './FiltersStyle';
 
 function Filters({
@@ -44,38 +45,40 @@ function Filters({
                 />
             </MobileMenuButton>
 
-            <Form isMobileMenuOpen={isMobileMenuOpen}>
-                <InputFilter
-                    type="text"
-                    id="inputSearchFilter"
-                    placeholder="Buscar por nome"
-                    onChange={(event) => {
-                        handleSearchFilterChanges(event);
-                    }}
-                    value={searchFilter}
-                />
-                <InputFilter
-                    type="number"
-                    id="inputMinFilter"
-                    placeholder="Valor Mínimo"
-                    onChange={(event) => {
-                        handleMinFilterChanges(event);
-                    }}
-                    value={minFilter}
-                />
-                <InputFilter
-                    type="number"
-                    id="inputMaxFilter"
-                    placeholder="Valor Máximo"
-                    onChange={(event) => {
-                        handleMaxFilterChanges(event);
-                    }}
-                    value={maxFilter}
-                />
-                <BtnClear onClick={(event) => ClearFilters(event)}>
-                    Limpar
-                </BtnClear>
-            </Form>
+            <ContainerAllFilters>
+                <Form isMobileMenuOpen={isMobileMenuOpen}>
+                    <InputFilter
+                        type="text"
+                        id="inputSearchFilter"
+                        placeholder="Buscar por nome"
+                        onChange={(event) => {
+                            handleSearchFilterChanges(event);
+                        }}
+                        value={searchFilter}
+                    />
+                    <InputFilter
+                        type="number"
+                        id="inputMinFilter"
+                        placeholder="Valor Mínimo"
+                        onChange={(event) => {
+                            handleMinFilterChanges(event);
+                        }}
+                        value={minFilter}
+                    />
+                    <InputFilter
+                        type="number"
+                        id="inputMaxFilter"
+                        placeholder="Valor Máximo"
+                        onChange={(event) => {
+                            handleMaxFilterChanges(event);
+                        }}
+                        value={maxFilter}
+                    />
+                    <BtnClear onClick={(event) => ClearFilters(event)}>
+                        Limpar
+                    </BtnClear>
+                </Form>
+            </ContainerAllFilters>
         </ContainerFilter>
     );
 }

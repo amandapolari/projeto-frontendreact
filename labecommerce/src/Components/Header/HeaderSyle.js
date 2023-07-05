@@ -19,7 +19,7 @@ export const ContainerHeader = styled.div`
     @media (max-width: 480px) {
         /* Estilo para celulares */
         height: 14vh;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 `;
 
@@ -35,8 +35,8 @@ export const IconCart = styled.img`
 
     @media (max-width: 480px) {
         /* Estilo para celulares */
-        height: 9vh;
-        margin: -8.5vh 2vh 2vh 2vh;
+        height: 6vh;
+        margin: -3.5vh 2.6vh 2vh 2vh;
     }
 `;
 
@@ -52,7 +52,7 @@ export const QuantityItems = styled.p`
 
     @media (max-width: 480px) {
         /* Estilo para celulares */
-        font-size: 3vh;
+        font-size: 2.1vh;
     }
 `;
 
