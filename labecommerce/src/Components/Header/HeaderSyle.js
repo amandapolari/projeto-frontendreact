@@ -12,14 +12,11 @@ export const ContainerHeader = styled.div`
     top: 0;
     z-index: 2;
     @media (max-width: 768px) {
-        /* Estilo para tablets */
-        height: 12vh;
+        height: 10vh;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        height: 14vh;
-        /* flex-direction: column; */
+        height: 10vh;
     }
 `;
 
@@ -28,13 +25,11 @@ export const IconCart = styled.img`
     height: 6vh;
     margin: -4.5vh 2.5vh 1vh 2vh;
     @media (max-width: 768px) {
-        /* Estilo para tablets */
         height: 6vh;
         margin: -3.9vh 2.7vh 2vh 2vh;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
         height: 6vh;
         margin: -3.5vh 2.6vh 2vh 2vh;
     }
@@ -44,14 +39,11 @@ export const QuantityItems = styled.p`
     height: 3vh;
     font-weight: 600;
     @media (max-width: 768px) {
-        /* Estilo para tablets */
         height: 2.5vh;
-        /* margin-top: 2vh; */
         font-size: 1.8vh;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
         font-size: 2.1vh;
     }
 `;
@@ -60,12 +52,6 @@ export const ContainerCartAndItems = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 10px;
-    right: 10px; */
 `;
 
 export const NameSite = styled.p`
@@ -75,12 +61,10 @@ export const NameSite = styled.p`
     font-size: 4vh;
     color: #50252d;
     @media (max-width: 768px) {
-        /* Estilo para tablets */
-        font-size: 3.5vh;
+        font-size: 3.1vh;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        font-size: 4vh;
+        font-size: 3.1vh;
     }
 `;

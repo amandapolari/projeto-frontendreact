@@ -13,7 +13,7 @@ export const Form = styled.form`
 
     @media (max-width: 480px) {
         flex-direction: column;
-        gap: 1vh;
+        gap: 0.5vh;
     }
 
     @media (max-width: 768px) {
@@ -24,24 +24,19 @@ export const Form = styled.form`
         overflow: hidden;
         transition: max-height 0.3s ease;
         background-color: #eee2df;
-        /* width: 30vw; */
-        /* padding: 2vw; */
+        gap: 0;
     }
 `;
 
 export const ContainerAllFilters = styled.div`
     @media (max-width: 768px) {
         margin-top: 15vh;
-        /* padding-top: 10vh; */
         padding: 2vh;
         display: block;
-        /* background-color: black; */
-        /* background-color: #eee2df; */
-
         position: fixed;
-        top: -2vh;
-        width: 92vw;
-        left: 1vh;
+        top: -6vh;
+        width: 100vw;
+        left: -2vh;
     }
 `;
 
@@ -59,12 +54,12 @@ export const InputFilter = styled.input`
         box-shadow: 0 0 5px #c89f9c;
     }
     @media (max-width: 768px) {
-        /* Estilo para tablets */
         font-size: 1.8vh;
+        margin: 1vh;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
+        margin: 1vh;
         font-size: 1.5vh;
     }
 `;
@@ -85,14 +80,14 @@ export const BtnClear = styled.button`
     }
     @media (max-width: 768px) {
         font-size: 1.8vh;
+        margin: 1vh;
     }
 
     @media (max-width: 480px) {
         font-size: 1.5vh;
+        margin: 1vh;
     }
 `;
-
-// Menu de hamburguer:
 
 export const MobileMenuButton = styled.button`
     display: none;
@@ -113,9 +108,7 @@ export const MobileMenuButton = styled.button`
 export const MenuIcon = styled.i`
     font-size: 3.5vh;
     @media (max-width: 480px) {
-        /* display: flex;
-        align-self: center; */
-        margin-top: 1.5vh;
+        margin-top: -0.2vh;
         font-size: 3vh;
     }
 `;
