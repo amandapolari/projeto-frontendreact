@@ -11,6 +11,16 @@ export const ContainerItems = styled.div`
     overflow-y: auto;
     max-height: 70vh;
     scroll-behavior: smooth;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        width: 95%;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        padding: 2vh;
+        max-height: 60vh;
+    }
 `;
 
 export const ButtonBackTop = styled.button`
@@ -22,11 +32,33 @@ export const ButtonBackTop = styled.button`
     right: 2.5vw;
     border: none;
     cursor: pointer;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        bottom: 4vh;
+        right: 1vw;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        bottom: 3vh;
+        right: 1.5vw;
+    }
 `;
 
 export const ImgTop = styled.img`
     height: 1vh;
     width: 1.5vh;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        height: 2vh;
+        width: 3vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        height: 3vh;
+        width: 4vh;
+    }
 `;
 
 export const SummaryContainer = styled.div`
@@ -47,18 +79,55 @@ export const SummaryContainer = styled.div`
         grid-row: 1/2;
         justify-content: center;
     }
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 2vh;
+        grid-template: 4vh 4vh 4vh 6vh / 1fr 0.5fr;
+        padding: 0.3vh 0.8vh 0.4vh 0.8vh;
+        h3 {
+            font-size: 2.3vh;
+        }
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 2.5vh;
+        grid-template: 3.5vh 3.5vh 3.5vh 5.5vh / 1fr 0.5fr;
+        padding: 0.2vh 0.5vh 0.3vh 0.5vh;
+        h3 {
+            font-size: 2.7vh;
+        }
+    }
 `;
 
 export const ProductsP = styled.p`
     display: grid;
     grid-column: 1 / 3;
     grid-row: 2 / 3;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        grid-row: 1 / 2;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        grid-row: 2 / 3;
+    }
 `;
 
 export const TotalPriceP = styled.p`
     display: grid;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        grid-row: 2 / 3;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        grid-row: 3 / 4;
+    }
 `;
 
 export const WarningDiv = styled.div`
@@ -68,6 +137,15 @@ export const WarningDiv = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 2.4vh;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 2.2vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 2vh;
+    }
 `;
 
 export const Container = styled.div`
@@ -76,6 +154,16 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-self: center;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        justify-content: flex-end;
+        margin-top: 1vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        margin-top: 2vh;
+    }
 `;
 
 export const ButtonClearAll = styled.button`
@@ -87,10 +175,24 @@ export const ButtonClearAll = styled.button`
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     justify-items: right;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        grid-column: 1 / 2;
+    }
 `;
 
 export const ImgButton = styled.img`
     height: 3vh;
+
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        height: 2.5vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        height: 2vh;
+    }
 `;
 
 export const ContainerButton = styled.div`
@@ -98,6 +200,15 @@ export const ContainerButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        margin-top: 1vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        margin-top: 2vh;
+    }
 `;
 
 export const CheckoutButton = styled.button`
@@ -118,6 +229,17 @@ export const CheckoutButton = styled.button`
     &:hover {
         box-shadow: 0 0 5px #3c355b;
     }
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 2.2vh;
+        width: 12vw;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 2.5vh;
+        width: 15vw;
+    }
 `;
 
 export const InfoItems = styled.div`
@@ -137,12 +259,32 @@ export const InfoItems = styled.div`
         grid-row: 2 / 3;
         grid-column: 1 / 2;
     }
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 2vh;
+        grid-template: 0.7fr 0.4fr 1fr / 1fr 1.5fr 0.7fr;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 2.3vh;
+        grid-template: 0.6fr 0.3fr 1fr / 1fr 1.5fr 0.7fr;
+    }
 `;
 
 export const Divisoria = styled.div`
     border-bottom: 1px solid #c89f9c;
     grid-column: 1 / 4;
     height: 2vh;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        height: 1.5vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        height: 2.5vh;
+    }
 `;
 
 export const TweaksContainer = styled.div`
@@ -154,6 +296,17 @@ export const TweaksContainer = styled.div`
     width: 8vw;
     height: 3vh;
     overflow: hidden;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        width: 10vw;
+        height: 2.5vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        width: 12vw;
+        height: 3.5vh;
+    }
 `;
 
 export const DecreaseAndIncreaseButton = styled.button`
@@ -166,6 +319,17 @@ export const DecreaseAndIncreaseButton = styled.button`
     border: none;
     padding: 1.2vh;
     cursor: pointer;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 18px;
+        padding: 1vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 16px;
+        padding: 0.8vh;
+    }
 `;
 
 export const InputQuantity = styled.input`
@@ -176,6 +340,17 @@ export const InputQuantity = styled.input`
     text-align: center;
     width: 2.4vw;
     font-size: 1.8vh;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        width: 3.5vw;
+        font-size: 2vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        width: 6vw;
+        font-size: 2.5vh;
+    }
 `;
 
 export const ButtonDeleteItem = styled.button`
@@ -183,6 +358,15 @@ export const ButtonDeleteItem = styled.button`
     background: none;
     border: none;
     cursor: pointer;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 2vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 2.5vh;
+    }
 `;
 
 export const PurchaseCompleted = styled.p`
@@ -192,4 +376,15 @@ export const PurchaseCompleted = styled.p`
     padding: 4vh;
     font-size: 2.5vh;
     z-index: 2;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        padding: 3vh;
+        font-size: 2.2vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        padding: 2vh;
+        font-size: 2.5vh;
+    }
 `;

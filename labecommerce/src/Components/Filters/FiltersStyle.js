@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 
-export const ContainerFilter = styled.div`
-`;
+export const ContainerFilter = styled.div``;
 
 export const Form = styled.form`
     display: flex;
     justify-content: space-around;
     gap: 2vh;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        max-height: ${({ isMobileMenuOpen }) =>
+            isMobileMenuOpen ? '1000px' : '0'};
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #eee2df;
+    }
 `;
 
 export const InputFilter = styled.input`
@@ -21,6 +34,15 @@ export const InputFilter = styled.input`
     &:focus {
         outline: none;
         box-shadow: 0 0 5px #c89f9c;
+    }
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 1.8vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 1.5vh;
     }
 `;
 
@@ -38,4 +60,33 @@ export const BtnClear = styled.button`
         box-shadow: 0 0 5px #3c355b;
         transition: box-shadow 0.3s ease;
     }
+    @media (max-width: 768px) {
+        font-size: 1.8vh;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.5vh;
+    }
+`;
+
+// Menu de hamburguer:
+
+export const MobileMenuButton = styled.button`
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        position: fixed;
+        top: 3.5vh;
+        right: 12vh;
+        z-index: 9999;
+    }
+`;
+
+export const MenuIcon = styled.i`
+    font-size: 3.5vh;
 `;

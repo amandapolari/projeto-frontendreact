@@ -7,15 +7,42 @@ export const ContainerFooter = styled.div`
     align-items: center;
     padding: 0.5vh;
     background-color: #eed7c5;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        height: 8vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        height: 10vh;
+    }
 `;
 
 export const ParagraphFooter = styled.p`
     font-size: 2vh;
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 2.5vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 3vh;
+    }
 `;
 
 export const AnchorLink = styled.a`
     color: #50252d;
     &:hover {
         color: #b36a5e;
+    }
+    @media (max-width: 768px) {
+        /* Estilo para tablets */
+        font-size: 2.5vh;
+    }
+
+    @media (max-width: 480px) {
+        /* Estilo para celulares */
+        font-size: 3vh;
     }
 `;

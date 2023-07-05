@@ -1,5 +1,13 @@
 /* eslint-disable array-callback-return */
-import { BtnClear, ContainerFilter, Form, InputFilter } from './FiltersStyle';
+import { useState } from 'react';
+import {
+    BtnClear,
+    ContainerFilter,
+    Form,
+    InputFilter,
+    MobileMenuButton,
+    MenuIcon,
+} from './FiltersStyle';
 
 function Filters({
     minFilter,
@@ -17,9 +25,26 @@ function Filters({
     handleMaxFilterChanges,
     ClearFilters,
 }) {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
         <ContainerFilter>
-            <Form>
+            <MobileMenuButton onClick={toggleMobileMenu}>
+                {/* Ícone do menu de hambúrguer */}
+                {/* <button>Clique</button> */}
+                {/* <MenuIcon>{isMobileMenuOpen ? 'close' : 'menu'}</MenuIcon> */}
+                <MenuIcon
+                    className={
+                        isMobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'
+                    }
+                />
+            </MobileMenuButton>
+
+            <Form isMobileMenuOpen={isMobileMenuOpen}>
                 <InputFilter
                     type="text"
                     id="inputSearchFilter"
@@ -47,7 +72,9 @@ function Filters({
                     }}
                     value={maxFilter}
                 />
-                <BtnClear onClick={(event) => ClearFilters(event)}>Limpar</BtnClear>
+                <BtnClear onClick={(event) => ClearFilters(event)}>
+                    Limpar
+                </BtnClear>
             </Form>
         </ContainerFilter>
     );
