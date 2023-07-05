@@ -11,16 +11,21 @@ export const ContainerItems = styled.div`
     overflow-y: auto;
     max-height: 70vh;
     scroll-behavior: smooth;
-    /* border: 2px solid red; */
+
     @media (max-width: 768px) {
-        width: 75%;
+        border: 2px solid red;
+        width: 85%;
+        margin-right: 2vw;
+        max-height: 50vh;
     }
-    
+
     @media (max-width: 480px) {
         /* Estilo para celulares */
-        width: 60%;
+        /* width: 60%;
         padding: 2vh;
-        max-height: 60vh;
+        max-height: 60vh; */
+        width: 80%;
+        margin-right: 2vw;
     }
 `;
 
@@ -34,14 +39,21 @@ export const ButtonBackTop = styled.button`
     border: none;
     cursor: pointer;
     @media (max-width: 768px) {
-        bottom: 4vh;
-        right: 1vw;
+        border-radius: 100%;
+        padding: 0.7vw;
+        height: 4.1vh;
+        position: absolute;
+        bottom: 30vh;
+        right: 4vw;
     }
 
     @media (max-width: 480px) {
-        /* Estilo para celulares */
-        bottom: 3vh;
-        right: 1.5vw;
+        border-radius: 100%;
+        padding: 0.7vw;
+        height: 5vh;
+        position: absolute;
+        bottom: 30vh;
+        right: 6vw;
     }
 `;
 
