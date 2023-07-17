@@ -15,8 +15,14 @@ export const ContainerSuperior = styled.div`
     }
 
     @media (max-width: 480px) {
-        padding: 0 1.5vh;
+        padding: 0.5vh;
         font-size: 2vh;
+        flex-direction: column;
+        p {
+            margin: 0;
+            padding: 1.2vh;
+            font-size: 1.7vh;
+        }
     }
 `;
 
@@ -48,12 +54,16 @@ export const Select = styled.select`
 
     @media (max-width: 768px) {
         font-size: 1.8vh;
-        width: 12vw;
+        width: 20vw;
     }
 
     @media (max-width: 480px) {
         font-size: 1.6vh;
-        width: 15vw;
+        padding: 0.6vh;
+        width: 28vw;
+        option {
+            font-size: 2vh;
+        }
     }
 
     &:hover {
