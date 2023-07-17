@@ -67,6 +67,8 @@ O Labecommerce oferece diversas funcionalidades aos usuários:
 
 -   Os itens do carrinho permanecem no carrinho mesmo após a atualização da página.
 
+-   O Labecommerce é um site responsivo que se adapta a diferentes dispositivos, incluindo desktop, tablet e celulares. A interface do usuário foi projetada para garantir uma experiência de uso adequada em todas as resoluções de tela. Independentemente do dispositivo utilizado, os usuários poderão acessar e utilizar todas as funcionalidades do Labecommerce, como visualizar a lista de produtos, adicionar itens ao carrinho, aplicar filtros e realizar buscas.
+
 ---
 
 ## 3. Instalação
